@@ -1,0 +1,40 @@
+<?xml version="1.0"?><svg width="1600" height="1200" xmlns="http://www.w3.org/2000/svg">
+ <title>2 Octave Blank Piano Keyboard Diagram</title>
+ <g>
+  <title>Layer 1</title>
+  <g id="g840" transform="matrix(1.03288 0 0 1.03149 -20.5534 -155.7)">
+   <rect id="rect826" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="97.056712" y="152.377695" width="51.7175" height="255.707"/>
+   <rect id="rect828" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="199.444612" y="152.251695" width="51.7175" height="255.707"/>
+   <rect id="rect829" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="404.556612" y="151.742695" width="51.7175" height="255.707"/>
+   <rect id="rect830" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="506.349612" y="152.760695" width="51.7175" height="255.707"/>
+   <rect id="rect831" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="610.178612" y="152.251695" width="51.7175" height="255.707"/>
+   <rect id="rect832" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" x="19.899112" y="150.946695" width="718.344" height="449.145"/>
+   <path id="path833" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m122.10862,397.872681l0,202.179016"/>
+   <path id="path834" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m225.757614,396.896698l0,202.179047"/>
+   <path id="path835" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m430.554626,398.231689l0,202.180054"/>
+   <path id="path836" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m532.384583,398.231689l0,202.180054"/>
+   <path id="path837" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m636.753601,397.512695l0,202.179016"/>
+   <path id="path839" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m328.031647,151.41069l0,448.216019"/>
+  </g>
+  <g id="svg_6" transform="matrix(1.03288 0 0 1.03149 -20.5534 -155.7)">
+   <rect id="svg_8" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="815.743812" y="152.377688" width="51.7175" height="255.707"/>
+   <rect id="svg_9" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="918.131712" y="152.251688" width="51.7175" height="255.707"/>
+   <rect id="svg_10" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="1123.243712" y="151.742688" width="51.7175" height="255.707"/>
+   <rect id="svg_11" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="1225.036712" y="152.760688" width="51.7175" height="255.707"/>
+   <rect id="svg_12" fill="#000000" fill-rule="evenodd" stroke="#000000" stroke-width="0.965896pt" x="1328.865712" y="152.251688" width="51.7175" height="255.707"/>
+   <rect id="svg_13" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" x="738.586212" y="150.946688" width="718.344" height="449.145"/>
+   <path id="svg_14" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m840.795715,397.872681l0,202.178955"/>
+   <path id="svg_15" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m944.444702,396.896698l0,202.178986"/>
+   <path id="svg_16" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m1149.241699,398.231689l0,202.179993"/>
+   <path id="svg_17" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m1251.071777,398.231689l0,202.179993"/>
+   <path id="svg_18" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m1355.440796,397.512695l0,202.178955"/>
+   <path id="svg_19" fill="none" fill-opacity="0.75" fill-rule="evenodd" stroke="#000000" stroke-width="2.375" d="m1046.71875,151.410675l0,448.215973"/>
+  </g>
+ </g>
+ <defs>
+  <radialGradient id="svg_7" spreadMethod="pad" cx="0.5" cy="0.5" r="0.5">
+   <stop stop-color="#7f7f7f" offset="0"/>
+   <stop stop-color="#808080" offset="1"/>
+  </radialGradient>
+ </defs>
+</svg>
