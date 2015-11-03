@@ -21,10 +21,11 @@ public class TempoBarScript : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "TutorialNote") 
+		if (other.tag == "Bar") 
 		{
-			
-			print ("Bar colided colided");
+			print("bar colided");
+			//Application.Quit();
+			UnityEditor.EditorApplication.isPlaying = false;
 		}
 	}
 }

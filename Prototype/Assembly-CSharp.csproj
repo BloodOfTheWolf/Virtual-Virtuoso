@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\BarNotesScript.cs" />
      <Compile Include="Assets\Scripts\ButtonTextControlScript.cs" />
      <Compile Include="Assets\Scripts\CheckScript.cs" />
+     <Compile Include="Assets\Scripts\ExitScript.cs" />
      <Compile Include="Assets\Scripts\LitkeyScript.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MovementScript.cs" />
@@ -56,6 +57,8 @@
      <Compile Include="Assets\Scripts\SheetNoteScript.cs" />
      <Compile Include="Assets\Scripts\TempoBarScript.cs" />
      <Compile Include="Assets\Scripts\TutorialNoteScript.cs" />
+     <None Include="Assets\Graphics\Textures\blahblah.txt" />
+     <None Include="Assets\Graphics\Fonts\blahblah.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
