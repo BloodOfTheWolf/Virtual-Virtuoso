@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BarNotesScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonTextControlScript.cs" />
      <Compile Include="Assets\Scripts\CheckScript.cs" />
      <Compile Include="Assets\Scripts\LitkeyScript.cs" />
+     <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\MovementScript.cs" />
      <Compile Include="Assets\Scripts\PianoKeyScript.cs" />
      <Compile Include="Assets\Scripts\SheetNoteScript.cs" />
