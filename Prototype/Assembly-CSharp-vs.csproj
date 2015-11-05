@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BarNotesScript.cs" />
      <Compile Include="Assets\Scripts\ButtonTextAndControlScript.cs" />
+     <Compile Include="Assets\Scripts\ButtonTextControlScript.cs" />
      <Compile Include="Assets\Scripts\CheckScript.cs" />
      <Compile Include="Assets\Scripts\ExitScript.cs" />
      <Compile Include="Assets\Scripts\LitkeyScript.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\PianoKeyScript.cs" />
      <Compile Include="Assets\Scripts\SheetNoteScript.cs" />
      <Compile Include="Assets\Scripts\TempoBarScript.cs" />
+     <Compile Include="Assets\Scripts\TutorialControlScript.cs" />
      <Compile Include="Assets\Scripts\TutorialNoteScript.cs" />
      <None Include="Assets\Graphics\Textures\blahblah.txt" />
      <None Include="Assets\Graphics\Fonts\blahblah.txt" />

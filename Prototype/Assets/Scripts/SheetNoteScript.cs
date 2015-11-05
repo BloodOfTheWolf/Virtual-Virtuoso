@@ -14,6 +14,8 @@ public class SheetNoteScript : MonoBehaviour {
 	public static int Score;
 	public static int NoteStreak;
 	public static int Multiplier = 10;
+	Camera cam;
+	float height, width;
 
 
 	// Use this for initialization
@@ -22,6 +24,9 @@ public class SheetNoteScript : MonoBehaviour {
 		sheetaudio = GetComponent<AudioSource>();
 		Score = 0;
 		NoteStreak = 0;
+		cam = Camera.main;
+		height = 2f * cam.orthographicSize;
+		width = height * cam.aspect;
 
 	}
 	// Update is called once per frame
@@ -72,8 +77,8 @@ public class SheetNoteScript : MonoBehaviour {
 	{
 		GUIStyle style = new GUIStyle();
 		style.fontSize = 30;
-		GUI.Label (new Rect(220,150,100,100),"Score: "+Score.ToString(),style);
-		GUI.Label (new Rect(10,150,100,100),"NoteStreak: "+NoteStreak.ToString(),style);
+		GUI.Label (new Rect(Screen.width/2 + 200,height + 10,100,100),"Score: "+Score.ToString(),style);
+		GUI.Label (new Rect(Screen.width/2 - 200, height + 10,100,100),"NoteStreak: "+NoteStreak.ToString(),style);
 		
 	}
 

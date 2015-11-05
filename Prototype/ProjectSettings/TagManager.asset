@@ -12,6 +12,7 @@ TagManager:
   - Right
   - LitKey
   - TutorialNote
+  - TutorialControl
   layers:
   - Default
   - TransparentFX
