@@ -37,9 +37,10 @@ public class SheetNoteScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "BarNote") 
+		if (this.tag == other.tag) 
 		{
-			print ("note hit");
+			print (this.tag);
+			print (other.tag);
 
 			GreenCheck.SetActive(true);
 			this.gameObject.SetActive(false);
@@ -54,6 +55,7 @@ public class SheetNoteScript : MonoBehaviour {
 			//sheetaudio.Play();
 			//Debug.Break();
 		}
+
 
 
 	}

@@ -3,8 +3,6 @@ using System.Collections;
 
 public class BarNotesScript : MonoBehaviour {
 
-	public int BarNoteKeyNumber;
-
 	// Use this for initialization
 	void Start () 
 	{

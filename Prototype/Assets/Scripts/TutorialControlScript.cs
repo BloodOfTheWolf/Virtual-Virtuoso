@@ -10,6 +10,8 @@ public class TutorialControlScript : MonoBehaviour {
 	public Canvas PlaybarCanvas;
 	public Canvas CorrectCanvas;
 	public Canvas IncorrectCanvas;
+	public Canvas YourTurnCanvas;
+	public Canvas FinishSongCanvas;
 	public Canvas CongratsCanvas;
 
 	public GameObject TutorialControlOne;
@@ -17,6 +19,10 @@ public class TutorialControlScript : MonoBehaviour {
 	public GameObject TutorialControlThree;
 	public GameObject TutorialControlFour;
 	public GameObject TutorialControlFive;
+	public GameObject TutorialControlSix;
+	public GameObject TutorialControlSeven;
+	public GameObject TutorialControlEight;
+	public GameObject TutorialControlNine;
 	public GameObject TempoBar;
 
 	public int TimesOpened = 0;
@@ -30,6 +36,8 @@ public class TutorialControlScript : MonoBehaviour {
 		PlaybarCanvas.enabled = false;
 		CorrectCanvas.enabled = false;
 		IncorrectCanvas.enabled = false;
+		YourTurnCanvas.enabled = false;
+		FinishSongCanvas.enabled = false;
 		CongratsCanvas.enabled = false;
 
 	}
@@ -61,11 +69,11 @@ public class TutorialControlScript : MonoBehaviour {
 			TimesOpened = 4;
 		}
 
-		/*if (TutorialControlFive.transform.position.x <= TempoBar.transform.position.x) {
-			CorrectCanvas.enabled = true;
-			Time.timeScale = 0;
-			GameObject.Destroy(TutorialControlFive);
-		}*/
+//		if (TutorialControlFive.transform.position.x <= TempoBar.transform.position.x) {
+//			CorrectCanvas.enabled = true;
+//			Time.timeScale = 0;
+//			GameObject.Destroy(TutorialControlFive);
+//		}
 
 		/*if (TutorialControlSix.transform.position.x <= TempoBar.transform.position.x) {
 			IncorrectCanvas.enabled = true;
@@ -74,9 +82,29 @@ public class TutorialControlScript : MonoBehaviour {
 		} */
 
 		if ((TutorialControlFive.transform.position.x <= TempoBar.transform.position.x)&&(TimesOpened == 4)) {
-			CongratsCanvas.enabled = true;
+			CorrectCanvas.enabled = true;
 			Time.timeScale = 0;
 			TimesOpened = 5;
+		}
+		if ((TutorialControlSix.transform.position.x <= TempoBar.transform.position.x)&&(TimesOpened == 5)) {
+			IncorrectCanvas.enabled = true;
+			Time.timeScale = 0;
+			TimesOpened = 6;
+		}
+		if ((TutorialControlSeven.transform.position.x <= TempoBar.transform.position.x)&&(TimesOpened == 6)) {
+			YourTurnCanvas.enabled = true;
+			Time.timeScale = 0;
+			TimesOpened = 7;
+		}
+		if ((TutorialControlEight.transform.position.x <= TempoBar.transform.position.x)&&(TimesOpened == 7)) {
+			FinishSongCanvas.enabled = true;
+			Time.timeScale = 0;
+			TimesOpened = 8;
+		}
+		if ((TutorialControlNine.transform.position.x <= TempoBar.transform.position.x)&&(TimesOpened == 8)) {
+			CongratsCanvas.enabled = true;
+			Time.timeScale = 0;
+			TimesOpened = 9;
 		}
 	}
 
@@ -96,6 +124,18 @@ public class TutorialControlScript : MonoBehaviour {
 			PlaybarCanvas.enabled = false;
 		}
 		if (TimesOpened == 5) {
+			CorrectCanvas.enabled = false;
+		}
+		if (TimesOpened == 6) {
+			IncorrectCanvas.enabled = false;
+		}
+		if (TimesOpened == 7) {
+			YourTurnCanvas.enabled = false;
+		}
+		if (TimesOpened == 8) {
+			FinishSongCanvas.enabled = false;
+		}
+		if (TimesOpened == 9) {
 			CongratsCanvas.enabled = false;
 		}
 		}

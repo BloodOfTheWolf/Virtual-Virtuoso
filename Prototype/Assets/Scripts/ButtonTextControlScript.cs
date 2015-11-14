@@ -23,5 +23,6 @@ public class ButtonTextControlScript : MonoBehaviour {
 	public void TutorialStart()
 	{
 		Application.LoadLevel (2);
+		Destroy(GameObject.Find("Songholder"));
 	}
 }

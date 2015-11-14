@@ -7,12 +7,13 @@ TagManager:
   - PianoKey
   - Bar
   - SheetNote
-  - BarNote
   - HitOrMiss
   - Right
   - LitKey
   - TutorialNote
   - TutorialControl
+  - Song
+  - SharpSheetNote
   layers:
   - Default
   - TransparentFX

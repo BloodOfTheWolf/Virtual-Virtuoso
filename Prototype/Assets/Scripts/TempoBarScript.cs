@@ -23,8 +23,8 @@ public class TempoBarScript : MonoBehaviour
 		if (other.tag == "Bar") 
 		{
 			print("bar colided");
-			//Application.Quit();
-			UnityEditor.EditorApplication.isPlaying = false;
+			Application.Quit();
+			//UnityEditor.EditorApplication.isPlaying = false;
 		}
 		if (other.tag == "TutorialControl") {
 			//DestroyObject(other);
