@@ -12,7 +12,7 @@ public class ButtonTextControlScript : MonoBehaviour {
 	void Start () {
 	
 		TutorialButton.GetComponentInChildren<Text>().text = "Twinkle Twinkle Little Star (Tutorial)";
-		BackButton.GetComponentInChildren<Text>().text = "Back";
+		//BackButton.GetComponentInChildren<Text>().text = "Back";
 	}
 
 	public void BackButtonPress()

@@ -14,7 +14,7 @@ public class ButtonTextAndControlScript : MonoBehaviour {
 	void Start () {
 	
 		TutorialButton.GetComponentInChildren<Text>().text = "Twinkle Twinkle Little Star (Tutorial)";
-		BackButton.GetComponentInChildren<Text>().text = "Back";
+		//BackButton.GetComponentInChildren<Text>().text = "Back";
 		StartButton.GetComponentInChildren<Text>().text = "Start";
 	}
 

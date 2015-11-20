@@ -9,7 +9,7 @@ public class AdjustVolumeScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		BackGroundMusic = GetComponent<AudioSource> ();
+			BackGroundMusic = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
