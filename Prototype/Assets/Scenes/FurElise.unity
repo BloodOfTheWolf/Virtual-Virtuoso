@@ -382,6 +382,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
   m_IsPrefabParent: 0
@@ -1759,6 +1763,10 @@ Prefab:
     - target: {fileID: 134508, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Name
       value: TutorialControlVolumeOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
@@ -5758,6 +5766,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
   m_IsPrefabParent: 0
@@ -6152,6 +6164,10 @@ Prefab:
       value: TutorialControlVolumeNine
       objectReference: {fileID: 0}
     - target: {fileID: 2381370, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -6912,6 +6928,10 @@ Prefab:
       value: TutorialControlVolumeSix
       objectReference: {fileID: 0}
     - target: {fileID: 2381370, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -13219,6 +13239,10 @@ Prefab:
       propertyPath: m_Name
       value: TutorialControlVolumeThree
       objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
   m_IsPrefabParent: 0
@@ -13673,6 +13697,10 @@ Prefab:
     - target: {fileID: 134508, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Name
       value: TutorialControlVolumeTwo
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
@@ -14327,6 +14355,10 @@ Prefab:
       value: TutorialControlVolumeSeven
       objectReference: {fileID: 0}
     - target: {fileID: 2381370, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -15068,6 +15100,7 @@ Transform:
   - {fileID: 492087046}
   - {fileID: 1944248632}
   - {fileID: 1201849415}
+  - {fileID: 769831366}
   - {fileID: 877155842}
   - {fileID: 962256991}
   - {fileID: 1639627229}
@@ -15075,15 +15108,10 @@ Transform:
   - {fileID: 1651375707}
   - {fileID: 1775648201}
   - {fileID: 22112860}
+  - {fileID: 804997956}
   - {fileID: 760516725}
   - {fileID: 423775831}
   - {fileID: 359641090}
-  - {fileID: 1985695316}
-  - {fileID: 2123974502}
-  - {fileID: 769831366}
-  - {fileID: 804997956}
-  - {fileID: 2138872634}
-  - {fileID: 1775938966}
   - {fileID: 1518017550}
   - {fileID: 1903293033}
   - {fileID: 76823708}
@@ -15097,10 +15125,13 @@ Transform:
   - {fileID: 1250721595}
   - {fileID: 992675660}
   - {fileID: 859619751}
+  - {fileID: 2138872634}
   - {fileID: 147851989}
   - {fileID: 1968964232}
+  - {fileID: 2123974502}
   - {fileID: 403001048}
   - {fileID: 1585231222}
+  - {fileID: 1985695316}
   - {fileID: 294494112}
   - {fileID: 1399273305}
   - {fileID: 1214574851}
@@ -15112,6 +15143,7 @@ Transform:
   - {fileID: 390563950}
   - {fileID: 466841222}
   - {fileID: 1642186001}
+  - {fileID: 1775938966}
   - {fileID: 221349163}
   - {fileID: 1134930034}
   - {fileID: 1312894954}
@@ -15596,7 +15628,7 @@ Transform:
   m_Children:
   - {fileID: 1080426175}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!54 &1738617287
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15790,6 +15822,10 @@ Prefab:
     - target: {fileID: 134508, guid: 896b071d0db420649aeccae33069df63, type: 2}
       propertyPath: m_Name
       value: TutorialControlVolumeFour
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440470, guid: 896b071d0db420649aeccae33069df63, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896b071d0db420649aeccae33069df63, type: 2}
