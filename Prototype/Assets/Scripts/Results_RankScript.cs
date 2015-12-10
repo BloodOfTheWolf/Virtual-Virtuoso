@@ -13,6 +13,9 @@ public class Results_RankScript : MonoBehaviour {
 	public GameObject TryAgain;
 	public GameObject Clear;
 
+	private GameObject Intermediate;
+	private GameObject Advanced;
+
 	private SheetNoteScript Results;
 	private float Total;
 	private float Good;
@@ -22,42 +25,88 @@ public class Results_RankScript : MonoBehaviour {
 	{
 		Total = SheetNoteScript.Total;
 		Good = SheetNoteScript.Hit;
+
+		Intermediate = GameObject.Find("Intermediate Objects");
+		Intermediate.SetActive (false);
+
+		Advanced = GameObject.Find("Expert Objects");
+		Advanced.SetActive (false);
+
 		Rank = Good / Total;
 		print (Rank);
-		if (Rank <= 0.5f) {
-			LetterF.SetActive (true);
-			TryAgain.SetActive (true);
-            print( "rank f" );
-		}
-		else if (Rank <= 0.6f) 
+		if (Rank <= 0.5f)
 		{
-			LetterD.SetActive (true);
-			Clear.SetActive(true);
-            print( "rank d" );
+			LetterF.SetActive (true);
+
+			LetterAplus.SetActive (false);
+			LetterA.SetActive (false);
+			LetterB.SetActive (false);
+			LetterC.SetActive (false);
+			LetterD.SetActive (false);
+			TryAgain.SetActive (true);
+			print ("Rank F");
 		}
 		else if (Rank <= 0.7f) 
 		{
-			LetterC.SetActive (true);
+			LetterD.SetActive (true);
+
+			LetterAplus.SetActive (false);
+			LetterA.SetActive (false);
+			LetterB.SetActive (false);
+			LetterC.SetActive (false);
+			LetterF.SetActive (false);
 			Clear.SetActive(true);
-            print( "rank c" );
+			TryAgain.SetActive (false);
+			print ("Rank D");
 		}
 		else if (Rank <= 0.8f) 
 		{
-			LetterB.SetActive (true);
+			LetterC.SetActive (true);
+
+			LetterAplus.SetActive (false);
+			LetterA.SetActive (false);
+			LetterB.SetActive (false);
+			LetterF.SetActive (false);
+			LetterD.SetActive (false);
 			Clear.SetActive(true);
-            print( "rank b" );
-		} 
+			TryAgain.SetActive (false);
+			print ("Rank C");
+		}
 		else if (Rank <= 0.9f) 
 		{
-			LetterA.SetActive (true);
+			LetterB.SetActive (true);
+
+			LetterAplus.SetActive (false);
+			LetterA.SetActive (false);
+			LetterF.SetActive (false);
+			LetterC.SetActive (false);
+			LetterD.SetActive (false);
 			Clear.SetActive(true);
-            print( "rank a" );
+			TryAgain.SetActive (false);
+		} 
+		else if (Rank <= 0.95f) 
+		{
+			LetterA.SetActive (true);
+
+			LetterAplus.SetActive (false);
+			LetterF.SetActive (false);
+			LetterB.SetActive (false);
+			LetterC.SetActive (false);
+			LetterD.SetActive (false);
+			Clear.SetActive(true);
+			TryAgain.SetActive (false);
 		}
-		else 
+		 else 
 		{
 			LetterAplus.SetActive(true);
+
+			LetterF.SetActive (false);
+			LetterA.SetActive (false);
+			LetterB.SetActive (false);
+			LetterC.SetActive (false);
+			LetterD.SetActive (false);
 			Clear.SetActive(true);
-            print( "rank cap" );
+			TryAgain.SetActive (false);
 		}
 	}
 	
