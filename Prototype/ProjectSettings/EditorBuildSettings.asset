@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/BackgroundMusicSelectionMenu.unity
   - enabled: 1
     path: Assets/Scenes/SoundSetSelectionMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/Results.unity

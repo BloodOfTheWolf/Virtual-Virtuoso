@@ -1630,10 +1630,10 @@ MonoBehaviour:
   BackButton: {fileID: 1131677533}
   Tutorial_Button: {fileID: 188080919}
   HotCrossBuns_Button: {fileID: 452940775}
-  MaryLamb_Button: {fileID: 0}
-  FurElise_Button: {fileID: 0}
-  CanonInD_Button: {fileID: 0}
-  Entertainer_Button: {fileID: 0}
+  MaryLamb_Button: {fileID: 1181943935}
+  FurElise_Button: {fileID: 2112209272}
+  CanonInD_Button: {fileID: 382812966}
+  Entertainer_Button: {fileID: 497753096}
   StartButton: {fileID: 1244562871}
   roomSelected: 0
 --- !u!1 &2112209270

@@ -27,31 +27,37 @@ public class Results_RankScript : MonoBehaviour {
 		if (Rank <= 0.5f) {
 			LetterF.SetActive (true);
 			TryAgain.SetActive (true);
+            print( "rank f" );
 		}
 		else if (Rank <= 0.6f) 
 		{
 			LetterD.SetActive (true);
 			Clear.SetActive(true);
+            print( "rank d" );
 		}
 		else if (Rank <= 0.7f) 
 		{
 			LetterC.SetActive (true);
 			Clear.SetActive(true);
+            print( "rank c" );
 		}
 		else if (Rank <= 0.8f) 
 		{
 			LetterB.SetActive (true);
 			Clear.SetActive(true);
+            print( "rank b" );
 		} 
 		else if (Rank <= 0.9f) 
 		{
 			LetterA.SetActive (true);
 			Clear.SetActive(true);
+            print( "rank a" );
 		}
 		else 
 		{
 			LetterAplus.SetActive(true);
 			Clear.SetActive(true);
+            print( "rank cap" );
 		}
 	}
 	

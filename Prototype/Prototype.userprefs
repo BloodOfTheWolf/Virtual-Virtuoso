@@ -1,14 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ButtonTextAndControlScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\MenuScript.cs" Line="6" Column="1" />
-      <File FileName="Assets\Scripts\SongholderScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ButtonTextAndControlScript.cs" Line="83" Column="1" />
-      <File FileName="Assets\Scripts\ButtonTextControlScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MarketplaceButtonController.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
