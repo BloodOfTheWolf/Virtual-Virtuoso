@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AdjustVolumeScript.cs" />
+     <Compile Include="Assets\Scripts\BGMusicSetController.cs" />
      <Compile Include="Assets\Scripts\BarDividerScript.cs" />
      <Compile Include="Assets\Scripts\BarNotesScript.cs" />
      <Compile Include="Assets\Scripts\ButtonTextAndControlScript.cs" />

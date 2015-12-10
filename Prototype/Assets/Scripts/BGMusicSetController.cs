@@ -2,17 +2,16 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class SoundSetButtonController : MonoBehaviour {
+public class BGMusicSetController : MonoBehaviour {
 
     //add public variable for each button we need in the song selection menu
     public Button BackButton;
-    public Button SoundSetOne;
-    public Button SoundSetTwo;
-    public Button SoundSetThree;
-    public Button SoundSetFour;
-    public Button SoundSetFive;
+    public Button MusicSetOne;
+    public Button MusicSetTwo;
+    public Button MusicSetThree;
+    public Button MusicSetFour;
 
-    string SoundSelected;
+    string MusicSelected;
     string PurchaseMessage;
 
     bool MenuActive = false;
@@ -22,13 +21,12 @@ public class SoundSetButtonController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        SoundSetOne.GetComponentInChildren<Text>().text = "SoundSetOne";
-        SoundSetTwo.GetComponentInChildren<Text>().text = "SoundSetTwo";
-        SoundSetThree.GetComponentInChildren<Text>().text = "SoundSetThree";
-        SoundSetFour.GetComponentInChildren<Text>().text = "SoundSetFour";
-        SoundSetFive.GetComponentInChildren<Text>().text = "SoundSetFive";
+        MusicSetOne.GetComponentInChildren<Text>().text = "MusicSetOne";
+        MusicSetTwo.GetComponentInChildren<Text>().text = "MusicSetTwo";
+        MusicSetThree.GetComponentInChildren<Text>().text = "MusicSetThree";
+        MusicSetFour.GetComponentInChildren<Text>().text = "MusicSetFour";
         BackButton.GetComponentInChildren<Text>().text = "Back";
-        SoundSelected = "";
+        MusicSelected = "";
         ConfirmPurchase.enabled = false;
 
     }
@@ -37,7 +35,7 @@ public class SoundSetButtonController : MonoBehaviour {
         if( MenuActive == true )
         {
             ConfirmPurchase.enabled = true;
-            ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy " + SoundSelected + "? There are no refunds.";
+            ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy " + MusicSelected + "? There are no refunds.";
         }
 
         else
@@ -53,27 +51,22 @@ public class SoundSetButtonController : MonoBehaviour {
 
     public void SoundOneSelected()
     {
-        SoundSelected = "Sound One";
+        MusicSelected = "Music One";
         MenuActive = true;
     }
     public void SoundTwoSelected()
     {
-        SoundSelected = "Sound Two";
+        MusicSelected = "Music Two";
         MenuActive = true;
     }
     public void SoundThreeSelected()
     {
-        SoundSelected = "Sound Three";
+        MusicSelected = "Music Three";
         MenuActive = true;
     }
     public void SoundFourSelected()
     {
-        SoundSelected = "Sound Four";
-        MenuActive = true;
-    }
-    public void SoundFiveSelected()
-    {
-        SoundSelected = "Sound Five";
+        MusicSelected = "Music Four";
         MenuActive = true;
     }
 
@@ -86,4 +79,3 @@ public class SoundSetButtonController : MonoBehaviour {
         MenuActive = false;
     }
 }
-
