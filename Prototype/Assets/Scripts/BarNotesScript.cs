@@ -3,6 +3,9 @@ using System.Collections;
 
 public class BarNotesScript : MonoBehaviour {
 
+	//private Collider noteHitBox;
+
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -12,6 +15,13 @@ public class BarNotesScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "SheetNote") 
+		{
+			this.gameObject.SetActive (false);
+		}
 	}
 }

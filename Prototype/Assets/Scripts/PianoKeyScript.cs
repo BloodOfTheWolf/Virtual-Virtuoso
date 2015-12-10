@@ -5,9 +5,7 @@ using System.Collections;
 
 public class PianoKeyScript : MonoBehaviour 
 {
-		//private int index;
-		//private GameObject[] PianoKeys;
-	//public AudioClip note;
+
 	AudioSource audio;
 	public GameObject barnotes;
 	GameObject LitNote;
@@ -19,7 +17,7 @@ public class PianoKeyScript : MonoBehaviour
 			// only to be done once. not in update
 		    audio = GetComponent<AudioSource>();
 			LitNote = gameObject.transform.GetChild (0).gameObject;
-
+			//notesHitBox = GameObject.FindWithTag(ajorHitbox)
 		
 
 		}
@@ -33,17 +31,20 @@ public class PianoKeyScript : MonoBehaviour
 		
 	void OnMouseDown()
 	{
-		audio.Play();
-		barnotes.SetActive(true);
-		LitNote.SetActive(true);
-		//barnotes
+
+			audio.Play ();
+			barnotes.SetActive (true);
+			LitNote.SetActive (true);
 	}
 	void OnMouseUp()
 	{
+
 		barnotes.SetActive(false);
-		LitNote.SetActive(false);	
+		LitNote.SetActive(false);
 	}
-		void OnTriggerEnter(Collider other)
-		{
-		}
+		
+	void OnTriggerEnter(Collider other)
+	{
 	}
+
+}

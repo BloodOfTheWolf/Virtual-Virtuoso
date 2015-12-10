@@ -7,9 +7,10 @@ public class TempoBarScript : MonoBehaviour
 	//SheetNoteScript sheet;
 	// Use this for initialization
 	// if  song notes and barnotes are colliding, show right or wrong image
+	public static int Section;
 	void Start () 
 	{
-
+		Section = 0;
 	}
 	
 	// Update is called once per frame
@@ -18,16 +19,19 @@ public class TempoBarScript : MonoBehaviour
 
 	}
 
-	public void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Bar") 
+		if (other.tag == "SectionBar") 
+		{
+			Section = Section +1;
+			print ("Section added");
+		}
+		 if (other.tag == "Bar") 
 		{
 			print("bar colided");
-			Application.Quit();
+			Application.LoadLevel("Results");
+			//Application.Quit();
 			//UnityEditor.EditorApplication.isPlaying = false;
-		}
-		if (other.tag == "TutorialControl") {
-			//DestroyObject(other);
 		}
 
 	}

@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class CheckScript : MonoBehaviour {
-
-	GameObject Checkmarks;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -14,17 +13,5 @@ public class CheckScript : MonoBehaviour {
 	void Update () 
 	{
 	
-	}
-
-	public void SetGreenTrue()
-	{
-		Checkmarks = GameObject.FindGameObjectWithTag ("Right");
-		Checkmarks.SetActive (true);
-	}
-
-	public void SetRedTrue()
-	{
-		Checkmarks = GameObject.FindGameObjectWithTag ("Wrong");
-		Checkmarks.SetActive (true);
 	}
 }
