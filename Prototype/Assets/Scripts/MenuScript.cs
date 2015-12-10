@@ -66,6 +66,11 @@ public class MenuScript : MonoBehaviour {
 		Application.LoadLevel (1);
 	}
 
+	public void GoToMarket()
+	{
+		Application.LoadLevel (8);
+	}
+
 	public void GameExit()
 	{
 		Application.Quit ();

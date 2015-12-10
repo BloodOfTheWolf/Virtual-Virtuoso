@@ -21,3 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CanonInD.unity
   - enabled: 1
     path: Assets/Scenes/TheEntertainer.unity
+  - enabled: 1
+    path: Assets/Scenes/Marketplace.unity
+  - enabled: 1
+    path: Assets/Scenes/BackgroundMusicSelectionMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/SoundSetSelectionMenu.unity

@@ -37,11 +37,46 @@ public class ButtonTextAndControlScript : MonoBehaviour {
 	{
 		roomSelected = 1;
 	}
+	public void HotCrossBunsSelected()
+	{
+		roomSelected = 2;
+	}
+	public void MaryLambSelected()
+	{
+		roomSelected = 3;
+	}
+	public void FurEliseSelected()
+	{
+		roomSelected = 4;
+	}
+	public void CanonInDSelected()
+	{
+		roomSelected = 5;
+	}
+	public void EntertainerSelected()
+	{
+		roomSelected = 6;
+	}
 
 	public void GameStart()
 	{
 		if (roomSelected == 1) {
 			Application.LoadLevel(2);
+		}
+		if (roomSelected == 2) {
+			Application.LoadLevel(3);
+		}
+		if (roomSelected == 3) {
+			Application.LoadLevel(4);
+		}
+		if (roomSelected == 4) {
+			Application.LoadLevel(5);
+		}
+		if (roomSelected == 5) {
+			Application.LoadLevel(6);
+		}
+		if (roomSelected == 6) {
+			Application.LoadLevel(7);
 		}
 	}
 }
