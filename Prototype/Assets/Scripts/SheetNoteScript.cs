@@ -36,6 +36,8 @@ public class SheetNoteScript : MonoBehaviour {
 	void Start () 
 	{
 		sheetaudio = GetComponent<AudioSource>();
+        GreenCheck = GameObject.Find( "greencheck" );
+        RedCheck = GameObject.Find( "RedCheck" );
 		Score = 0;
 		NoteStreak = 0;
 		HighestStreak = 0;
