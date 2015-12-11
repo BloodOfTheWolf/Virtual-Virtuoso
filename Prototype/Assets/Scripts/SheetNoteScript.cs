@@ -21,6 +21,8 @@ public class SheetNoteScript : MonoBehaviour {
 	public static float Total;
 	Camera cam;
 	float height, width;
+    private bool Colored;
+    private GameObject Tutorial;
 
 	public static SheetNoteScript GetInstance()
 	{
@@ -48,6 +50,14 @@ public class SheetNoteScript : MonoBehaviour {
 		cam = Camera.main;
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
+        Colored = ColorToggleScript.Toggle;
+
+        Tutorial = gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        if( Colored == false )
+        {
+            Tutorial.SetActive( false );
+
+        }
 
 	}
 	// Update is called once per frame

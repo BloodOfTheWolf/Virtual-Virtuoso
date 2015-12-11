@@ -16,7 +16,7 @@ public class PianoKeyScript : MonoBehaviour
 		// Use this for initialization
 		void Awake () 
 		{
-			Colored = false;
+			Colored = ColorToggleScript.Toggle;
 			// only to be done once. not in update
 		    audio = GetComponent<AudioSource>();
 			NoteVol = PianoVolumeScript.PKVolume;
