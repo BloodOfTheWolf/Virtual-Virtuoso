@@ -63,17 +63,17 @@ public class MenuScript : MonoBehaviour {
 
 	public void GoToSongSelect()
 	{
-		Application.LoadLevel (1);
+		Application.LoadLevel(1);
 	}
 
 	public void GoToMarket()
 	{
-		Application.LoadLevel (8);
+		Application.LoadLevel(8);
 	}
 
 	public void GameExit()
 	{
-		Application.Quit ();
+		Application.Quit();
 		//UnityEditor.EditorApplication.isPlaying = false;
 	}
 }

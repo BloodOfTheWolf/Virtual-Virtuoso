@@ -113,14 +113,29 @@ public class UIEvents : MonoBehaviour
     }
 
     //screen loading handlers
-    void LoadMainMenu()
+    public void LoadMainMenu()
     {
         GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenu );
     }
 
-    void LoadSongSelection()
+    public void LoadSongSelection()
     {
         GameStateController.Instance.ChangeState( GameStateController.GameState.SongSelection );
+    }
+
+    public void LoadMarketplace()
+    {
+        GameStateController.Instance.ChangeState( GameStateController.GameState.Marketplace );
+    }
+
+    public void LoadSoundSetSelection()
+    {
+        GameStateController.Instance.ChangeState( GameStateController.GameState.SoundSetSelection );
+    }
+
+    public void LoadBackgroundMusicSelection()
+    {
+        GameStateController.Instance.ChangeState( GameStateController.GameState.BackgroundMusicSelection );
     }
 
     void LoadTutorial()

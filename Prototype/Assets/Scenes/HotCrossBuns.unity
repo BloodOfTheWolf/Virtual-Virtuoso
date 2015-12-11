@@ -383,7 +383,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 1019799125}
-  Keynumber: 10
 --- !u!82 &201720826
 AudioSource:
   m_ObjectHideFlags: 0
@@ -547,7 +546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 509585}
-  Keynumber: 1
 --- !u!82 &215052664
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1188,7 +1186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 2079299311}
-  Keynumber: 7
 --- !u!82 &455104471
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1776,7 +1773,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 888366942}
-  Keynumber: 4
 --- !u!82 &555433734
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2069,7 +2065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 377483238}
-  Keynumber: 11
 --- !u!82 &630394048
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2288,7 +2283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 2085321212}
-  Keynumber: 2
 --- !u!82 &778482128
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2542,7 +2536,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 832087807}
-  Keynumber: 0
 --- !u!82 &863294301
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3346,7 +3339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 1630773348}
-  Keynumber: 3
 --- !u!82 &1051251742
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3626,7 +3618,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 2109450124}
-  Keynumber: 8
 --- !u!82 &1112198103
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3790,7 +3781,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 1917874285}
-  Keynumber: 6
 --- !u!82 &1121606084
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5563,7 +5553,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 269576467}
-  Keynumber: 9
 --- !u!82 &1805905689
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5917,7 +5906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnotes: {fileID: 31918616}
-  Keynumber: 5
 --- !u!82 &1955962487
 AudioSource:
   m_ObjectHideFlags: 0

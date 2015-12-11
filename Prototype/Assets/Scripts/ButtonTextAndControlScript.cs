@@ -16,14 +16,16 @@ public class ButtonTextAndControlScript : MonoBehaviour {
 	public int roomSelected = 0;
 
 	// Use this for initialization
-    void Start()
+	void Start ()
     {
-        Tutorial_Button.GetComponentInChildren<Text>().text = "Twinkle Twinkle Little Star (Tutorial)";
-		HotCrossBuns_Button.GetComponentInChildren<Text>().text     = "Hot Cross Buns";
+        Tutorial_Button.GetComponentInChildren<Text>().text         = "Twinkle Twinkle Little Star (Tutorial)";
+        HotCrossBuns_Button.GetComponentInChildren<Text>().text     = "Hot Cross Buns";
         MaryLamb_Button.GetComponentInChildren<Text>().text         = "Mary Had a Little Lamb";
         FurElise_Button.GetComponentInChildren<Text>().text         = "Für Elise";
         CanonInD_Button.GetComponentInChildren<Text>().text         = "Canon In D";
-        Entertainer_Button.GetComponentInChildren<Text>().text      = "The Entertainer";		StartButton.GetComponentInChildren<Text>().text = "Start";
+        Entertainer_Button.GetComponentInChildren<Text>().text      = "The Entertainer";
+		//BackButton.GetComponentInChildren<Text>().text = "Back";
+		StartButton.GetComponentInChildren<Text>().text = "Start";
 	}
 
 	public void BackButtonPress()
@@ -35,47 +37,11 @@ public class ButtonTextAndControlScript : MonoBehaviour {
 	{
 		roomSelected = 1;
 	}
-	public void HotCrossBunsSelected()
-	{
-		roomSelected = 2;
-	}
-	public void MaryLambSelected()
-	{
-		roomSelected = 3;
-	}
-	public void FurEliseSelected()
-	{
-		roomSelected = 4;
-	}
-	public void CanonInDSelected()
-	{
-		roomSelected = 5;
-	}
-	public void EntertainerSelected()
-	{
-		roomSelected = 6;
-	}
 
 	public void GameStart()
 	{
-        Destroy( GameObject.Find( "Songholder" ) );
 		if (roomSelected == 1) {
 			Application.LoadLevel(2);
-		}
-		if (roomSelected == 2) {
-			Application.LoadLevel(3);
-		}
-		if (roomSelected == 3) {
-			Application.LoadLevel(4);
-		}
-		if (roomSelected == 4) {
-			Application.LoadLevel(5);
-		}
-		if (roomSelected == 5) {
-			Application.LoadLevel(6);
-		}
-		if (roomSelected == 6) {
-			Application.LoadLevel(7);
 		}
 	}
 }

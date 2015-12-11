@@ -22,6 +22,9 @@ public class GameStateController : MonoBehaviour
     public enum GameState
     {
         MainMenu,
+        Marketplace,
+        SoundSetSelection,
+        BackgroundMusicSelection,
         SongSelection,
         Tutorial,
         HotCrossBuns,
@@ -56,6 +59,15 @@ public class GameStateController : MonoBehaviour
         {
         case GameState.MainMenu:
             Application.LoadLevel( "MainMenu" );
+            break;
+        case GameState.Marketplace:
+            Application.LoadLevel( "Marketplace" );
+            break;
+        case GameState.SoundSetSelection:
+            Application.LoadLevel( "SoundSetSelectionMenu" );
+            break;
+        case GameState.BackgroundMusicSelection:
+            Application.LoadLevel( "BackgroundMusicSelectionMenu" );
             break;
         case GameState.SongSelection:
             Application.LoadLevel( "SongSelectionMenu" );

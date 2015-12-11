@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class MarketplaceButtonController : MonoBehaviour {
+public class MarketplaceButtonController : MonoBehaviour
+{
 	
 	public Canvas marketMenu;
 	public Button soundSetButton;
@@ -10,8 +11,8 @@ public class MarketplaceButtonController : MonoBehaviour {
 	public Button backButton;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+    {
 		marketMenu = marketMenu.GetComponent<Canvas> ();
 		soundSetButton = soundSetButton.GetComponent<Button> ();
 		bgMusicButton = bgMusicButton.GetComponent<Button> ();
@@ -20,17 +21,17 @@ public class MarketplaceButtonController : MonoBehaviour {
 	
 	public void BackButtonPress()
 	{
-		Application.LoadLevel (0);
+		Application.LoadLevel( "MainMenu" );
 	}
 	
 	public void SoundSetSelect()
 	{
-		Application.LoadLevel (10);
+		Application.LoadLevel( "SoundSetSelectionMenu" );
 	}
 	
 	public void BGMusicSelect()
 	{
-		Application.LoadLevel (9);
+		Application.LoadLevel( "BackgroundMusicSelectionMenu" );
 		//UnityEditor.EditorApplication.isPlaying = false;
 	}
 }
