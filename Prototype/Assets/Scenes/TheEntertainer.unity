@@ -2738,7 +2738,7 @@ Transform:
   - {fileID: 1857660403}
   - {fileID: 1873037203}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1001 &195964312
 Prefab:
   m_ObjectHideFlags: 0
@@ -3765,7 +3765,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436862, guid: e4f3a4d0c64b84592ac10f8e304ae82e, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 112622, guid: e4f3a4d0c64b84592ac10f8e304ae82e, type: 2}
       propertyPath: m_TagString
@@ -7244,15 +7244,71 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414598, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 177098, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
       propertyPath: m_Name
       value: BarNotes 1
       objectReference: {fileID: 0}
+    - target: {fileID: 439990, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 429390, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &538642150 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 178286, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642151 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 124854, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642152 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 167822, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642153 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173988, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642154 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 146520, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642155 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 124464, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642156 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137590, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642157 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 104416, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642158 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 122894, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642159 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 131050, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642160 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 182738, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
+--- !u!1 &538642161 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170852, guid: 9d00ec6b47e0149c7895b5fd57faf3e2, type: 2}
+  m_PrefabInternal: {fileID: 538642149}
 --- !u!1 &545534346
 GameObject:
   m_ObjectHideFlags: 0
@@ -17915,7 +17971,7 @@ Transform:
   m_LocalScale: {x: 3.69524765, y: 2.68745756, z: 2.68745756}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1001 &1528671943
 Prefab:
   m_ObjectHideFlags: 0
@@ -23327,51 +23383,51 @@ Prefab:
     - target: {fileID: 11424020, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642161}
     - target: {fileID: 11419388, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642157}
     - target: {fileID: 11415914, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642150}
     - target: {fileID: 11444578, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642151}
     - target: {fileID: 11466538, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642160}
     - target: {fileID: 11493496, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642156}
     - target: {fileID: 11411168, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642155}
     - target: {fileID: 11431958, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642152}
     - target: {fileID: 11499832, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642154}
     - target: {fileID: 11446072, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642159}
     - target: {fileID: 11437172, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642153}
     - target: {fileID: 11407592, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: barnotes
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 538642158}
     - target: {fileID: 8280600, guid: 14bafcc1b0a44498b9d50e895f708313, type: 2}
       propertyPath: BypassListenerEffects
       value: 1
