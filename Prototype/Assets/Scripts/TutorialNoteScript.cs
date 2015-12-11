@@ -6,12 +6,15 @@ using System.Collections;
 public class TutorialNoteScript : MonoBehaviour {
 	
 	 public GameObject NotetoLit;
+	 //private float NoteVol;
 
 	AudioSource sheetaudio;
 	// Use this for initialization
 	void Start () 
 	{
 		sheetaudio = GetComponent<AudioSource>();
+//		NoteVol = PianoVolumeScript.PKVolume;
+//		sheetaudio.volume = NoteVol; 
 	}
 	
 	// Update is called once per frame

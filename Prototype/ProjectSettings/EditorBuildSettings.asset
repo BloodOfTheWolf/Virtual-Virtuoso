@@ -5,27 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Main.unity
+  - enabled: 0
+    path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
   - enabled: 1
     path: Assets/Scenes/SongSelectionMenu.unity
   - enabled: 1
     path: Assets/Scenes/Main.unity
-  - enabled: 1
-    path: Assets/Scenes/HotCrossBuns.unity
-  - enabled: 1
-    path: Assets/Scenes/MaryLamb.unity
-  - enabled: 1
-    path: Assets/Scenes/FurElise.unity
-  - enabled: 1
-    path: Assets/Scenes/CanonInD.unity
-  - enabled: 1
-    path: Assets/Scenes/TheEntertainer.unity
-  - enabled: 1
-    path: Assets/Scenes/Marketplace.unity
-  - enabled: 1
-    path: Assets/Scenes/BackgroundMusicSelectionMenu.unity
-  - enabled: 1
-    path: Assets/Scenes/SoundSetSelectionMenu.unity
   - enabled: 1
     path: Assets/Scenes/Results.unity

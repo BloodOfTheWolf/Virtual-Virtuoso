@@ -100,7 +100,7 @@ public class SheetNoteScript : MonoBehaviour {
 			Total++;
 			if(LoseStreak == 15)
 			{
-				UnityEditor.EditorApplication.isPlaying = false;
+				//Application.isPlaying = false;
 			}
 
 		}
