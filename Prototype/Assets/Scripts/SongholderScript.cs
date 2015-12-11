@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class SongholderScript : MonoBehaviour {
 
-	private static bool IsCreated = false;
+	public static bool IsCreated = false;
 
 	public static float BGMVolume;
 	public static AudioSource BGSong;

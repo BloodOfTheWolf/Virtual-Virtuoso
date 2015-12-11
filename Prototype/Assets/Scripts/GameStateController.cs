@@ -75,26 +75,33 @@ public class GameStateController : MonoBehaviour
         case GameState.Tutorial:
             Application.LoadLevel( "Main" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
             break;
         case GameState.HotCrossBuns:
             Application.LoadLevel( "HotCrossBuns" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
             break;
         case GameState.MaryLamb:
             Application.LoadLevel( "MaryLamb" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
             break;
         case GameState.FurElise:
             Application.LoadLevel( "FurElise" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
             break;
         case GameState.CanonInD:
             Application.LoadLevel( "CanonInD" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
             break;
         case GameState.Entertainer:
             Application.LoadLevel( "TheEntertainer" );
             Destroy( GameObject.Find( "Songholder" ) );
+            SongholderScript.IsCreated = false;
+            
             break;
         }
     }
