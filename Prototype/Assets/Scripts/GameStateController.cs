@@ -74,7 +74,7 @@ public class GameStateController : MonoBehaviour
             break;
         case GameState.Tutorial:
             Application.LoadLevel( "Main" );
-            Destroy( GameObject.Find( "Songholder" ) );
+            Destroy( GameObject.Find( "Songholder" ) ); // stops the menu music
             SongholderScript.IsCreated = false;
             break;
         case GameState.HotCrossBuns:
