@@ -30,4 +30,5 @@ public class ButtonTextControlScript : MonoBehaviour {
 	{
 		Application.LoadLevel("MainMenu");
 	}
+
 }
