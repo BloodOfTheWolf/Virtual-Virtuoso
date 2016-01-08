@@ -23,6 +23,9 @@ public class SheetNoteScript : MonoBehaviour {
 	float height, width;
     private bool Colored;
     private GameObject Tutorial;
+    public GameObject HitEffect;    // The ParticleSystem prefab we want to spawn when the player plays this note.
+    public GameObject MissEffect;   // The ParticleSystem prefab we want to spawn when the player misses this note.
+    Vector3 HitLocation;
 
 	public static SheetNoteScript GetInstance()
 	{
@@ -59,6 +62,11 @@ public class SheetNoteScript : MonoBehaviour {
 
         }
 
+        // AG 07-Jan-16
+        // Get the center of the sprite and set the particle effect's spawn location
+        var SpriteCenter = gameObject.GetComponentInChildren<SpriteRenderer>().bounds.extents.x;
+        HitLocation = gameObject.transform.position - new Vector3( SpriteCenter, 0f, 0f );
+
 	}
 	// Update is called once per frame
 	void Update () 
@@ -92,13 +100,24 @@ public class SheetNoteScript : MonoBehaviour {
 			}
 			//sheetaudio.Play();
 			//Debug.Break();
+
+            // AG 07-Jan-16
+            // Play our hit effect
+            PlayParticleEffect( HitEffect );
 		}
 
 
 
 	}
 
-	void OnTriggerExit ( Collider other)
+    // AG 07-Jan-16
+    // Plays the specified particle effect at the gameObject's location and rotation.
+    void PlayParticleEffect(GameObject pfx)
+    {
+        Instantiate( pfx, gameObject.transform.position, Quaternion.identity );
+    }
+
+	void OnTriggerExit(Collider other)
 	{
 		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
 		{
