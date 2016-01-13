@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameStateController : MonoBehaviour
 {
+
     private static GameStateController instance = null;
     public static GameStateController Instance
     {
@@ -52,6 +53,27 @@ public class GameStateController : MonoBehaviour
         previousState = oldState;
     }
 
+    // AG 12-Jan-2016
+    // Stops the menu music and kills the background note particles. Returns true if objects are found and destroyed, and false if not.
+    void RemoveFrontEndObjects()
+    {
+        var SongholderObj = GameObject.Find( "Songholder" );
+        var DistantPfxObj = GameObject.Find( "P_UI_NotesBackground_Distant_01" );
+        var NearPfxObj = GameObject.Find( "P_UI_NotesBackground_Near_01" );
+
+        // Menu music
+        Destroy( SongholderObj );
+        SongholderScript.IsCreated = false;
+
+        // Background note particles (distant)
+        DistantPfxObj.GetComponent<ParticleSystem>().Stop();
+        Destroy( DistantPfxObj );
+
+        // Background note particles (near)
+        NearPfxObj.GetComponent<ParticleSystem>().Stop();
+        Destroy( NearPfxObj );
+    }
+
     public void ChangeState( GameState newState )
     {
         currentState = newState;
@@ -74,34 +96,27 @@ public class GameStateController : MonoBehaviour
             break;
         case GameState.Tutorial:
             Application.LoadLevel( "Main" );
-            Destroy( GameObject.Find( "Songholder" ) ); // stops the menu music
-            SongholderScript.IsCreated = false;
+            RemoveFrontEndObjects();    // AG 12-Jan-2016 -- replaced old code with reusable function
             break;
         case GameState.HotCrossBuns:
             Application.LoadLevel( "HotCrossBuns" );
-            Destroy( GameObject.Find( "Songholder" ) );
-            SongholderScript.IsCreated = false;
+            RemoveFrontEndObjects();
             break;
         case GameState.MaryLamb:
             Application.LoadLevel( "MaryLamb" );
-            Destroy( GameObject.Find( "Songholder" ) );
-            SongholderScript.IsCreated = false;
+            RemoveFrontEndObjects();
             break;
         case GameState.FurElise:
             Application.LoadLevel( "FurElise" );
-            Destroy( GameObject.Find( "Songholder" ) );
-            SongholderScript.IsCreated = false;
+            RemoveFrontEndObjects();
             break;
         case GameState.CanonInD:
             Application.LoadLevel( "CanonInD" );
-            Destroy( GameObject.Find( "Songholder" ) );
-            SongholderScript.IsCreated = false;
+            RemoveFrontEndObjects();
             break;
         case GameState.Entertainer:
             Application.LoadLevel( "TheEntertainer" );
-            Destroy( GameObject.Find( "Songholder" ) );
-            SongholderScript.IsCreated = false;
-            
+            RemoveFrontEndObjects();
             break;
         }
     }

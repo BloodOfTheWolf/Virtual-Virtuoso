@@ -10,9 +10,10 @@ GameObject:
   - 4: {fileID: 470112}
   - 198: {fileID: 19824616}
   - 199: {fileID: 19982566}
+  - 114: {fileID: 11433082}
   m_Layer: 0
   m_Name: P_UI_NotesBackground_Near_01
-  m_TagString: Untagged
+  m_TagString: FrontEndNotesPFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,6 +30,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11433082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebc3d863c8f3f48b4668a46deaa622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19824616
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1074,7 +1086,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: FrontEndNotesPFX
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167188}
