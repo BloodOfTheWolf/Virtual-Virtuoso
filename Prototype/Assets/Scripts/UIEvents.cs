@@ -4,6 +4,8 @@ using System.Collections;
 public class UIEvents : MonoBehaviour
 {
 
+    public GameObject SFXController;
+
     //create new enumeration for each song button
     public enum SongChoice
     {
@@ -120,6 +122,7 @@ public class UIEvents : MonoBehaviour
 
     public void LoadSongSelection()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SongSelection );
     }
 

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SFXControllerScript : MonoBehaviour {
     
-    public AudioSource SFXSource;
+    private AudioSource SFXSource;
     public AudioClip ButtonPress;
     public AudioClip CashRegister;
     public AudioClip MassiveApplause;
@@ -23,13 +23,14 @@ public class SFXControllerScript : MonoBehaviour {
 	void Awake () {
 
         SFXSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad( this.gameObject );
 
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public void ButtonPressed () {
 
-
+        SFXSource.PlayOneShot( ButtonPress, 1f );
 	
 	}
 }
