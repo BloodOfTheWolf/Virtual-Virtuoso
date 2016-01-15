@@ -4,6 +4,8 @@ using System.Collections;
 public class GameStateController : MonoBehaviour
 {
 
+    GameObject PFXControllerInst;
+
     private static GameStateController instance = null;
     public static GameStateController Instance
     {
@@ -19,10 +21,16 @@ public class GameStateController : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        PFXControllerInst = GameObject.Find( "BackgroundPFX" );
+    }
+
     //create new enumeration for each game state (screen)
     public enum GameState
     {
         MainMenu,
+        MainMenuPostResults,
         Marketplace,
         SoundSetSelection,
         BackgroundMusicSelection,
@@ -57,21 +65,15 @@ public class GameStateController : MonoBehaviour
     // Stops the menu music and kills the background note particles. Returns true if objects are found and destroyed, and false if not.
     void RemoveFrontEndObjects()
     {
+        Debug.Log( "GameStateController.RemoveFrontEndObjects(): Entered" );
+
         var SongholderObj = GameObject.Find( "Songholder" );
-        var DistantPfxObj = GameObject.Find( "P_UI_NotesBackground_Distant_01" );
-        var NearPfxObj = GameObject.Find( "P_UI_NotesBackground_Near_01" );
 
         // Menu music
         Destroy( SongholderObj );
         SongholderScript.IsCreated = false;
 
-        // Background note particles (distant)
-        DistantPfxObj.GetComponent<ParticleSystem>().Stop();
-        Destroy( DistantPfxObj );
-
-        // Background note particles (near)
-        NearPfxObj.GetComponent<ParticleSystem>().Stop();
-        Destroy( NearPfxObj );
+        PFXControllerInst.GetComponent<PFXController>().StopEffects();
     }
 
     public void ChangeState( GameState newState )
@@ -81,6 +83,11 @@ public class GameStateController : MonoBehaviour
         {
         case GameState.MainMenu:
             Application.LoadLevel( "MainMenu" );
+            PFXControllerInst.GetComponent<PFXController>().PlayEffects();
+            break;
+        case GameState.MainMenuPostResults:
+            Application.LoadLevel( "MainMenu" );
+            PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();
             break;
         case GameState.Marketplace:
             Application.LoadLevel( "Marketplace" );

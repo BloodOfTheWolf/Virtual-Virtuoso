@@ -133,6 +133,11 @@ public class UIEvents : MonoBehaviour
         GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenu );
     }
 
+    public void LoadMainMenuFromResultsScreen()
+    {
+        GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenuPostResults );
+    }
+
     public void LoadSongSelection()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
