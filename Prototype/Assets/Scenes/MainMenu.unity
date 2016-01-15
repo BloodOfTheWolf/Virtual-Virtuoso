@@ -1335,7 +1335,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2016700441}
-        m_MethodName: AcceptButtonPress
+        m_MethodName: BackButtonPress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2441,19 +2441,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ButtonPress: {fileID: 8300000, guid: de0e2fe9dff550446a829c0c0d4023bd, type: 3}
-  CashRegister: {fileID: 0}
-  MassiveApplause: {fileID: 0}
-  MediumApplause: {fileID: 0}
-  MoneyGet: {fileID: 0}
-  OptionSwitch: {fileID: 0}
-  MultIncrease: {fileID: 0}
-  ScoreTally: {fileID: 0}
-  MultReset: {fileID: 0}
-  SmallApplause: {fileID: 0}
-  StarGet: {fileID: 0}
-  LargeApplause: {fileID: 0}
-  VolumeCtlEffect: {fileID: 0}
-  WrongNote: {fileID: 0}
+  CashRegister: {fileID: 8300000, guid: 4d3bc8a67b5ad5640821543b843e7116, type: 3}
+  MassiveApplause: {fileID: 8300000, guid: 8c2591864aaee454ab342844b79de471, type: 3}
+  MediumApplause: {fileID: 8300000, guid: ff5ba06c3b725b042ae7d2b8e4767480, type: 3}
+  MoneyGet: {fileID: 8300000, guid: c719e98dc9ace354294f319a632e0815, type: 3}
+  OptionSwitch: {fileID: 8300000, guid: 97e22090fa1e497419f4a987461891d6, type: 3}
+  MultIncrease: {fileID: 8300000, guid: ca1b72ed7cd1e2f40aadf7da15976645, type: 3}
+  ScoreTally: {fileID: 8300000, guid: bebc3f6dfee981f449575fab44e81a22, type: 3}
+  MultReset: {fileID: 8300000, guid: cf881661656cf8a4188dec06d702c965, type: 3}
+  SmallApplause: {fileID: 8300000, guid: 89eef9f61b2c37343bbf49be5d1b783b, type: 3}
+  StarGet: {fileID: 8300000, guid: aaf4c1092fc6b7245ae22405d087626a, type: 3}
+  LargeApplause: {fileID: 8300000, guid: cfec40670ebc6e34fbdd769e29ad2510, type: 3}
+  VolumeCtlEffect: {fileID: 8300000, guid: 1492ea1dd57c78f41a8ca8bb65b9e80e, type: 3}
+  WrongNote: {fileID: 8300000, guid: 8f6a6bf451b13254da9ce26cec395c50, type: 3}
+  QuitButton: {fileID: 8300000, guid: 209d9aff69ba30749bec64e038b3d5aa, type: 3}
 --- !u!4 &1214304863
 Transform:
   m_ObjectHideFlags: 0
@@ -2708,7 +2709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34fc52e957205346adb2f132a4cdc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFXController: {fileID: 1214304861}
 --- !u!4 &1435665196
 Transform:
   m_ObjectHideFlags: 0

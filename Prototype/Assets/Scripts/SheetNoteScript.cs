@@ -27,6 +27,8 @@ public class SheetNoteScript : MonoBehaviour {
     public GameObject MissEffect;   // The ParticleSystem prefab we want to spawn when the player misses this note.
     Vector3 HitLocation;
 
+    GameObject SFXController;
+
 	public static SheetNoteScript GetInstance()
 	{
 		if (Instance == null) 
@@ -68,10 +70,10 @@ public class SheetNoteScript : MonoBehaviour {
         HitLocation = gameObject.transform.position - new Vector3( SpriteCenter, 0f, 0f );
 
 	}
-	// Update is called once per frame
+	// Need to get the SFX Controller object
 	void Update () 
 	{
-		
+        SFXController = GameObject.Find( "SFXController" );
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -79,7 +81,6 @@ public class SheetNoteScript : MonoBehaviour {
 
 		if (this.tag == other.tag) 
 		{
-
 			GreenCheck.SetActive(true);
 			this.gameObject.SetActive(false);
 			RedCheck.SetActive(false);
@@ -96,8 +97,21 @@ public class SheetNoteScript : MonoBehaviour {
 			LoseStreak = 0;
 			if(NoteStreak == 3 )
 			{
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 				Multiplier = Multiplier * 2;
 			}
+            
+            //these are the additional multipliers, we need these later (and the math needs to be reworked to do 10 x2, x3, and x4)
+            if( NoteStreak == 6 )
+            {
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+                Multiplier = Multiplier * 2;
+            }
+            if( NoteStreak == 9 )
+            {
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+                Multiplier = Multiplier * 2;
+            }
 			//sheetaudio.Play();
 			//Debug.Break();
 
@@ -121,6 +135,7 @@ public class SheetNoteScript : MonoBehaviour {
 	{
 		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
 		{
+            SFXController.GetComponent<SFXControllerScript>().NoteFail();
 			RedCheck.SetActive(true);
 			GreenCheck.SetActive(false);
 			print ("trigger exit called");

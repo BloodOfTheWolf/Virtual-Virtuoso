@@ -11,6 +11,8 @@ public class MenuScript : MonoBehaviour {
 	public Button optionsText;
 	public Button exitText;
 
+    GameObject SFXController;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -24,9 +26,15 @@ public class MenuScript : MonoBehaviour {
 		soundOptions.enabled = false;
 
 	}
+
+    void Update()
+    {
+        SFXController = GameObject.Find( "SFXController" );
+    }
 	
 	public void ExitButtonPress()
 	{
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
 		quitMenu.enabled = true;
 		startText.enabled = false;
 		marketText.enabled = false;
@@ -36,6 +44,7 @@ public class MenuScript : MonoBehaviour {
 
 	public void NoButtonPress()
 	{
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
 		quitMenu.enabled = false;
 		startText.enabled = true;
 		marketText.enabled = true;
@@ -45,6 +54,7 @@ public class MenuScript : MonoBehaviour {
 
 	public void OptionsButtonPress()
 	{
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
 		soundOptions.enabled = true;
 		startText.enabled = false;
 		marketText.enabled = false;
@@ -54,12 +64,23 @@ public class MenuScript : MonoBehaviour {
 	
 	public void AcceptButtonPress()
 	{
+        SFXController.GetComponent<SFXControllerScript>().OptionAccepted();
 		soundOptions.enabled = false;
 		startText.enabled = true;
 		marketText.enabled = true;
 		optionsText.enabled = true;
 		exitText.enabled = true;
 	}
+
+    public void BackButtonPress()
+    {
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
+        soundOptions.enabled = false;
+        startText.enabled = true;
+        marketText.enabled = true;
+        optionsText.enabled = true;
+        exitText.enabled = true;
+    }
 
 	public void GoToSongSelect()
 	{

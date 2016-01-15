@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Results_AcceptButtonScript : MonoBehaviour {
 
+    GameObject SFXController;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -11,12 +13,14 @@ public class Results_AcceptButtonScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+    {
+        SFXController = GameObject.Find( "SFXController" );	
 	}
 
     public void ReturntoMainMenu()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         Application.LoadLevel( "MainMenu" );
     }
 }

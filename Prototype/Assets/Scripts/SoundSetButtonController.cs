@@ -19,6 +19,8 @@ public class SoundSetButtonController : MonoBehaviour {
 
     public Canvas ConfirmPurchase;
 
+    GameObject SFXController;
+
     // Use this for initialization
     void Start()
     {
@@ -34,6 +36,8 @@ public class SoundSetButtonController : MonoBehaviour {
     }
     void Update()
     {
+        SFXController = GameObject.Find( "SFXController" );
+
         if( MenuActive == true )
         {
             ConfirmPurchase.enabled = true;
@@ -48,41 +52,49 @@ public class SoundSetButtonController : MonoBehaviour {
 
     public void BackButtonPress()
     {
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
         Application.LoadLevel( "Marketplace" );
     }
 
     public void SoundOneSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         SoundSelected = "Sound One";
         MenuActive = true;
     }
     public void SoundTwoSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         SoundSelected = "Sound Two";
         MenuActive = true;
     }
     public void SoundThreeSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         SoundSelected = "Sound Three";
         MenuActive = true;
     }
     public void SoundFourSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         SoundSelected = "Sound Four";
         MenuActive = true;
     }
     public void SoundFiveSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         SoundSelected = "Sound Five";
         MenuActive = true;
     }
 
     public void PurchaseAccept()
     {
+        SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
         MenuActive = false;
     }
     public void PurchaseCancelled()
     {
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
         MenuActive = false;
     }
 }

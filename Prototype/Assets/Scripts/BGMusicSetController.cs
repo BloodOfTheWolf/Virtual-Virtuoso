@@ -18,6 +18,8 @@ public class BGMusicSetController : MonoBehaviour {
 
     public Canvas ConfirmPurchase;
 
+    GameObject SFXController;
+
     // Use this for initialization
     void Start()
     {
@@ -32,6 +34,8 @@ public class BGMusicSetController : MonoBehaviour {
     }
     void Update()
     {
+        SFXController = GameObject.Find( "SFXController" );
+
         if( MenuActive == true )
         {
             ConfirmPurchase.enabled = true;
@@ -46,36 +50,43 @@ public class BGMusicSetController : MonoBehaviour {
 
     public void BackButtonPress()
     {
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
         Application.LoadLevel( "Marketplace" );
     }
 
     public void SoundOneSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music One";
         MenuActive = true;
     }
     public void SoundTwoSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Two";
         MenuActive = true;
     }
     public void SoundThreeSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Three";
         MenuActive = true;
     }
     public void SoundFourSelected()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Four";
         MenuActive = true;
     }
 
     public void PurchaseAccept()
     {
+        SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
         MenuActive = false;
     }
     public void PurchaseCancelled()
     {
+        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
         MenuActive = false;
     }
 }

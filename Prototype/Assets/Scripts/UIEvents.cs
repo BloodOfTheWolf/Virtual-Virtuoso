@@ -4,7 +4,7 @@ using System.Collections;
 public class UIEvents : MonoBehaviour
 {
 
-    public GameObject SFXController;
+    GameObject SFXController;
 
     //create new enumeration for each song button
     public enum SongChoice
@@ -23,36 +23,42 @@ public class UIEvents : MonoBehaviour
     //song selection handlers
     public void SelectTutorial()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.Tutorial;
         PlaySongPreview( currentChoice );
     }
 
     public void SelectHotCrossBuns()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.HotCrossBuns;
         PlaySongPreview( currentChoice );
     }
 
     public void SelectMaryLamb()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.MaryLamb;
         PlaySongPreview( currentChoice );
     }
 
     public void SelectFurElise()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.FurElise;
         PlaySongPreview( currentChoice );
     }
 
     public void SelectCanonInD()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.CanonInD;
         PlaySongPreview( currentChoice );
     }
 
     public void SelectEntertainer()
     {
+        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
         currentChoice = SongChoice.Entertainer;
         PlaySongPreview( currentChoice );
     }
@@ -114,9 +120,16 @@ public class UIEvents : MonoBehaviour
         }
     }
 
+    //makes it so that the SFX Controller can be found in any scene
+    void Update()
+    {
+        SFXController = GameObject.Find( "SFXController" );
+    }
+
     //screen loading handlers
     public void LoadMainMenu()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenu );
     }
 
@@ -128,16 +141,19 @@ public class UIEvents : MonoBehaviour
 
     public void LoadMarketplace()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.Marketplace );
     }
 
     public void LoadSoundSetSelection()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SoundSetSelection );
     }
 
     public void LoadBackgroundMusicSelection()
     {
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.BackgroundMusicSelection );
     }
 
