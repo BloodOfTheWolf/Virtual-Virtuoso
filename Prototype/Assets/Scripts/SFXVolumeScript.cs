@@ -12,15 +12,11 @@ public class SFXVolumeScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        SFXSlider = GameObject.Find( "Slider" ).GetComponent<Slider>();
+        SFXSlider = GameObject.Find( "SFXSlider" ).GetComponent<Slider>();
         SFXVolume = SFXSlider.value;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 
     public void OnValueChanged( float NewValue )
     {

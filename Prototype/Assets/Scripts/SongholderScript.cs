@@ -28,14 +28,15 @@ public class SongholderScript : MonoBehaviour {
 		{
 			Destroy (this.gameObject);
 			BGMSlider.value = BGMVolume;
-		}	
+		}
+
+        
 	}
 
 	public void OnValueChanged(float NewValue)
 	{
 		BGMVolume = NewValue;
 		BGSong.volume = NewValue;
-
 	}
 
 	// Update is called once per frame
