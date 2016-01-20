@@ -5,28 +5,114 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 
 
-public class SheetNoteScript : MonoBehaviour {
+public class SheetNoteScript : MonoBehaviour
+{
 
 	static SheetNoteScript Instance = null;
+
+    /// <summary>
+    /// Holder for the note's sound effect.
+    /// </summary>
 	AudioSource sheetaudio;
+
+    /// <summary>
+    /// 'Hit' icon.
+    /// </summary>
 	public GameObject GreenCheck;
+
+    /// <summary>
+    /// 'Missed' icon.
+    /// </summary>
 	public GameObject RedCheck;
+
+    /// <summary>
+    /// The player's score.
+    /// </summary>
 	public static int Score;
+
+    /// <summary>
+    /// The notestreak value.
+    /// </summary>
 	public static int NoteStreak;
+
+    /// <summary>
+    /// The player's highest streak obtained.
+    /// </summary>
 	public static int HighestStreak;
+
+    /// <summary>
+    /// The multiplier's base value.
+    /// </summary>
 	public static int Multiplier = 10;
+
+    /// <summary>
+    /// The losestreak value.
+    /// </summary>
 	public static int LoseStreak;
+
+    /// <summary>
+    /// The total number of notes the player played successfully. Primarily used for the results screen.
+    /// </summary>
 	public static int Hit;
+
+    /// <summary>
+    /// The total number of notes the player missed. Primarily used for the results screen.
+    /// </summary>
 	public static int Miss;
+
+    /// <summary>
+    /// The total number of notes in the song.  Primarily used for the results screen.
+    /// </summary>
 	public static float Total;
+
+    /// <summary>
+    /// The player's camera. Used for GUI purposes.
+    /// </summary>
 	Camera cam;
+
+    /// <summary>
+    /// The screen's height and width. Used for GUI purposes.
+    /// </summary>
 	float height, width;
+
+    /// <summary>
+    /// Bool determining whether or not this note should be colored.
+    /// </summary>
     private bool Colored;
+
+    /// <summary>
+    /// The tutorial object.
+    /// </summary>
     private GameObject Tutorial;
-    public GameObject HitEffect;    // The ParticleSystem prefab we want to spawn when the player plays this note.
-    public GameObject MissEffect;   // The ParticleSystem prefab we want to spawn when the player misses this note.
+
+    /// <summary>
+    /// The ParticleSystem to spawn when the player plays a note.
+    /// </summary>
+    public GameObject HitEffect;
+
+    /// <summary>
+    /// The ParticleSystem to spawn when the player misses a note.
+    /// </summary>
+    public GameObject MissEffect;
+
+    /// <summary>
+    /// The ParticleSystem to spawn when the Notestreak multiplier increases.
+    /// </summary>
+    public GameObject NotestreakMultiplierIncreaseEffect;
+
+    /// <summary>
+    /// The Vector3 position of the notestreak multiplier UI object.
+    /// </summary>
+    Vector3 NotestreakMultiplierEffectPosition;
+
+    /// <summary>
+    /// Stores the Vector3 location of the note's center.
+    /// </summary>
     Vector3 HitLocation;
 
+    /// <summary>
+    /// Our audio controller object.
+    /// </summary>
     GameObject SFXController;
 
 	public static SheetNoteScript GetInstance()
@@ -40,7 +126,7 @@ public class SheetNoteScript : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () 
+	void Start() 
 	{
 		sheetaudio = GetComponent<AudioSource>();
         GreenCheck = GameObject.Find( "greencheck" );
@@ -68,105 +154,188 @@ public class SheetNoteScript : MonoBehaviour {
         // Get the center of the sprite and set the particle effect's spawn location
         var SpriteCenter = gameObject.GetComponentInChildren<SpriteRenderer>().bounds.extents.x;
         HitLocation = gameObject.transform.position - new Vector3( SpriteCenter, 0f, 0f );
-
 	}
+
 	// Need to get the SFX Controller object
-	void Update () 
+	void Update() 
 	{
         SFXController = GameObject.Find( "SFXController" );
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-
 		if (this.tag == other.tag) 
 		{
+            // Show the 'hit' icon
 			GreenCheck.SetActive(true);
 			this.gameObject.SetActive(false);
 			RedCheck.SetActive(false);
-			Score = Score + Multiplier;
-			NoteStreak++;
+
+            // Update the score
+			Score += Multiplier;
+
+            // Increment the note stats
 			Hit++;
 			Total++;
-			if(NoteStreak >= HighestStreak)
-			{
-				HighestStreak = NoteStreak;
-				print ("Highest streak =" + HighestStreak);
-			}
-			print ("NoteStreak: " + NoteStreak);
-			LoseStreak = 0;
-			if(NoteStreak == 3 )
-			{
-                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-				Multiplier = Multiplier * 2;
-			}
-            
-            //these are the additional multipliers, we need these later (and the math needs to be reworked to do 10 x2, x3, and x4)
-            if( NoteStreak == 6 )
-            {
-                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-                Multiplier = Multiplier * 2;
-            }
-            if( NoteStreak == 9 )
-            {
-                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-                Multiplier = Multiplier * 2;
-            }
+
+            // AG 19-Jan-16
+            // Moved the Notestreak code into its own function for the sake of brevity and organization
+            NotestreakMultiplierIncrement();
+			
 			//sheetaudio.Play();
 			//Debug.Break();
 
             // AG 07-Jan-16
-            // Play our hit effect
-            PlayParticleEffect( HitEffect );
+            // Play our hit effect at the note's location
+            PlayParticleEffect( HitEffect, gameObject.transform.position );
 		}
-
-
-
 	}
 
     // AG 07-Jan-16
-    // Plays the specified particle effect at the gameObject's location and rotation.
-    void PlayParticleEffect(GameObject pfx)
+    /// <summary>
+    /// Plays the specified ParticleSystem prefab 'pfx' at the specified Vector3 location 'spawnLocation'.
+    /// </summary>
+    /// <param name="pfx">Particle effect to spawn</param>
+    /// <param name="spawnLocation">Location in which to spawn</param>
+    /// 
+    void PlayParticleEffect(GameObject pfx, Vector3 spawnLocation)
     {
-        Instantiate( pfx, gameObject.transform.position, Quaternion.identity );
+        Instantiate( pfx, spawnLocation, Quaternion.identity );
+    }
+
+    // AG 19-Jan-16
+    /// <summary>
+    /// Increments the Notestreak multiplier.
+    /// </summary>
+    void NotestreakMultiplierIncrement()
+    {
+        // Increment the notestreak value
+        NoteStreak++;
+
+        // Update the highest streak if appropriate
+        if( NoteStreak >= HighestStreak )
+        {
+            HighestStreak = NoteStreak;
+            print( "Highest streak =" + HighestStreak );
+        }
+
+        // Print the values to the log
+        print( "NoteStreak: " + NoteStreak );
+
+        // Reset the losestreak
+        LoseStreak = 0;
+
+
+        // *********************
+        // MULTIPLIER START
+
+        // TODO: Fix NotestreakMultiplierEffectPosition's value.
+        // Set the position of the 'notestreak multiplier increment' particle effect
+        NotestreakMultiplierEffectPosition = new Vector3( 0, 0, 0 );
+        print( NotestreakMultiplierEffectPosition.ToString() );
+        print( gameObject.transform.position.ToString() );
+
+        // x2 Multiplier
+        if( NoteStreak == 3 )
+        {
+            // Play the 'multiplier increase' sound ditty
+            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+            // Spawn the 'notestreak multiplier increment' particle effect
+            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+            // Double the multiplier value
+            Multiplier *= 2;
+        }
+
+        //these are the additional multipliers, we need these later (and the math needs to be reworked to do 10 x2, x3, and x4)
+        // AG 19-Jan-16:    It might be better to have the base Multiplier value set to 1, and then somewhere like in the update function have it multiplied by another 
+        //                  variable, like MultiplierFactor, which would be set to 10.
+        // x3 Multiplier(?)
+        if( NoteStreak == 6 )
+        {
+            // Play the 'multiplier increase' sound ditty
+            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+            // Spawn the 'notestreak multiplier increment' particle effect
+            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+            // Double the multiplier value
+            Multiplier *= 2;
+        }
+
+        // x4 Multiplier(?)
+        if( NoteStreak == 9 )
+        {
+            // Play the 'multiplier increase' sound ditty
+            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+            // Spawn the 'notestreak multiplier increment' particle effect
+            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+            // Double the multiplier value
+            Multiplier *= 2;
+        }
+
+        // MULTIPLIER END
+        // *********************
     }
 
 	void OnTriggerExit(Collider other)
 	{
 		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
 		{
+            // Play the 'failed' sound ditty
             SFXController.GetComponent<SFXControllerScript>().NoteFail();
+
+            // Show the 'missed' icon
 			RedCheck.SetActive(true);
 			GreenCheck.SetActive(false);
-			print ("trigger exit called");
+
+			print("trigger exit called");
+
+            // Reset the notestreak
 			NoteStreak = 0;
 			Multiplier = 10;
-			LoseStreak = LoseStreak +1;
+
+            // Increment the losestreaks
+			LoseStreak += 1;
+
+            // Increment the note stats
 			Miss++;
 			Total++;
+
+            // If the player is doing just absolutely *terrible*, then...
 			if(LoseStreak == 15)
 			{
 				//Application.isPlaying = false;
 			}
-
 		}
 
-		//GreenCheck.SetActive (false);
-		//RedCheck.SetActive (false);
-
+        // Don't show the 'hit' or 'failed' icon
+		//GreenCheck.SetActive(false);
+		//RedCheck.SetActive(false);
 	}
 
+    // HUD work
 	void OnGUI()
 	{
+        // Initialize the GUI constructor
 		GUIStyle style = new GUIStyle();
+
+        // Set the font size
 		style.fontSize = 30;
-		GUI.Label (new Rect(Screen.width/2 + 200,height + 10,100,100),"Score: "+Score.ToString(),style);
-		GUI.Label (new Rect(Screen.width/2 - 200, height + 10,100,100),"NoteStreak: "+NoteStreak.ToString(),style);
-		
+
+        // Draw the temporary text for the score and notestreak
+		GUI.Label( new Rect( (Screen.width/2 + 200), (height + 10), 100, 100 ), "Score: " + Score.ToString(), style );
+		GUI.Label( new Rect( (Screen.width/2 - 200), (height + 10), 100, 100 ), "NoteStreak: " + NoteStreak.ToString(), style );
 	}
 
+    /// <summary>
+    /// Plays the note's sound effect.
+    /// </summary>
 	public void PlayNote()
 	{
-		sheetaudio.Play ();
+		sheetaudio.Play();
 	}
 }

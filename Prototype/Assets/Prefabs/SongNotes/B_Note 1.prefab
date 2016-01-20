@@ -276,6 +276,8 @@ MonoBehaviour:
   RedCheck: {fileID: 0}
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
+  NotestreakMultiplierIncreaseEffect: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210,
+    type: 2}
 --- !u!212 &21270930
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -365,6 +367,10 @@ Prefab:
       propertyPath: HitEffect
       value: 
       objectReference: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
+    - target: {fileID: 0}
+      propertyPath: NotestreakMultiplierIncreaseEffect
+      value: 
+      objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 181788}
