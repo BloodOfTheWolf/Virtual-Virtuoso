@@ -453,6 +453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaryLambScore: 0
   HotCrossScore: 0
+  MaryLambScoreHigh: 0
+  HotCrossScoreHigh: 0
   lastLevelPlayed: 
 --- !u!4 &245527696
 Transform:
