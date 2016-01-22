@@ -43,6 +43,7 @@ public class Results_RankScript : MonoBehaviour {
 			LetterB.SetActive (false);
 			LetterC.SetActive (false);
 			LetterD.SetActive (false);
+            Clear.SetActive( false );
 			TryAgain.SetActive (true);
 			print ("Rank F");
 		}
