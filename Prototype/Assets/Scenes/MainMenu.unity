@@ -453,8 +453,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaryLambScore: 0
   HotCrossScore: 0
+  TwinkleTwinkleScore: 0
+  CanonScore: 0
+  EliseScore: 0
+  EntertainerScore: 0
   MaryLambScoreHigh: 0
   HotCrossScoreHigh: 0
+  TwinkleTwinkleScoreHigh: 0
+  CanonScoreHigh: 0
+  EliseScoreHigh: 0
+  EntertainerScoreHigh: 0
   lastLevelPlayed: 
 --- !u!4 &245527696
 Transform:

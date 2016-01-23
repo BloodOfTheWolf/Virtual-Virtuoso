@@ -6,8 +6,16 @@ public class PlayerScoreInfoScript : MonoBehaviour {
 
     public float MaryLambScore;
     public float HotCrossScore;
+    public float TwinkleTwinkleScore;
+    public float CanonScore;
+    public float EliseScore;
+    public float EntertainerScore;
     public float MaryLambScoreHigh;
     public float HotCrossScoreHigh;
+    public float TwinkleTwinkleScoreHigh;
+    public float CanonScoreHigh;
+    public float EliseScoreHigh;
+    public float EntertainerScoreHigh;
     private SheetNoteScript Info;
     public string lastLevelPlayed;
     
@@ -21,8 +29,16 @@ public class PlayerScoreInfoScript : MonoBehaviour {
     {
         MaryLambScore = 0;
         HotCrossScore = 0;
+        TwinkleTwinkleScore = 0;
+        CanonScore = 0;
+        EliseScore = 0;
+        EntertainerScore = 0;
         MaryLambScoreHigh = 0;
         HotCrossScoreHigh = 0;
+        TwinkleTwinkleScoreHigh = 0;
+        CanonScoreHigh = 0;
+        EliseScoreHigh = 0;
+        EntertainerScoreHigh = 0;
 	}
 	
 	// Update is called once per frame
@@ -39,6 +55,30 @@ public class PlayerScoreInfoScript : MonoBehaviour {
         {
             lastLevelPlayed = "HotCrossBuns";
             HotCrossScore = SheetNoteScript.Score;
+        }
+
+        if( Application.loadedLevelName == "Main" )
+        {
+            lastLevelPlayed = "TwinkleTwinkle";
+            TwinkleTwinkleScore = SheetNoteScript.Score;
+        }
+
+        if( Application.loadedLevelName == "CanonInD" )
+        {
+            lastLevelPlayed = "CanonInD";
+            CanonScore = SheetNoteScript.Score;
+        }
+
+        if( Application.loadedLevelName == "FurElise" )
+        {
+            lastLevelPlayed = "FurElise";
+            EliseScore = SheetNoteScript.Score;
+        }
+
+        if( Application.loadedLevelName == "TheEntertainer" )
+        {
+            lastLevelPlayed = "Entertainer";
+            EntertainerScore = SheetNoteScript.Score;
         }
 	}
 }
