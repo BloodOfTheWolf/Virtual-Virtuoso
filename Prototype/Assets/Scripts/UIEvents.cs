@@ -6,6 +6,8 @@ public class UIEvents : MonoBehaviour
 
     GameObject SFXController;
 
+    public Transform objSongholder;
+
     //create new enumeration for each song button
     public enum SongChoice
     {
@@ -124,6 +126,7 @@ public class UIEvents : MonoBehaviour
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
+        DontDestroyOnLoad( this.gameObject );
     }
 
     //screen loading handlers

@@ -904,15 +904,15 @@ RectTransform:
   m_GameObject: {fileID: 496319420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .625328362, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 703558568}
   m_Father: {fileID: 2024682458}
   m_RootOrder: 3
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 135, y: 46}
-  m_SizeDelta: {x: 300, y: 60}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 109.199997, y: 45}
+  m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &496319422
 MonoBehaviour:
@@ -2170,15 +2170,15 @@ RectTransform:
   m_GameObject: {fileID: 1244562870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.62495148, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1710032318}
   m_Father: {fileID: 2024682458}
   m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: -16.0100002, y: 5.5}
+  m_SizeDelta: {x: 160, y: 80}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &1244562874
 CanvasRenderer:
@@ -2217,9 +2217,9 @@ RectTransform:
   - {fileID: 159106021}
   m_Father: {fileID: 2024682458}
   m_RootOrder: 4
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -215.160004, y: -192.5}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 43.5099983}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1396007136
@@ -2297,6 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34fc52e957205346adb2f132a4cdc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objSongholder: {fileID: 0}
 --- !u!4 &1409548459
 Transform:
   m_ObjectHideFlags: 0
@@ -2309,6 +2310,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1001 &1518047070
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 604
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472514, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 194864, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+      propertyPath: m_Name
+      value: SongholderBackup
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11488682, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 4921f1d42c6c4264d8565afddf8ae7d9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1589639088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,7 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

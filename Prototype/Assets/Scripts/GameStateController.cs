@@ -86,7 +86,7 @@ public class GameStateController : MonoBehaviour
             PFXControllerInst.GetComponent<PFXController>().PlayEffects();
             break;
         case GameState.MainMenuPostResults:
-            Application.LoadLevel( "MainMenu" );
+            Application.LoadLevel( "SongSelectionMenu" );
             PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();
             break;
         case GameState.Marketplace:
