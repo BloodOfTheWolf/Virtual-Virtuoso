@@ -17,6 +17,7 @@ public class Results_RankScript : MonoBehaviour {
 	private GameObject Advanced;
 
 	private SheetNoteScript Results;
+	private PlayerScoreInfoScript Cash;
 	private float Total;
 	private float Good;
 	private float Rank;
@@ -46,6 +47,9 @@ public class Results_RankScript : MonoBehaviour {
             Clear.SetActive( false );
 			TryAgain.SetActive (true);
 			print ("Rank F");
+			PlayerScoreInfoScript.Money += 10;
+			print ("Total money : " +PlayerScoreInfoScript.Money);
+
 		}
 		else if (Rank <= 0.7f) 
 		{
@@ -59,6 +63,8 @@ public class Results_RankScript : MonoBehaviour {
 			Clear.SetActive(true);
 			TryAgain.SetActive (false);
 			print ("Rank D");
+			PlayerScoreInfoScript.Money += 30;
+			print ("Total money : " +PlayerScoreInfoScript.Money);
 		}
 		else if (Rank <= 0.8f) 
 		{
@@ -72,6 +78,8 @@ public class Results_RankScript : MonoBehaviour {
 			Clear.SetActive(true);
 			TryAgain.SetActive (false);
 			print ("Rank C");
+			PlayerScoreInfoScript.Money += 40;
+			print ("Total money : " +PlayerScoreInfoScript.Money);
 		}
 		else if (Rank <= 0.9f) 
 		{
@@ -84,6 +92,8 @@ public class Results_RankScript : MonoBehaviour {
 			LetterD.SetActive (false);
 			Clear.SetActive(true);
 			TryAgain.SetActive (false);
+			PlayerScoreInfoScript.Money += 50;
+			print ("Total money : " +PlayerScoreInfoScript.Money);
 		} 
 		else if (Rank <= 0.95f) 
 		{
@@ -96,6 +106,8 @@ public class Results_RankScript : MonoBehaviour {
 			LetterD.SetActive (false);
 			Clear.SetActive(true);
 			TryAgain.SetActive (false);
+			PlayerScoreInfoScript.Money += 70;
+			print ("Total money : " +PlayerScoreInfoScript.Money);
 		}
 		 else 
 		{
@@ -108,6 +120,8 @@ public class Results_RankScript : MonoBehaviour {
 			LetterD.SetActive (false);
 			Clear.SetActive(true);
 			TryAgain.SetActive (false);
+			PlayerScoreInfoScript.Money += 80;
+			print ("Total money : " + PlayerScoreInfoScript.Money);
 		}
 	}
 	

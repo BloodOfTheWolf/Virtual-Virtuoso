@@ -11,6 +11,8 @@ public class BGMusicSetController : MonoBehaviour {
     public Button MusicSetThree;
     public Button MusicSetFour;
 
+	public int price = 150;
+
     string MusicSelected;
     string PurchaseMessage;
 
@@ -19,6 +21,9 @@ public class BGMusicSetController : MonoBehaviour {
     public Canvas ConfirmPurchase;
 
     GameObject SFXController;
+
+	public SongholderScript BackgroundMusic;
+	public PlayerScoreInfoScript CurrentMoney;
 
     // Use this for initialization
     void Start()
@@ -31,22 +36,35 @@ public class BGMusicSetController : MonoBehaviour {
         MusicSelected = "";
         ConfirmPurchase.enabled = false;
 
+
     }
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
-
-        if( MenuActive == true )
-        {
-            ConfirmPurchase.enabled = true;
-            ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy " + MusicSelected + "? There are no refunds.";
-        }
-
-        else
-        {
-            ConfirmPurchase.enabled = false;
-        }
+		
     }
+
+	public void Purchase()
+	{
+		if (CheckTransaction (150)) 
+		{
+			
+			ConfirmPurchase.enabled = true;
+			ConfirmPurchase.GetComponentInChildren<Text> ().text = "Are you sure you want to buy " + MusicSelected + "? There are no refunds.";
+			
+			//			else
+			//			{
+			//
+			//				ConfirmPurchase.GetComponentInChildren<Text> ().text = "Sorry, You dont have enough funds.";
+			//			}
+		}
+		
+		else
+		{
+			ConfirmPurchase.enabled = false;
+
+		}
+	}
 
     public void BackButtonPress()
     {
@@ -58,35 +76,52 @@ public class BGMusicSetController : MonoBehaviour {
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music One";
-        MenuActive = true;
+		Purchase ();
     }
     public void SoundTwoSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Two";
-        MenuActive = true;
+		Purchase ();
     }
     public void SoundThreeSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Three";
-        MenuActive = true;
+		Purchase ();
     }
     public void SoundFourSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Four";
-        MenuActive = true;
+		Purchase ();
     }
 
     public void PurchaseAccept()
     {
+		PlayerScoreInfoScript.Money = PlayerScoreInfoScript.Money - price;
+		print (" You have : " + PlayerScoreInfoScript.Money);
         SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
+		ConfirmPurchase.enabled = false;
         MenuActive = false;
+
     }
     public void PurchaseCancelled()
     {
         SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
+		ConfirmPurchase.enabled = false;
         MenuActive = false;
     }
+
+	public bool CheckTransaction(int price)
+	{
+		if (PlayerScoreInfoScript.Money > price) 
+		{
+			MenuActive = true;
+			return true;
+
+		}
+		return false;
+		//MenuActive = false;
+	}
 }
