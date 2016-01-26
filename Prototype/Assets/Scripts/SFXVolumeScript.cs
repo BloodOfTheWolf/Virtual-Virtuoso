@@ -9,14 +9,11 @@ public class SFXVolumeScript : MonoBehaviour
     public static Slider SFXSlider;
     public static float SFXVolume;
 
-    // Use this for initialization
     void Start()
     {
         SFXSlider = GameObject.Find( "SFXSlider" ).GetComponent<Slider>();
         SFXVolume = SFXSlider.value;
     }
-
-
 
     public void OnValueChanged( float NewValue )
     {

@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MovementScript : MonoBehaviour {
-
+public class MovementScript : MonoBehaviour
+{
+    GameObject MovementController;
 	public float speed;
 	Rigidbody rb;
-	// Use this for initialization
+	
 	void Start () 
 	{
 		rb = GetComponent<Rigidbody>();
+        MovementController = GameObject.Find("MovementController");
+        speed = MovementController.GetComponent<MovementController>().MovementSpeed;
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
-		Vector3 force = this.transform.position += new Vector3 (1, 0, 0) * speed*Time.deltaTime;
-		rb.AddForce (force);
+		Vector3 force = this.transform.position += new Vector3(1, 0, 0) * speed*Time.deltaTime;
+		rb.AddForce(force);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -24,6 +26,5 @@ public class MovementScript : MonoBehaviour {
 		{
 
 		}
-
 	}
 }

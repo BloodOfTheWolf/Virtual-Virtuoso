@@ -21,6 +21,7 @@ TagManager:
   - Intermediate
   - Advanced
   - FrontEndNotesPFX
+  - MovementController
   layers:
   - Default
   - TransparentFX
