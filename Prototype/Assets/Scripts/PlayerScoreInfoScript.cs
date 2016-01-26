@@ -18,6 +18,7 @@ public class PlayerScoreInfoScript : MonoBehaviour {
     public float EntertainerScoreHigh;
     private SheetNoteScript Info;
     public string lastLevelPlayed;
+    public int PlayerMoney;
     
     void Awake()
     {
@@ -39,6 +40,7 @@ public class PlayerScoreInfoScript : MonoBehaviour {
         CanonScoreHigh = 0;
         EliseScoreHigh = 0;
         EntertainerScoreHigh = 0;
+        PlayerMoney = 0;
 	}
 	
 	// Update is called once per frame
@@ -47,37 +49,37 @@ public class PlayerScoreInfoScript : MonoBehaviour {
         //checks to see the player's highest score, and if the new score is higher than that
         if( Application.loadedLevelName == "MaryLamb" )
         {
-            lastLevelPlayed = "MaryLamb";
+            lastLevelPlayed = "Mary Had a Little Lamb";
             MaryLambScore = SheetNoteScript.Score;
         }
         
         if (Application.loadedLevelName == "HotCrossBuns")
         {
-            lastLevelPlayed = "HotCrossBuns";
+            lastLevelPlayed = "Hot Cross Buns";
             HotCrossScore = SheetNoteScript.Score;
         }
 
         if( Application.loadedLevelName == "Main" )
         {
-            lastLevelPlayed = "TwinkleTwinkle";
+            lastLevelPlayed = "Twinkle Twinkle Little Star";
             TwinkleTwinkleScore = SheetNoteScript.Score;
         }
 
         if( Application.loadedLevelName == "CanonInD" )
         {
-            lastLevelPlayed = "CanonInD";
+            lastLevelPlayed = "Canon in D Minor";
             CanonScore = SheetNoteScript.Score;
         }
 
         if( Application.loadedLevelName == "FurElise" )
         {
-            lastLevelPlayed = "FurElise";
+            lastLevelPlayed = "Fur Elise";
             EliseScore = SheetNoteScript.Score;
         }
 
         if( Application.loadedLevelName == "TheEntertainer" )
         {
-            lastLevelPlayed = "Entertainer";
+            lastLevelPlayed = "The Entertainer";
             EntertainerScore = SheetNoteScript.Score;
         }
 	}

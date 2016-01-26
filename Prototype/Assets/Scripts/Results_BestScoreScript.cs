@@ -24,14 +24,14 @@ public class Results_BestScoreScript : MonoBehaviour
     {
         PlayerInfo = GameObject.Find( "PlayerInfoHolder" );
         BestText = GetComponent<Text>();
-        BestText.text = ("blah");
+        BestText.text = ("This is where the best score should be");
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
         //check last level played, and then check the new score against the player's current highest
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "MaryLamb" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Mary Had a Little Lamb" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScoreHigh )
             {
@@ -40,7 +40,7 @@ public class Results_BestScoreScript : MonoBehaviour
             BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScoreHigh);
         }
 
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "HotCrossBuns" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Hot Cross Buns" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh )
             {
@@ -49,7 +49,7 @@ public class Results_BestScoreScript : MonoBehaviour
             BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh);
         }
 
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "TwinkleTwinkle" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Twinkle Twinkle Little Star" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScoreHigh )
             {
@@ -58,7 +58,7 @@ public class Results_BestScoreScript : MonoBehaviour
             BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScoreHigh);
         }
 
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "CanonInD" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Canon in D Minor" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScoreHigh )
             {
@@ -67,7 +67,7 @@ public class Results_BestScoreScript : MonoBehaviour
             BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScoreHigh);
         }
 
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "FurElise" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Fur Elise" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScoreHigh )
             {
@@ -76,7 +76,7 @@ public class Results_BestScoreScript : MonoBehaviour
             BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScoreHigh);
         }
 
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Entertainer" )
+        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "The Entertainer" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScoreHigh )
             {

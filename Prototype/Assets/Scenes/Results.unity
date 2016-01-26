@@ -889,8 +889,8 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -344.100006, y: -188}
-  m_SizeDelta: {x: 106.300003, y: 237}
+  m_AnchoredPosition: {x: -575.099976, y: -196.169998}
+  m_SizeDelta: {x: 200.699997, y: 237}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &638072191
 MonoBehaviour:
@@ -926,12 +926,12 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 20
     m_Alignment: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Best Score
@@ -968,6 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b34fc52e957205346adb2f132a4cdc63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objSongholder: {fileID: 0}
 --- !u!4 &671265362
 Transform:
   m_ObjectHideFlags: 0
@@ -2263,6 +2264,7 @@ GameObject:
   - 224: {fileID: 2000568892}
   - 222: {fileID: 2000568894}
   - 114: {fileID: 2000568893}
+  - 114: {fileID: 2000568895}
   m_Layer: 5
   m_Name: SongName
   m_TagString: Untagged
@@ -2284,8 +2286,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -176.899994, y: 177.699997}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -126.599998, y: 190.899994}
+  m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2000568893
 MonoBehaviour:
@@ -2310,12 +2312,12 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: SongName
@@ -2325,6 +2327,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000568891}
+--- !u!114 &2000568895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000568891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e214db74c4f864eb435b6c7a4ac543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasText: {fileID: 2000568893}
 --- !u!1 &2006110283
 GameObject:
   m_ObjectHideFlags: 0

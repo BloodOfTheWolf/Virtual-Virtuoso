@@ -12,6 +12,12 @@ public class ButtonTextAndControlScript : MonoBehaviour {
     public Button FurElise_Button;
     public Button CanonInD_Button;
     public Button Entertainer_Button;
+    public Button Tutorial_Composer;
+    public Button HotCrossBuns_Composer;
+    public Button MaryLamb_Composer;
+    public Button FurElise_Composer;
+    public Button CanonInD_Composer;
+    public Button Entertainer_Composer;
 	public Button StartButton;
 	public int roomSelected = 0;
 

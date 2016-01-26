@@ -464,6 +464,7 @@ MonoBehaviour:
   EliseScoreHigh: 0
   EntertainerScoreHigh: 0
   lastLevelPlayed: 
+  PlayerMoney: 0
 --- !u!4 &245527696
 Transform:
   m_ObjectHideFlags: 0

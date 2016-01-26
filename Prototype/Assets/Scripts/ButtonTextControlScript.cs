@@ -13,16 +13,28 @@ public class ButtonTextControlScript : MonoBehaviour {
     public Button FurEliseButton;
     public Button CanonInDButton;
     public Button EntertainerButton;
+    public Text TutorialComposer;
+    public Text HotCrossBunsComposer;
+    public Text MaryLambComposer;
+    public Text FurEliseComposer;
+    public Text CanonInDComposer;
+    public Text EntertainerComposer;
 
 	// Use this for initialization
 	void Start ()
     {
-        TutorialButton.GetComponentInChildren<Text>().text          = "\"Twinkle Twinkle Little Star (Tutorial)\" \u2014 Jane Taylor (1806)";
-        HotCrossBunsButton.GetComponentInChildren<Text>().text      = "\"Hot Cross Buns\" \u2014 Traditional (1798)";
-        MaryLambButton.GetComponentInChildren<Text>().text          = "\"Mary Had a Little Lamb\" \u2014 Sarah Josepha Hale (1830)";
-        FurEliseButton.GetComponentInChildren<Text>().text          = "\"Für Elise\" \u2014 Ludwig van Beethoven (1867)";
-        CanonInDButton.GetComponentInChildren<Text>().text          = "\"Canon In D\" \u2014 Johann Pachelbel (1680)";
-        EntertainerButton.GetComponentInChildren<Text>().text       = "\"The Entertainer\" \u2014 John Stark & Son (1902)";
+        TutorialButton.GetComponentInChildren<Text>().text          = "Twinkle Twinkle Little Star (Tutorial)";
+        HotCrossBunsButton.GetComponentInChildren<Text>().text      = "Hot Cross Buns";
+        MaryLambButton.GetComponentInChildren<Text>().text          = "Mary Had a Little Lamb";
+        FurEliseButton.GetComponentInChildren<Text>().text          = "Für Elise";
+        CanonInDButton.GetComponentInChildren<Text>().text          = "Canon In D";
+        EntertainerButton.GetComponentInChildren<Text>().text       = "The Entertainer";
+        TutorialComposer.text = "Jane Taylor (1806)";
+        HotCrossBunsComposer.text = "Traditional (1798)";
+        MaryLambComposer.text = "Sarah Josepha Hale (1830)";
+        FurEliseComposer.text = "Ludwig van Beethoven (1867)";
+        CanonInDComposer.text = "Johann Pachelbel (1680)";
+        EntertainerComposer.text = "John Stark & Son (1902)";
 		//BackButton.GetComponentInChildren<Text>().text = "Back";
 	}
 
