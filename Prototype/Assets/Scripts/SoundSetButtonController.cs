@@ -106,8 +106,8 @@ public class SoundSetButtonController : MonoBehaviour {
 
     public void PurchaseAccept()
     {
-		PlayerScoreInfoScript.Money = PlayerScoreInfoScript.Money - price;
-		print (" You have : " + PlayerScoreInfoScript.Money);
+		PlayerScoreInfoScript.PlayerMoney = PlayerScoreInfoScript.PlayerMoney - price;
+		print (" You have : " + PlayerScoreInfoScript.PlayerMoney);
         SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
 		ConfirmPurchase.enabled = false;
 		MenuActive = false;
@@ -121,7 +121,7 @@ public class SoundSetButtonController : MonoBehaviour {
 
 	public bool CheckTransaction(int price)
 	{
-		if (PlayerScoreInfoScript.Money > price) 
+		if (PlayerScoreInfoScript.PlayerMoney > price) 
 		{
 			MenuActive = true;
 			return true;

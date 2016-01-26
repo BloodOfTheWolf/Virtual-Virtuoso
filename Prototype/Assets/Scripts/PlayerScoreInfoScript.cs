@@ -18,7 +18,7 @@ public class PlayerScoreInfoScript : MonoBehaviour {
     public float EntertainerScoreHigh;
     private SheetNoteScript Info;
     public string lastLevelPlayed;
-    public int PlayerMoney;
+    public static int PlayerMoney = 200;
     
     void Awake()
     {
@@ -40,7 +40,7 @@ public class PlayerScoreInfoScript : MonoBehaviour {
         CanonScoreHigh = 0;
         EliseScoreHigh = 0;
         EntertainerScoreHigh = 0;
-        PlayerMoney = 0;
+        
 	}
 	
 	// Update is called once per frame

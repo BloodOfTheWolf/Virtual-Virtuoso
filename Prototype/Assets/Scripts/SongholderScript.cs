@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SongholderScript : MonoBehaviour {
 
@@ -9,9 +10,17 @@ public class SongholderScript : MonoBehaviour {
 	public static float BGMVolume;
 	public static AudioSource BGSong;
 	public static Slider BGMSlider;
+
+	public static List<AudioSource> songs = new List<AudioSource>();
+
+
 	// Use this for initialization
 	void Start () 
 	{
+
+		//if (ListOfNames == ListofAduiSources[i].name)
+		//play me
+
 		BGMSlider = GameObject.Find("BGMSlider").GetComponent<Slider> ();
 		if (!IsCreated) 
 		{

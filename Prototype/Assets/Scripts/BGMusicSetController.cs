@@ -99,12 +99,14 @@ public class BGMusicSetController : MonoBehaviour {
 
     public void PurchaseAccept()
     {
-		PlayerScoreInfoScript.Money = PlayerScoreInfoScript.Money - price;
-		print (" You have : " + PlayerScoreInfoScript.Money);
+		PlayerScoreInfoScript.PlayerMoney = PlayerScoreInfoScript.PlayerMoney - price;
+		print (" You have : " + PlayerScoreInfoScript.PlayerMoney);
         SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
 		ConfirmPurchase.enabled = false;
         MenuActive = false;
 
+		// = GetComponent<AudioSource> (MusicSelected);
+		//SongholderScript.BGSong.Play ();
     }
     public void PurchaseCancelled()
     {
@@ -115,7 +117,7 @@ public class BGMusicSetController : MonoBehaviour {
 
 	public bool CheckTransaction(int price)
 	{
-		if (PlayerScoreInfoScript.Money > price) 
+		if (PlayerScoreInfoScript.PlayerMoney > price) 
 		{
 			MenuActive = true;
 			return true;
