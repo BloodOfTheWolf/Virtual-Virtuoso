@@ -11,7 +11,9 @@ public class MovementScript : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody>();
         MovementController = GameObject.Find("MovementController");
+
         speed = MovementController.GetComponent<MovementController>().MovementSpeed;
+        speed *= -1;
 	}
 	
 	void Update() 

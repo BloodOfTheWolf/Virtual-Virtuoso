@@ -6,7 +6,7 @@ public class MovementController : MonoBehaviour
 {
     static MovementController instance;
     public Slider SpeedSlider;
-    public float MovementSpeed;
+    public float MovementSpeed = 2;
 
     void Awake()
     {
@@ -19,15 +19,17 @@ public class MovementController : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
+        Debug.Log("MovementController: Resetting MovementSpeed...");
+
+        // Reset the movement speed
+        ChangeSpeed();
     }
 	
 	public void ChangeSpeed()
     {
         // Get the value...
         MovementSpeed = SpeedSlider.GetComponent<Slider>().value;
-        
-        // and negate it
-        MovementSpeed *= -1;
 
         Debug.Log("MovementController: MovementSpeed = " + MovementSpeed);
 	}
