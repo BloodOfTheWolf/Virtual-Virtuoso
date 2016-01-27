@@ -2022,6 +2022,106 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2be4598782310114b9a3db1078f45d09, type: 3}
+    - target: {fileID: 11468872, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143932}
+    - target: {fileID: 11476576, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143921}
+    - target: {fileID: 11408002, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143931}
+    - target: {fileID: 11419724, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143934}
+    - target: {fileID: 11405366, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143938}
+    - target: {fileID: 11461458, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143942}
+    - target: {fileID: 11481898, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143928}
+    - target: {fileID: 11475356, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143925}
+    - target: {fileID: 11465188, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143920}
+    - target: {fileID: 11456022, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143933}
+    - target: {fileID: 11432986, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143930}
+    - target: {fileID: 11495406, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143927}
+    - target: {fileID: 11498410, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143939}
+    - target: {fileID: 11415700, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143922}
+    - target: {fileID: 11499608, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143936}
+    - target: {fileID: 11451084, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143937}
+    - target: {fileID: 11486724, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143935}
+    - target: {fileID: 11459838, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143919}
+    - target: {fileID: 11431560, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143941}
+    - target: {fileID: 11452308, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143926}
+    - target: {fileID: 11467924, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143923}
+    - target: {fileID: 11455610, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143924}
+    - target: {fileID: 11452740, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143929}
+    - target: {fileID: 11482216, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143943}
+    - target: {fileID: 11445188, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: barnotes
+      value: 
+      objectReference: {fileID: 1027143940}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
   m_IsPrefabParent: 0
