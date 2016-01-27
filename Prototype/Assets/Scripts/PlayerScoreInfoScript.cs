@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerScoreInfoScript : MonoBehaviour {
-
+public class PlayerScoreInfoScript : MonoBehaviour
+{
     public float MaryLambScore;
     public float HotCrossScore;
     public float TwinkleTwinkleScore;

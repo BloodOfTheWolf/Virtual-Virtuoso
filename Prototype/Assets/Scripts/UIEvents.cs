@@ -122,11 +122,16 @@ public class UIEvents : MonoBehaviour
         }
     }
 
+    //keep object persistent
+    void Start()
+    {
+        DontDestroyOnLoad( this.gameObject );
+    }
+
     //makes it so that the SFX Controller can be found in any scene
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
-        DontDestroyOnLoad( this.gameObject );
     }
 
     //screen loading handlers
