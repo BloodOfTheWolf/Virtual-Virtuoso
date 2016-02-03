@@ -4,15 +4,22 @@ using UnityEngine.UI;
 
 public class MovementSliderScript : MonoBehaviour
 {
-    public float SpeedValue;
-    GameObject MovementController;
+    public static float SpeedValue;
+    Slider SpeedController;
 
     void Awake()
     {
-        MovementController = GameObject.Find("MovementController");
 
-        SpeedValue = gameObject.GetComponent<Slider>().value;
-        MovementController.GetComponent<MovementController>().MovementSpeed = SpeedValue;
+        if(SpeedValue == 0)
+        {
+           
+            SpeedValue = gameObject.GetComponent<Slider>().value;
+   
+        }
+        else
+        {
+            gameObject.GetComponent<Slider>().value = SpeedValue;
+        }
 
         Debug.Log("MovementSliderScript: SpeedValue = " + SpeedValue);
     }

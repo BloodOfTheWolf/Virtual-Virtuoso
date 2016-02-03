@@ -140,7 +140,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &65886947
@@ -198,7 +199,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11474994, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &65886948 stripped
@@ -326,7 +328,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &143476438 stripped
@@ -523,7 +526,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &451505262
@@ -631,7 +635,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &452758594 stripped
@@ -1101,7 +1106,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &598166509 stripped
@@ -1163,7 +1169,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &771346577 stripped
@@ -1221,7 +1228,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &905172710 stripped
@@ -1357,7 +1365,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1061900274 stripped
@@ -1473,7 +1482,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1152037029 stripped
@@ -1621,7 +1631,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1196643879 stripped
@@ -1679,7 +1690,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1335922709 stripped
@@ -1737,7 +1749,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11471368, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 25f49b744f4637f40ba1ec79e3e5c0de, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1458430457 stripped
@@ -1832,7 +1845,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11474994, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1696862465
@@ -1843,6 +1857,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1696862466}
+  - 114: {fileID: 1696862467}
   m_Layer: 0
   m_Name: SongNotes
   m_TagString: Untagged
@@ -1879,6 +1894,18 @@ Transform:
   - {fileID: 1061900274}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1696862467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1696862465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 420a2a942ceb14c22bcafceeb709a756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1738617282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2206,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1843176691 stripped
@@ -2245,7 +2273,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11420646, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5e7e3e3eed710854fa4bafb4f9197d3c, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2099941052 stripped
@@ -2307,7 +2336,8 @@ Prefab:
       propertyPath: RedCheck
       value: 
       objectReference: {fileID: 89571591}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11474994, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2123944064 stripped

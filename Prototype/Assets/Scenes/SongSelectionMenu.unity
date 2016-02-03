@@ -894,11 +894,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 348954106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2de7e2f506fea44bb2cfd37be0471e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e26153b1ae386249b3136082c0a434d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedSlider: {fileID: 1396007136}
-  MovementSpeed: 3
 --- !u!1 &361352670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,8 +2544,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 348954108}
-        m_MethodName: ChangeSpeed
-        m_Mode: 1
+        m_MethodName: OnValueChanged
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2569,7 +2567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e26153b1ae386249b3136082c0a434d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedValue: 0
 --- !u!1 &1475115183
 GameObject:
   m_ObjectHideFlags: 0
