@@ -7,7 +7,7 @@ public class BootScript : MonoBehaviour
     /// <summary>
     /// Is the timer running?
     /// </summary>
-    bool TimerActive;
+    bool bTimerActive;
 
     /// <summary>
     /// What's the timer's current value?
@@ -47,8 +47,8 @@ public class BootScript : MonoBehaviour
     /// </summary>
     void StartTimer()
     {
-        Debug.Log( "BootScript: Starting timer" );
-        TimerActive = true;
+        Debug.Log( "BootScript.StartTimer(): Starting timer" );
+        bTimerActive = true;
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public class BootScript : MonoBehaviour
     /// </summary>
     void LoadFrontEnd()
     {
-        Debug.Log( "BootScript: Loading front end" );
+        Debug.Log( "BootScript.LoadFrontEnd(): Loading front end" );
         Application.LoadLevel( "MainMenu" );
     }
 
@@ -70,14 +70,15 @@ public class BootScript : MonoBehaviour
         TimerValueRounded = Round( TimerValue, 2 );
         TimerText.GetComponent<Text>().text = TimerTextContent + TimerValueRounded.ToString();
 
-        if (TimerActive)
+        if (bTimerActive)
         {
             TimerValue -= Time.deltaTime;
-        }
 
-        if (TimerValue < 0)
-        {
-            LoadFrontEnd();
+            if( TimerValue < 0 )
+            {
+                bTimerActive = false;
+                LoadFrontEnd();
+            }
         }
     }
 }

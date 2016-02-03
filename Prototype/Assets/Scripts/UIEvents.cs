@@ -3,10 +3,22 @@ using System.Collections;
 
 public class UIEvents : MonoBehaviour
 {
+    /// <summary>
+    /// Is the timer running?
+    /// </summary>
+    bool bTimerActive = false;
+
+    /// <summary>
+    /// What's the timer's current value?
+    /// </summary>
+    public float LoadTimerValue = 0.5f;
+
+    bool bLoadSelection = false;
 
     GameObject SFXController;
 
     public Transform objSongholder;
+    public Canvas LoadscreenObject;
 
     //create new enumeration for each song button
     public enum SongChoice
@@ -68,27 +80,10 @@ public class UIEvents : MonoBehaviour
 
     public void LoadSelection()
     {
-        switch( currentChoice )
-        {
-        case SongChoice.Tutorial:
-            LoadTutorial();
-            break;
-        case SongChoice.HotCrossBuns:
-            LoadHotCrossBuns();
-            break;
-        case SongChoice.MaryLamb:
-            LoadMaryLamb();
-            break;
-        case SongChoice.FurElise:
-            LoadFurElise();
-            break;
-        case SongChoice.CanonInD:
-            LoadCanonInD();
-            break;
-        case SongChoice.Entertainer:
-            LoadEntertainer();
-            break;
-        }
+        Debug.Log( "UIEvents.LoadSelection(): Entered" );
+        LoadscreenObject.GetComponent<LoadManager>().PushScreen( 0.1f );
+        bTimerActive = true;
+        bLoadSelection = true;
     }
 
     void PlaySongPreview( SongChoice songPreview )
@@ -132,6 +127,39 @@ public class UIEvents : MonoBehaviour
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
+
+        if( bTimerActive )
+        {
+            LoadTimerValue -= Time.deltaTime;
+            
+            if( ( bLoadSelection ) && (LoadTimerValue <= 0) )
+            {
+                Debug.Log( "UIEvents.Update(): Loading selection" );
+                bTimerActive = false;
+
+                switch( currentChoice )
+                {
+                case SongChoice.Tutorial:
+                    LoadTutorial();
+                    break;
+                case SongChoice.HotCrossBuns:
+                    LoadHotCrossBuns();
+                    break;
+                case SongChoice.MaryLamb:
+                    LoadMaryLamb();
+                    break;
+                case SongChoice.FurElise:
+                    LoadFurElise();
+                    break;
+                case SongChoice.CanonInD:
+                    LoadCanonInD();
+                    break;
+                case SongChoice.Entertainer:
+                    LoadEntertainer();
+                    break;
+                }
+            }
+        }
     }
 
     //screen loading handlers
