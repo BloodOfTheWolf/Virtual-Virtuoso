@@ -9,7 +9,7 @@ public class SongholderScript : MonoBehaviour {
 
 	public static float BGMVolume;
 	public static AudioSource BGSong;
-	public static Slider BGMSlider;
+	Slider BGMSlider;
 
 	public static List<AudioSource> songs = new List<AudioSource>();
 
@@ -29,6 +29,7 @@ public class SongholderScript : MonoBehaviour {
 			BGSong.Play ();
 			DontDestroyOnLoad(this.gameObject) ;
 			BGMVolume = BGMSlider.value;
+            print( "entered !iscreated" );
 
 			//BGMVolume = GameObject.Find("BGMSlider").GetComponent<Slider> ().value;
 		}
@@ -37,6 +38,7 @@ public class SongholderScript : MonoBehaviour {
 		{
 			Destroy (this.gameObject);
 			BGMSlider.value = BGMVolume;
+
 		}
 
         
