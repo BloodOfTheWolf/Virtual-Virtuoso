@@ -31,29 +31,17 @@ public class SongholderScript : MonoBehaviour {
 			BGMVolume = BGMSlider.value;
             print( "entered !iscreated" );
 
-			//BGMVolume = GameObject.Find("BGMSlider").GetComponent<Slider> ().value;
 		}
 		//otherwise, if we do, kill this thing
 		else 
 		{
 			Destroy (this.gameObject);
-			BGMSlider.value = BGMVolume;
+           // BGSong.volume = BGMSliderScript.BGVolumeVal;
+            print( "entered else of !iscreated" );
 
 		}
 
         
 	}
 
-	public void OnValueChanged(float NewValue)
-	{
-		BGMVolume = NewValue;
-		BGSong.volume = NewValue;
-	}
-
-	// Update is called once per frame
-	void Update () 
-	{
-//		BGMVolume = GameObject.Find("BGMSlider").GetComponent<Slider> ().value;
-//		BGMSlider.v = BGMVolume;
-	}
 }

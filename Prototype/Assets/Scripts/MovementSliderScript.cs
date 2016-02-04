@@ -21,12 +21,11 @@ public class MovementSliderScript : MonoBehaviour
             gameObject.GetComponent<Slider>().value = SpeedValue;
         }
 
-        Debug.Log("MovementSliderScript: SpeedValue = " + SpeedValue);
+      
     }
 
     public void OnValueChanged(float NewValue)
     {
         SpeedValue = NewValue;
-        Debug.Log("MovementSliderScript: SpeedValue = " + SpeedValue);
     }
 }

@@ -20,119 +20,126 @@ public class SFXControllerScript : MonoBehaviour {
     public AudioClip WrongNote;
     public AudioClip QuitButton;
 
-    private float SFXVol;
+    public static float SFXVol;
 
 	// Use this for initialization
 	void Awake () {
 
         SFXSource = GetComponent<AudioSource>();
         DontDestroyOnLoad( this.gameObject );
-        SFXVol = SFXVolumeScript.SFXVolume;
+        if(SFXVolumeScript.SFXVolume == 0)
+        {
+            SFXVol = 0.5f;
+        }
+        else
+        {
+            SFXVol = SFXVolumeScript.SFXVolume;
+        }
 
 	}
 	
 	// Recieve functions from other scripts indicating which effect to play
 	public void ButtonPressed () {
 
-        SFXSource.PlayOneShot( ButtonPress, 1.0f );
+        SFXSource.PlayOneShot( ButtonPress, SFXVol );
 	
 	}
 
     public void ItemPurchased()
     {
 
-        SFXSource.PlayOneShot( CashRegister, 1.0f );
+        SFXSource.PlayOneShot( CashRegister, SFXVol );
 
     }
 
     public void SmlApplause()
     {
 
-        SFXSource.PlayOneShot( SmallApplause, 1.0f );
+        SFXSource.PlayOneShot( SmallApplause, SFXVol );
 
     }
 
     public void MedApplause()
     {
 
-        SFXSource.PlayOneShot( MediumApplause, 1.0f );
+        SFXSource.PlayOneShot( MediumApplause, SFXVol );
 
     }
 
     public void LrgApplause()
     {
 
-        SFXSource.PlayOneShot( LargeApplause, 1.0f );
+        SFXSource.PlayOneShot( LargeApplause, SFXVol );
 
     }
 
     public void MsvApplause()
     {
 
-        SFXSource.PlayOneShot( MassiveApplause, 1.0f );
+        SFXSource.PlayOneShot( MassiveApplause, SFXVol );
 
     }
 
     public void CoinDrop()
     {
 
-        SFXSource.PlayOneShot( MoneyGet, 1.0f );
+        SFXSource.PlayOneShot( MoneyGet, SFXVol );
 
     }
 
     public void MultiplierIncrease()
     {
 
-        SFXSource.PlayOneShot( MultIncrease, 1.0f );
+        SFXSource.PlayOneShot( MultIncrease, SFXVol );
 
     }
 
     public void MultiplierFail()
     {
 
-        SFXSource.PlayOneShot( MultReset, 1.0f );
+        SFXSource.PlayOneShot( MultReset, SFXVol );
 
     }
 
     public void ScoreInc()
     {
 
-        SFXSource.PlayOneShot( ScoreTally, 1.0f );
+        SFXSource.PlayOneShot( ScoreTally, SFXVol );
 
     }
 
     public void StarRecieved()
     {
 
-        SFXSource.PlayOneShot( StarGet, 1.0f );
+        SFXSource.PlayOneShot( StarGet, SFXVol );
 
     }
 
     public void NoteFail()
     {
 
-        SFXSource.PlayOneShot( WrongNote, 1.0f );
+        SFXSource.PlayOneShot( WrongNote, SFXVol );
 
     }
 
     public void SelectionButtonPressed()
     {
 
-        SFXSource.PlayOneShot( OptionSwitch, 1.0f );
+        SFXSource.PlayOneShot( OptionSwitch, SFXVol );
 
     }
 
     public void QuitButtonPressed()
     {
 
-        SFXSource.PlayOneShot( QuitButton, 1.0f );
+        SFXSource.PlayOneShot( QuitButton, SFXVol );
 
     }
 
     public void OptionAccepted()
     {
 
-        SFXSource.PlayOneShot( StarGet, 1.0f );
+        SFXSource.PlayOneShot( StarGet, SFXVol );
 
     }
 }

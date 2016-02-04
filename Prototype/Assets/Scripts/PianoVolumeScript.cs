@@ -4,15 +4,23 @@ using UnityEngine.UI;
 
 public class PianoVolumeScript : MonoBehaviour {
 
-	public static float PianoVol;
-	public static Slider PianoVolSlider;
+	Slider PianoVolSlider;
 	public static float PKVolume;
 
 	// Use this for initialization
 	void Start () 
 	{
-		PianoVolSlider = GameObject.Find ("PianoSlider").GetComponent<Slider>();
-		PKVolume = PianoVolSlider.value;
+        if( PKVolume == 0 )
+        {
+
+            PKVolume = gameObject.GetComponent<Slider>().value;
+
+        }
+        else
+        {
+            gameObject.GetComponent<Slider>().value = PKVolume;
+        }
+		
 	}
 	
 	// Update is called once per frame

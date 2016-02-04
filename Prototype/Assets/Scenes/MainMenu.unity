@@ -591,6 +591,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 331391407}
   - 114: {fileID: 331391408}
+  - 114: {fileID: 331391409}
   m_Layer: 5
   m_Name: PianoSlider
   m_TagString: Untagged
@@ -664,7 +665,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1583843077}
+      - m_Target: {fileID: 331391409}
         m_MethodName: OnValueChanged
         m_Mode: 0
         m_Arguments:
@@ -677,6 +678,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &331391409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 331391406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bcc45f5f25314a2eae4f57c658e6303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &413936218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,12 +2143,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160616103}
---- !u!114 &1164563729 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11488682, guid: 4921f1d42c6c4264d8565afddf8ae7d9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1218114741}
-  m_Script: {fileID: 11500000, guid: 905064a6c334a1d48bc8dbced371efa0, type: 3}
 --- !u!1001 &1218114741
 Prefab:
   m_ObjectHideFlags: 0
@@ -3673,6 +3679,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1876363762}
   - 114: {fileID: 1876363764}
+  - 114: {fileID: 1876363763}
   m_Layer: 5
   m_Name: BGMSlider
   m_TagString: Untagged
@@ -3700,6 +3707,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -29.2999992}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &1876363763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876363761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1bd14b5b95546e4db2bae5d8f5809e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1876363764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3746,7 +3764,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1164563729}
+      - m_Target: {fileID: 1876363763}
         m_MethodName: OnValueChanged
         m_Mode: 0
         m_Arguments:

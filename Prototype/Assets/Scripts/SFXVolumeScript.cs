@@ -5,19 +5,30 @@ using UnityEngine.UI;
 public class SFXVolumeScript : MonoBehaviour
 {
 
-    public static float SFXVol;
-    public static Slider SFXSlider;
+    Slider SFXSlider;
     public static float SFXVolume;
 
     void Start()
     {
-        SFXSlider = GameObject.Find( "SFXSlider" ).GetComponent<Slider>();
-        SFXVolume = SFXSlider.value;
+
+        if( SFXVolume == 0 )
+        {
+
+            SFXVolume = gameObject.GetComponent<Slider>().value;
+
+        }
+        else
+        {
+            gameObject.GetComponent<Slider>().value = SFXVolume;
+        }
+
+        
     }
 
     public void OnValueChanged( float NewValue )
     {
         SFXVolume = NewValue;
+        SFXControllerScript.SFXVol = NewValue;
 
     }
 }
