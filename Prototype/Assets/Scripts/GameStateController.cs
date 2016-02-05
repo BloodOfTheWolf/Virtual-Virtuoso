@@ -73,7 +73,7 @@ public class GameStateController : MonoBehaviour
         Destroy( SongholderObj );
         SongholderScript.IsCreated = false;
 
-        PFXControllerInst.GetComponent<PFXController>().StopEffects();
+        //PFXControllerInst.GetComponent<PFXController>().StopEffects();
     }
 
     public void ChangeState( GameState newState )
@@ -83,11 +83,11 @@ public class GameStateController : MonoBehaviour
         {
         case GameState.MainMenu:
             Application.LoadLevel( "MainMenu" );
-            PFXControllerInst.GetComponent<PFXController>().PlayEffects();
+            //PFXControllerInst.GetComponent<PFXController>().PlayEffects();
             break;
         case GameState.MainMenuPostResults:
             Application.LoadLevel( "SongSelectionMenu" );
-            PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();
+            //PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();
             break;
         case GameState.Marketplace:
             Application.LoadLevel( "Marketplace" );

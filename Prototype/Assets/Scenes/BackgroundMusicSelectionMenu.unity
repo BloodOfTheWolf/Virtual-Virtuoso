@@ -515,7 +515,10 @@ MonoBehaviour:
   MusicSetTwo: {fileID: 2061537516}
   MusicSetThree: {fileID: 1412248851}
   MusicSetFour: {fileID: 449830730}
+  price: 150
   ConfirmPurchase: {fileID: 1509121226}
+  BackgroundMusic: {fileID: 0}
+  CurrentMoney: {fileID: 0}
 --- !u!1 &536088139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1312,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509121222}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_RenderMode: 0
   m_Camera: {fileID: 0}

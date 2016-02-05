@@ -1090,6 +1090,10 @@ Prefab:
       propertyPath: barnotes
       value: 
       objectReference: {fileID: 1764894744}
+    - target: {fileID: 482318, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d538a6d280c54b54386259c6f169b6f4, type: 2}
   m_IsPrefabParent: 0
@@ -1351,7 +1355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!4 &1051151856 stripped
 Transform:
   m_PrefabParentObject: {fileID: 423098, guid: 29af5e1bcf2d23a44bb628ef0d4503cc, type: 2}

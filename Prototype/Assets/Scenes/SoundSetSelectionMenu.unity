@@ -964,7 +964,9 @@ MonoBehaviour:
   SoundSetThree: {fileID: 1133546917}
   SoundSetFour: {fileID: 379315882}
   SoundSetFive: {fileID: 55715799}
+  price: 150
   ConfirmPurchase: {fileID: 2021438050}
+  Cash: {fileID: 0}
 --- !u!1 &1133546915
 GameObject:
   m_ObjectHideFlags: 0

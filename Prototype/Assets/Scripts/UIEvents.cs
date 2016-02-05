@@ -20,6 +20,9 @@ public class UIEvents : MonoBehaviour
     public Transform objSongholder;
     public Canvas LoadscreenObject;
 
+    public GameObject SongProgressionManagerObj;
+    public SongProgressionManagerScript SongProgressionScript;
+
     //create new enumeration for each song button
     public enum SongChoice
     {
@@ -35,46 +38,116 @@ public class UIEvents : MonoBehaviour
     SongChoice currentChoice = SongChoice.Tutorial;
 
     //song selection handlers
+
+    //***********************
+    // EASY SONGS
+    //***********************
     public void SelectTutorial()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.Tutorial;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Easy )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.Tutorial;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectTutorial(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
 
     public void SelectHotCrossBuns()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.HotCrossBuns;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Easy )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.HotCrossBuns;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectHotCrossBuns(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
 
     public void SelectMaryLamb()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.MaryLamb;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Easy )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.MaryLamb;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectMaryLamb(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
 
+    //***********************
+    // MEDIUM SONGS
+    //***********************
     public void SelectFurElise()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.FurElise;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Medium )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.FurElise;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectFurElise(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
 
     public void SelectCanonInD()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.CanonInD;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Medium )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.CanonInD;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectCanonInD(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
 
+    //***********************
+    // HARD SONGS
+    //***********************
     public void SelectEntertainer()
     {
-        SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-        currentChoice = SongChoice.Entertainer;
-        PlaySongPreview( currentChoice );
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Hard )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.Entertainer;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectEntertainer(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
     }
     //end
 
@@ -121,6 +194,9 @@ public class UIEvents : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad( this.gameObject );
+
+        SongProgressionManagerObj = GameObject.Find( "SongProgressionManager" );
+        SongProgressionScript = SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>();
     }
 
     //makes it so that the SFX Controller can be found in any scene

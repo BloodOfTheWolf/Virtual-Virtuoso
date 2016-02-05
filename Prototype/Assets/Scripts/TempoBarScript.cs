@@ -6,17 +6,15 @@ public class TempoBarScript : MonoBehaviour
 {
 	//SheetNoteScript sheet;
 	// Use this for initialization
-	// if  song notes and barnotes are colliding, show right or wrong image
+	// if song notes and barnotes are colliding, show right or wrong image
 	public static int Section;
-	void Start () 
+
+    GameObject SongProgressionManagerObj;
+
+	void Start() 
 	{
 		Section = 0;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-
+        SongProgressionManagerObj = GameObject.Find( "SongProgressionManager" );
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -26,9 +24,14 @@ public class TempoBarScript : MonoBehaviour
 			Section = Section +1;
 			print ("Section added");
 		}
-		 if (other.tag == "Bar") 
+
+		if (other.tag == "Bar") 
 		{
 			print("bar colided");
+
+            // Update the song's completion state
+            SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>().UpdateSongStates( Application.loadedLevelName );
+
 			Application.LoadLevel("Results");
 			//Application.Quit();
 			//UnityEditor.EditorApplication.isPlaying = false;
