@@ -10,110 +10,70 @@ public class SheetNoteScript : MonoBehaviour
 
 	static SheetNoteScript Instance = null;
 
-    /// <summary>
     /// Holder for the note's sound effect.
-    /// </summary>
 	AudioSource sheetaudio;
 
-    /// <summary>
     /// 'Hit' icon.
-    /// </summary>
 	public GameObject GreenCheck;
 
-    /// <summary>
     /// 'Missed' icon.
-    /// </summary>
 	public GameObject RedCheck;
 
-    /// <summary>
     /// The player's score.
-    /// </summary>
 	public static int Score;
 
-    /// <summary>
     /// The notestreak value.
-    /// </summary>
 	public static int NoteStreak;
 
-    /// <summary>
     /// The player's highest streak obtained.
-    /// </summary>
 	public static int HighestStreak;
 
-    /// <summary>
     /// The multiplier's base value.
-    /// </summary>
 	public static int Multiplier = 10;
 
-    /// <summary>
     /// The losestreak value.
-    /// </summary>
 	public static int LoseStreak;
 
-    /// <summary>
     /// The total number of notes the player played successfully. Primarily used for the results screen.
-    /// </summary>
 	public static int Hit;
 
-    /// <summary>
     /// The total number of notes the player missed. Primarily used for the results screen.
-    /// </summary>
 	public static int Miss;
 
-    /// <summary>
     /// The total number of notes in the song.  Primarily used for the results screen.
-    /// </summary>
 	public static float Total;
 
-    /// <summary>
     /// The player's camera. Used for GUI purposes.
-    /// </summary>
 	Camera cam;
 
-    /// <summary>
     /// The screen's height and width. Used for GUI purposes.
-    /// </summary>
 	float height, width;
 
-    /// <summary>
     /// Bool determining whether or not this note should be colored.
-    /// </summary>
     private bool Colored;
 
-    /// <summary>
     /// The tutorial object.
-    /// </summary>
     private GameObject Tutorial;
 
-    /// <summary>
     /// The ParticleSystem to spawn when the player plays a note.
-    /// </summary>
     public GameObject HitEffect;
 
-    /// <summary>
     /// The ParticleSystem to spawn when the player misses a note.
-    /// </summary>
     public GameObject MissEffect;
 
-    /// <summary>
+
     /// The ParticleSystem to spawn when the Notestreak multiplier increases.
-    /// </summary>
     public GameObject NotestreakMultiplierIncreaseEffect;
 
-    /// <summary>
     /// The Vector3 position of the notestreak multiplier UI object.
-    /// </summary>
     Vector3 NotestreakMultiplierEffectPosition;
 
-    /// <summary>
     /// Stores the Vector3 location of the note's center.
-    /// </summary>
     Vector3 HitLocation;
 
-    /// <summary>
     /// Our audio controller object.
-    /// </summary>
     GameObject SFXController;
+
 
 	public static SheetNoteScript GetInstance()
 	{
@@ -164,6 +124,7 @@ public class SheetNoteScript : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+        
 		if (this.tag == other.tag) 
 		{
             // Show the 'hit' icon
@@ -283,6 +244,7 @@ public class SheetNoteScript : MonoBehaviour
 
 	void OnTriggerExit(Collider other)
 	{
+        
 		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
 		{
             // Play the 'failed' sound ditty
