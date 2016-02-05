@@ -74,6 +74,7 @@ public class SheetNoteScript : MonoBehaviour
     /// Our audio controller object.
     GameObject SFXController;
 
+    public GameObject Song;
 
 	public static SheetNoteScript GetInstance()
 	{
@@ -102,6 +103,7 @@ public class SheetNoteScript : MonoBehaviour
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
         Colored = ColorToggleScript.Toggle;
+        Song = GameObject.FindGameObjectWithTag( "SongObject" );
 
         Tutorial = gameObject.transform.GetChild(0).GetChild(0).gameObject;
         if( Colored == false )
@@ -131,7 +133,7 @@ public class SheetNoteScript : MonoBehaviour
 			GreenCheck.SetActive(true);
 			this.gameObject.SetActive(false);
 			RedCheck.SetActive(false);
-
+            Song.GetComponent<MovementScript>().enabled = true;
             // Update the score
 			Score += Multiplier;
 
