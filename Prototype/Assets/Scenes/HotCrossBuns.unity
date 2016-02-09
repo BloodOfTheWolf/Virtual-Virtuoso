@@ -2083,6 +2083,106 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 118190, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 161190, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 148676, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 177094, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 158968, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 120120, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 166442, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 106974, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 194594, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 107280, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 155584, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 198820, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 138792, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 138360, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 110324, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 190838, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 132722, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 183660, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 141514, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 193944, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 164086, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 188866, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 101770, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 167764, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 150526, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
+      propertyPath: m_TagString
+      value: BarNote
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 749c69aef15331d47bf9a73f9a792123, type: 2}
   m_IsPrefabParent: 0

@@ -127,7 +127,7 @@ public class SheetNoteScript : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
         
-		if (this.tag == other.tag) 
+		if ( other.tag == "BarNote") 
 		{
             // Show the 'hit' icon
 			GreenCheck.SetActive(true);

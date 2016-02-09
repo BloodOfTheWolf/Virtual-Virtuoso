@@ -23,6 +23,7 @@ TagManager:
   - FrontEndNotesPFX
   - MovementController
   - SongObject
+  - BarNote
   layers:
   - Default
   - TransparentFX
