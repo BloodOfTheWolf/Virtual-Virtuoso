@@ -278,6 +278,7 @@ MonoBehaviour:
   MissEffect: {fileID: 0}
   NotestreakMultiplierIncreaseEffect: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210,
     type: 2}
+  Song: {fileID: 0}
 --- !u!212 &21216454
 SpriteRenderer:
   m_ObjectHideFlags: 1
