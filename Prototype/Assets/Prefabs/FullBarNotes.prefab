@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11437606}
   m_Layer: 0
   m_Name: BarNoteC#2
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ GameObject:
   - 114: {fileID: 11471308}
   m_Layer: 0
   m_Name: BarNoteF#
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ GameObject:
   - 114: {fileID: 11412504}
   m_Layer: 0
   m_Name: BarNoteD#
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,7 +376,7 @@ GameObject:
   - 114: {fileID: 11485598}
   m_Layer: 0
   m_Name: BarNoteG#
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -429,7 +429,7 @@ GameObject:
   - 114: {fileID: 11448832}
   m_Layer: 0
   m_Name: BarNoteG#2
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   - 114: {fileID: 11491974}
   m_Layer: 0
   m_Name: BarNoteA#2
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -758,7 +758,7 @@ GameObject:
   - 114: {fileID: 11421992}
   m_Layer: 0
   m_Name: BarNoteF#2
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -811,7 +811,7 @@ GameObject:
   - 114: {fileID: 11403870}
   m_Layer: 0
   m_Name: BarNoteA#
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -848,7 +848,7 @@ GameObject:
   - 114: {fileID: 11425376}
   m_Layer: 0
   m_Name: BarNoteC#
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1262,7 +1262,7 @@ GameObject:
   - 114: {fileID: 11444756}
   m_Layer: 0
   m_Name: BarNoteD#2
-  m_TagString: SheetNote
+  m_TagString: SharpBarNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7713,7 +7713,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: SharpBarNote
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101794}

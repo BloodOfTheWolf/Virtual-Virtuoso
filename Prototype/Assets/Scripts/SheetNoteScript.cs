@@ -127,7 +127,7 @@ public class SheetNoteScript : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
         
-		if ( other.tag == "BarNote") 
+		if ((this.tag == "SheetNote" && other.tag == "BarNote") || (this.tag == "SharpSheetNote" && other.tag == "SharpBarNote") ) 
 		{
             // Show the 'hit' icon
 			GreenCheck.SetActive(true);
@@ -155,9 +155,7 @@ public class SheetNoteScript : MonoBehaviour
 	}
 
     // AG 07-Jan-16
-    /// <summary>
     /// Plays the specified ParticleSystem prefab 'pfx' at the specified Vector3 location 'spawnLocation'.
-    /// </summary>
     /// <param name="pfx">Particle effect to spawn</param>
     /// <param name="spawnLocation">Location in which to spawn</param>
     /// 

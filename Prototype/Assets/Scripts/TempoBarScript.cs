@@ -22,7 +22,7 @@ public class TempoBarScript : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
        
-		if (other.tag == "SheetNote") 
+		if (other.tag == "SheetNote" || other.tag == "SharpSheetNote") 
 		{
 			print ("hello from tempobar");
             
