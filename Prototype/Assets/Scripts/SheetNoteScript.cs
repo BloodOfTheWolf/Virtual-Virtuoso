@@ -238,6 +238,12 @@ public class SheetNoteScript : MonoBehaviour
             Multiplier *= 2;
         }
 
+        if (NoteStreak == 0)
+        {
+            SFXController.GetComponent<SFXControllerScript>().MultiplierFail();
+            Multiplier = 0;
+        }
+
         // MULTIPLIER END
         // *********************
     }

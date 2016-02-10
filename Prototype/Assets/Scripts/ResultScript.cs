@@ -6,11 +6,40 @@ public class ResultScript : MonoBehaviour
 {
 	private SheetNoteScript Results;
 	private int Score;
+    private int ScoreInitializer;
 	
 	void Start() 
 	{
+        ScoreInitializer = 0;
 		Score = SheetNoteScript.Score;
-		Text ScoreText = GetComponent<Text>();
-		ScoreText.text = Score.ToString();
 	}
+
+    void Update()
+    {
+        Text ScoreText = GetComponent<Text>();
+        ScoreText.text = ScoreInitializer.ToString();
+        if (ScoreInitializer != Score)
+        {
+            if( (Score - ScoreInitializer) > 1000 )
+            {
+                ScoreInitializer += 75;
+            }
+            else if( (Score - ScoreInitializer) <= 1000 )
+            {
+                ScoreInitializer += 50;
+            }
+            else if( (Score - ScoreInitializer) <= 500 )
+            {
+                ScoreInitializer += 25;
+            }
+            else if( (Score - ScoreInitializer) <= 100 )
+            {
+                ScoreInitializer += 10;
+            }
+            else if( (Score - ScoreInitializer) < 100 )
+            {
+                ScoreInitializer += 1;
+            }
+        }
+    }
 }
