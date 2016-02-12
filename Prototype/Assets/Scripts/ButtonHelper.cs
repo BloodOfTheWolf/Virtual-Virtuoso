@@ -24,6 +24,7 @@ public class ButtonHelper : MonoBehaviour
         LoadMainMenuFromResultsScreen,
         LoadSoundSetSelection,
         LoadBackgroundMusicSelection,
+        ToggleNoteAssistMode,
         DebugUnlockAllSongs
 
     };
@@ -86,6 +87,9 @@ public class ButtonHelper : MonoBehaviour
             break;
         case ButtonType.LoadBackgroundMusicSelection:
             UIEventsObj.GetComponent<UIEvents>().LoadBackgroundMusicSelection();
+            break;
+        case ButtonType.ToggleNoteAssistMode:
+            UIEventsObj.GetComponent<UIEvents>().ToggleNoteAssistMode();
             break;
         case ButtonType.DebugUnlockAllSongs:
             UIEventsObj.GetComponent<UIEvents>().SongProgressionScript.UnlockDifficulty( SongProgressionManagerScript.DifficultyState.Hard );

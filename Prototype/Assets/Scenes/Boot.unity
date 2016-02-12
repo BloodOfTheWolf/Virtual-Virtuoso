@@ -350,6 +350,8 @@ MonoBehaviour:
   LoadscreenObject: {fileID: 1883445340}
   SongProgressionManagerObj: {fileID: 0}
   SongProgressionScript: {fileID: 0}
+  SaveDataObj: {fileID: 0}
+  SaveDataScript: {fileID: 0}
 --- !u!4 &115545394
 Transform:
   m_ObjectHideFlags: 0
@@ -444,6 +446,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 281385509}
+  - 114: {fileID: 281385510}
   m_Layer: 0
   m_Name: SaveData
   m_TagString: Untagged
@@ -463,6 +466,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!114 &281385510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281385508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991731301e1ec6841a85a73b90a0eb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bNoteAssistModeEnabled: 1
 --- !u!1 &353000515
 GameObject:
   m_ObjectHideFlags: 0

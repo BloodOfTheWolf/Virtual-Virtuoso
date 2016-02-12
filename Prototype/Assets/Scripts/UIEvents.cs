@@ -23,6 +23,9 @@ public class UIEvents : MonoBehaviour
     public GameObject SongProgressionManagerObj;
     public SongProgressionManagerScript SongProgressionScript;
 
+    public GameObject SaveDataObj;
+    public SaveDataScript SaveDataScript;
+
     //create new enumeration for each song button
     public enum SongChoice
     {
@@ -197,6 +200,9 @@ public class UIEvents : MonoBehaviour
 
         SongProgressionManagerObj = GameObject.Find( "SongProgressionManager" );
         SongProgressionScript = SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>();
+
+        SaveDataObj = GameObject.Find( "SaveData" );
+        SaveDataScript = SaveDataObj.GetComponent<SaveDataScript>();
     }
 
     //makes it so that the SFX Controller can be found in any scene
@@ -272,6 +278,21 @@ public class UIEvents : MonoBehaviour
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.BackgroundMusicSelection );
+    }
+
+    public void ToggleNoteAssistMode()
+    {
+        // Is Note Assist mode enabled?
+        if( SaveDataScript.bNoteAssistModeEnabled )
+        {
+            SaveDataScript.bNoteAssistModeEnabled = false;
+            Debug.Log( "UIEvents.ToggleNoteAssistMode(): Note Assist mode is now disabled" );
+        }
+        else
+        {
+            SaveDataScript.bNoteAssistModeEnabled = true;
+            Debug.Log( "UIEvents.ToggleNoteAssistMode(): Note Assist mode is now enabled" );
+        }
     }
 
     void LoadTutorial()
