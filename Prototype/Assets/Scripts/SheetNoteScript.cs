@@ -75,6 +75,8 @@ public class SheetNoteScript : MonoBehaviour
     GameObject SFXController;
 
     public GameObject Song;
+    public GameObject LeftHand;
+    public GameObject Perfect;
 
 	public static SheetNoteScript GetInstance()
 	{
@@ -104,6 +106,9 @@ public class SheetNoteScript : MonoBehaviour
 		width = height * cam.aspect;
         Colored = ColorToggleScript.Toggle;
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
+        LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
+        Perfect = GameObject.Find( "perfect_note_hit" );
+        
 
         Tutorial = gameObject.transform.GetChild(0).GetChild(0).gameObject;
         if( Colored == false )
@@ -132,8 +137,10 @@ public class SheetNoteScript : MonoBehaviour
             // Show the 'hit' icon
 			GreenCheck.SetActive(true);
 			this.gameObject.SetActive(false);
+            Perfect.SetActive( true );
 			RedCheck.SetActive(false);
             Song.GetComponent<MovementScript>().enabled = true;
+            LeftHand.GetComponent<MovementScript>().enabled = true;
             // Update the score
 			Score += Multiplier;
 

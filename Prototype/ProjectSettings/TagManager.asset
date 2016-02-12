@@ -26,6 +26,7 @@ TagManager:
   - BarNote
   - SharpSheetNote
   - SharpBarNote
+  - LeftHand
   layers:
   - Default
   - TransparentFX
