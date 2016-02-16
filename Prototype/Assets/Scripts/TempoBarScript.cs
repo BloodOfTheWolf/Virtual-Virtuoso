@@ -13,12 +13,26 @@ public class TempoBarScript : MonoBehaviour
 
     GameObject SongProgressionManagerObj;
 
+    /// <summary>
+    /// Our save data manager.
+    /// </summary>
+    GameObject SaveDataManagerObj;
+
+    /// <summary>
+    /// The save data manager's main script.
+    /// </summary>
+    SaveDataScript SaveDataManagerScript;
+
 	void Start() 
 	{
 		Section = 0;
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
         LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
         SongProgressionManagerObj = GameObject.Find( "SongProgressionManager" );
+
+        // Find and assign the save data manager object and script
+        SaveDataManagerObj = GameObject.Find( "SaveData" );
+        SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -27,9 +41,12 @@ public class TempoBarScript : MonoBehaviour
 		if (other.tag == "SheetNote" || other.tag == "SharpSheetNote") 
 		{
 			print ("hello from tempobar");
-            
-            Song.GetComponent<MovementScript>().enabled = false;
-            LeftHand.GetComponent<MovementScript>().enabled = false;
+
+            if( SaveDataManagerScript.bNoteAssistModeEnabled )
+            {
+                Song.GetComponent<MovementScript>().enabled = false;
+                LeftHand.GetComponent<MovementScript>().enabled = false;
+            }
             
             //GetComponent<MovementScript>().enabled = false;
 			Section = Section +1;

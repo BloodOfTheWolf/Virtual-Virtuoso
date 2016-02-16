@@ -74,6 +74,16 @@ public class SheetNoteScript : MonoBehaviour
     /// Our audio controller object.
     GameObject SFXController;
 
+    /// <summary>
+    /// Our save data manager.
+    /// </summary>
+    GameObject SaveDataManagerObj;
+
+    /// <summary>
+    /// The save data manager's main script.
+    /// </summary>
+    SaveDataScript SaveDataManagerScript;
+
     public GameObject Song;
     public GameObject LeftHand;
     public GameObject Perfect;
@@ -121,6 +131,10 @@ public class SheetNoteScript : MonoBehaviour
         // Get the center of the sprite and set the particle effect's spawn location
         var SpriteCenter = gameObject.GetComponentInChildren<SpriteRenderer>().bounds.extents.x;
         HitLocation = gameObject.transform.position - new Vector3( SpriteCenter, 0f, 0f );
+
+        // Find and assign the save data manager object and script
+        SaveDataManagerObj = GameObject.Find( "SaveData" );
+        SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
 	// Need to get the SFX Controller object
@@ -139,8 +153,14 @@ public class SheetNoteScript : MonoBehaviour
 			this.gameObject.SetActive(false);
             Perfect.SetActive( true );
 			RedCheck.SetActive(false);
-            Song.GetComponent<MovementScript>().enabled = true;
-            LeftHand.GetComponent<MovementScript>().enabled = true;
+
+            // Is note assist mode enabled?
+            if( SaveDataManagerScript.bNoteAssistModeEnabled )
+            {
+                Song.GetComponent<MovementScript>().enabled = true;
+                LeftHand.GetComponent<MovementScript>().enabled = true;
+            }
+
             // Update the score
 			Score += Multiplier;
 
