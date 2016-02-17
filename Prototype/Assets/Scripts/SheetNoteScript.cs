@@ -74,18 +74,6 @@ public class SheetNoteScript : MonoBehaviour
     /// Our audio controller object.
     GameObject SFXController;
 
-    /// <summary>
-    /// Our save data manager.
-    /// </summary>
-    GameObject SaveDataManagerObj;
-
-    /// <summary>
-    /// The save data manager's main script.
-    /// </summary>
-    SaveDataScript SaveDataManagerScript;
-
-    public GameObject Song;
-    public GameObject LeftHand;
     public GameObject Perfect;
 
 	public static SheetNoteScript GetInstance()
@@ -115,8 +103,7 @@ public class SheetNoteScript : MonoBehaviour
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
         Colored = ColorToggleScript.Toggle;
-        Song = GameObject.FindGameObjectWithTag( "SongObject" );
-        LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
+       
         Perfect = GameObject.Find( "perfect_note_hit" );
         
 
@@ -131,10 +118,6 @@ public class SheetNoteScript : MonoBehaviour
         // Get the center of the sprite and set the particle effect's spawn location
         var SpriteCenter = gameObject.GetComponentInChildren<SpriteRenderer>().bounds.extents.x;
         HitLocation = gameObject.transform.position - new Vector3( SpriteCenter, 0f, 0f );
-
-        // Find and assign the save data manager object and script
-        SaveDataManagerObj = GameObject.Find( "SaveData" );
-        SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
 	// Need to get the SFX Controller object
@@ -148,18 +131,15 @@ public class SheetNoteScript : MonoBehaviour
         
 		if ((this.tag == "SheetNote" && other.tag == "BarNote") || (this.tag == "SharpSheetNote" && other.tag == "SharpBarNote") ) 
 		{
+            print( "sheetnotescrip sheetnote pos" + this.gameObject.transform.position.y );
+            print( "sheetnotescrip barnote pos" + other.gameObject.transform.position.y );
             // Show the 'hit' icon
 			GreenCheck.SetActive(true);
-			this.gameObject.SetActive(false);
-            Perfect.SetActive( true );
+			//this.gameObject.SetActive(false);
+            //Perfect.SetActive( true );
 			RedCheck.SetActive(false);
+           
 
-            // Is note assist mode enabled?
-            if( SaveDataManagerScript.bNoteAssistModeEnabled )
-            {
-                Song.GetComponent<MovementScript>().enabled = true;
-                LeftHand.GetComponent<MovementScript>().enabled = true;
-            }
 
             // Update the score
 			Score += Multiplier;
@@ -222,7 +202,7 @@ public class SheetNoteScript : MonoBehaviour
         NotestreakMultiplierEffectPosition = new Vector3( 0, 0, 0 );
         print( NotestreakMultiplierEffectPosition.ToString() );
         print( gameObject.transform.position.ToString() );
-        
+
         // x2 Multiplier
         if( NoteStreak == 3 )
         {

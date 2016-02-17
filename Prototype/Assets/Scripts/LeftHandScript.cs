@@ -18,7 +18,6 @@ public class LeftHandScript : MonoBehaviour {
         if( other.tag == "Bar" )
         {
             sheetaudio.Play();
-            print( "Left Hand collided" );
         }
     }
 }
