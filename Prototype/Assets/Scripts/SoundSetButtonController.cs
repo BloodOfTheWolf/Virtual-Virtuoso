@@ -23,7 +23,7 @@ public class SoundSetButtonController : MonoBehaviour {
 
     GameObject SFXController;
 
-	public PlayerScoreInfoScript Cash ;
+	public PlayerScoreInfoScript Cash;
 
     // Use this for initialization
     void Start()
@@ -47,7 +47,7 @@ public class SoundSetButtonController : MonoBehaviour {
 
 	public void Purchase()
 	{
-		if (CheckTransaction (150)) 
+		if (CheckTransaction(150))
 		{
 			
 			ConfirmPurchase.enabled = true;
@@ -73,6 +73,7 @@ public class SoundSetButtonController : MonoBehaviour {
         Application.LoadLevel( "Marketplace" );
     }
 
+    // TODO: Update the name for each sound!
     public void SoundOneSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
@@ -112,6 +113,7 @@ public class SoundSetButtonController : MonoBehaviour {
 		ConfirmPurchase.enabled = false;
 		MenuActive = false;
     }
+
     public void PurchaseCancelled()
     {
         SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();

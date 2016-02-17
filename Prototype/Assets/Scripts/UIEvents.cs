@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class UIEvents : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class UIEvents : MonoBehaviour
 
     public Transform objSongholder;
     public Canvas LoadscreenObject;
+
+    public GameObject CurrencyCanvas;
+    public PlayerCashTextScript CurrencyCanvasScript;
 
     public GameObject SongProgressionManagerObj;
     public SongProgressionManagerScript SongProgressionScript;
@@ -203,6 +207,9 @@ public class UIEvents : MonoBehaviour
 
         SaveDataObj = GameObject.Find( "SaveData" );
         SaveDataScript = SaveDataObj.GetComponent<SaveDataScript>();
+
+        CurrencyCanvas = GameObject.Find( "CurrencyCanvas" );
+        CurrencyCanvasScript = CurrencyCanvas.GetComponent<PlayerCashTextScript>();
     }
 
     //makes it so that the SFX Controller can be found in any scene
@@ -247,35 +254,41 @@ public class UIEvents : MonoBehaviour
     //screen loading handlers
     public void LoadMainMenu()
     {
+        CurrencyCanvasScript.HideCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenu );
     }
 
     public void LoadMainMenuFromResultsScreen()
     {
+        CurrencyCanvasScript.HideCash();
         GameStateController.Instance.ChangeState( GameStateController.GameState.MainMenuPostResults );
     }
 
     public void LoadSongSelection()
     {
+        CurrencyCanvasScript.HideCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SongSelection );
     }
 
     public void LoadMarketplace()
     {
+        CurrencyCanvasScript.ShowCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.Marketplace );
     }
 
     public void LoadSoundSetSelection()
     {
+        CurrencyCanvasScript.ShowCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SoundSetSelection );
     }
 
     public void LoadBackgroundMusicSelection()
     {
+        CurrencyCanvasScript.ShowCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.BackgroundMusicSelection );
     }
