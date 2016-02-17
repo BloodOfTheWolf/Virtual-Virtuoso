@@ -222,7 +222,7 @@ public class SheetNoteScript : MonoBehaviour
         NotestreakMultiplierEffectPosition = new Vector3( 0, 0, 0 );
         print( NotestreakMultiplierEffectPosition.ToString() );
         print( gameObject.transform.position.ToString() );
-
+        
         // x2 Multiplier
         if( NoteStreak == 3 )
         {
