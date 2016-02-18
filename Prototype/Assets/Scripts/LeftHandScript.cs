@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeftHandScript : MonoBehaviour {
+public class LeftHandScript : MonoBehaviour
+{
 
     AudioSource sheetaudio;
 
@@ -10,9 +11,9 @@ public class LeftHandScript : MonoBehaviour {
         sheetaudio = GetComponent<AudioSource>();
         sheetaudio.volume = 1.0f;
         //		NoteVol = PianoVolumeScript.PKVolume;
-        //		sheetaudio.volume = NoteVol; 
+        //		sheetaudio.volume = NoteVol;
     }
-
+    
     void OnTriggerEnter( Collider other )
     {
         if( other.tag == "Bar" )

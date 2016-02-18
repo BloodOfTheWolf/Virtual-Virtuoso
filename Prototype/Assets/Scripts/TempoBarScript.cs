@@ -42,8 +42,10 @@ public class TempoBarScript : MonoBehaviour
 		{
 			print ("hello from tempobar");
 
+            // Is note assist mode enabled?
             if( SaveDataManagerScript.bNoteAssistModeEnabled )
             {
+                // Halt note movement
                 Song.GetComponent<MovementScript>().enabled = false;
                 LeftHand.GetComponent<MovementScript>().enabled = false;
             }
