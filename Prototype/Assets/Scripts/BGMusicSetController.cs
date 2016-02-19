@@ -2,14 +2,28 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class BGMusicSetController : MonoBehaviour {
+public class BGMusicSetController : MonoBehaviour
+{
 
     //add public variable for each button we need in the song selection menu
-    public Button BackButton;
-    public Button MusicSetOne;
-    public Button MusicSetTwo;
-    public Button MusicSetThree;
-    public Button MusicSetFour;
+    //public Button BackButton;     // AG 18-Feb-16
+                                    //  We're handling all scene-transitioning buttons (to keep things clean and organized) 
+                                    //  through ButtonHelper.cs, which then goes through UIEvents.cs and GameStateManager.cs
+    public Button MusicSetOneBtn;
+    public Button MusicSetTwoBtn;
+    public Button MusicSetThreeBtn;
+    public Button MusicSetFourBtn;
+
+    enum PurchaseChoice
+    {
+        MusicSetOne,
+        MusicSetTwo,
+        MusicSetThree,
+        MusicSetFour
+    };
+
+    PurchaseChoice currentSelectedChoice;
+
 
 	public int price = 150;
 
@@ -28,29 +42,27 @@ public class BGMusicSetController : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        MusicSetOne.GetComponentInChildren<Text>().text = "MusicSetOne";
-        MusicSetTwo.GetComponentInChildren<Text>().text = "MusicSetTwo";
-        MusicSetThree.GetComponentInChildren<Text>().text = "MusicSetThree";
-        MusicSetFour.GetComponentInChildren<Text>().text = "MusicSetFour";
-        BackButton.GetComponentInChildren<Text>().text = "Back";
+        MusicSetOneBtn.GetComponentInChildren<Text>().text = "MusicSetOne";
+        MusicSetTwoBtn.GetComponentInChildren<Text>().text = "MusicSetTwo";
+        MusicSetThreeBtn.GetComponentInChildren<Text>().text = "MusicSetThree";
+        MusicSetFourBtn.GetComponentInChildren<Text>().text = "MusicSetFour";
+        //BackButton.GetComponentInChildren<Text>().text = "Back";      // See my comment in variable init area     -- AG 18-Feb-16
         MusicSelected = "";
         ConfirmPurchase.enabled = false;
-
-
     }
+
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
-		
     }
 
 	public void Purchase()
 	{
-		if (CheckTransaction (150)) 
+		if (CheckTransaction(150)) 
 		{
 			
 			ConfirmPurchase.enabled = true;
-			ConfirmPurchase.GetComponentInChildren<Text> ().text = "Are you sure you want to buy " + MusicSelected + "? There are no refunds.";
+			ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy " + MusicSelected + "? There are no refunds.";
 			
 			//			else
 			//			{
@@ -76,25 +88,33 @@ public class BGMusicSetController : MonoBehaviour {
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music One";
-		Purchase ();
+		Purchase();
+
+        currentSelectedChoice = PurchaseChoice.MusicSetOne;
     }
     public void SoundTwoSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Two";
-		Purchase ();
+        Purchase();
+
+        currentSelectedChoice = PurchaseChoice.MusicSetTwo;
     }
     public void SoundThreeSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Three";
-		Purchase ();
+        Purchase();
+
+        currentSelectedChoice = PurchaseChoice.MusicSetThree;
     }
     public void SoundFourSelected()
     {
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         MusicSelected = "Music Four";
-		Purchase ();
+        Purchase();
+
+        currentSelectedChoice = PurchaseChoice.MusicSetFour;
     }
 
     public void PurchaseAccept()
@@ -105,8 +125,24 @@ public class BGMusicSetController : MonoBehaviour {
 		ConfirmPurchase.enabled = false;
         MenuActive = false;
 
-		// = GetComponent<AudioSource> (MusicSelected);
-		//SongholderScript.BGSong.Play ();
+		// = GetComponent<AudioSource>(MusicSelected);
+		//SongholderScript.BGSong.Play();
+
+        switch( currentSelectedChoice )
+        {
+        case PurchaseChoice.MusicSetOne:
+            MusicSetOneBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            break;
+        case PurchaseChoice.MusicSetTwo:
+            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            break;
+        case PurchaseChoice.MusicSetThree:
+            MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            break;
+        case PurchaseChoice.MusicSetFour:
+            MusicSetFourBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            break;
+        }
     }
     public void PurchaseCancelled()
     {
@@ -121,7 +157,6 @@ public class BGMusicSetController : MonoBehaviour {
 		{
 			MenuActive = true;
 			return true;
-
 		}
 		return false;
 		//MenuActive = false;

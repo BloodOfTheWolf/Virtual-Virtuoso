@@ -2,10 +2,13 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class SoundSetButtonController : MonoBehaviour {
+public class SoundSetButtonController : MonoBehaviour
+{
 
     //add public variable for each button we need in the song selection menu
-    public Button BackButton;
+    //public Button BackButton;     // AG 18-Feb-16
+                                    //  We're handling all scene-transitioning buttons (to keep things clean and organized) 
+                                    //  through ButtonHelper.cs, which then goes through UIEvents.cs and GameStateManager.cs
     public Button SoundSetOne;
     public Button SoundSetTwo;
     public Button SoundSetThree;
@@ -34,7 +37,7 @@ public class SoundSetButtonController : MonoBehaviour {
         SoundSetThree.GetComponentInChildren<Text>().text = "SoundSetThree";
         SoundSetFour.GetComponentInChildren<Text>().text = "SoundSetFour";
         SoundSetFive.GetComponentInChildren<Text>().text = "SoundSetFive";
-        BackButton.GetComponentInChildren<Text>().text = "Back";
+        //BackButton.GetComponentInChildren<Text>().text = "Back";  // See my comment in variable init area     -- AG 18-Feb-16
         SoundSelected = "";
         ConfirmPurchase.enabled = false;
 

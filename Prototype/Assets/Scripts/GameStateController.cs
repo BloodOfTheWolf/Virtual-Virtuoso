@@ -4,7 +4,7 @@ using System.Collections;
 public class GameStateController : MonoBehaviour
 {
 
-    GameObject PFXControllerInst;
+    //GameObject PFXControllerInst;     // redacted a while ago     -- AG 18-Feb-16
 
     private static GameStateController instance = null;
     public static GameStateController Instance
@@ -23,10 +23,10 @@ public class GameStateController : MonoBehaviour
 
     void Start()
     {
-        PFXControllerInst = GameObject.Find( "BackgroundPFX" );
+        //PFXControllerInst = GameObject.Find( "BackgroundPFX" );     // redacted a while ago     -- AG 18-Feb-16
     }
 
-    //create new enumeration for each game state (screen)
+    // Create new enumeration for each game state (screen)
     public enum GameState
     {
         MainMenu,
@@ -61,7 +61,7 @@ public class GameStateController : MonoBehaviour
         previousState = oldState;
     }
 
-    // AG 12-Jan-2016
+    // AG 12-Jan-16
     // Stops the menu music and kills the background note particles. Returns true if objects are found and destroyed, and false if not.
     void RemoveFrontEndObjects()
     {
@@ -83,11 +83,11 @@ public class GameStateController : MonoBehaviour
         {
         case GameState.MainMenu:
             Application.LoadLevel( "MainMenu" );
-            //PFXControllerInst.GetComponent<PFXController>().PlayEffects();
+            //PFXControllerInst.GetComponent<PFXController>().PlayEffects();     // redacted a while ago     -- AG 18-Feb-16
             break;
         case GameState.MainMenuPostResults:
             Application.LoadLevel( "SongSelectionMenu" );
-            //PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();
+            //PFXControllerInst.GetComponent<PFXController>().ForceSpawnObjects();     // redacted a while ago     -- AG 18-Feb-16
             break;
         case GameState.Marketplace:
             Application.LoadLevel( "Marketplace" );
