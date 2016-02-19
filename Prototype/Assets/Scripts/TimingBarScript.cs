@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class TimingBarScript : MonoBehaviour
 {
-
+    SheetNoteScript Sheet;
     List<GameObject> SheetNotes = new List<GameObject>();
     List<GameObject> FullBarNotes = new List<GameObject>();
     GameObject[] BarNotes;
@@ -106,6 +106,7 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 print( "perfect hit" );
+                                Sheet.NotestreakMultiplierIncreaseEffect();
                             }
 
                         }

@@ -327,4 +327,9 @@ public class SheetNoteScript : MonoBehaviour
 	{
 		sheetaudio.Play();
 	}
+
+    internal void NotestreakMultiplierIncreaseEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }
