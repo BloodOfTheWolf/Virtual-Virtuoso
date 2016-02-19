@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(AudioSource))]
@@ -7,6 +8,19 @@ using System.Collections;
 
 public class SheetNoteScript : MonoBehaviour
 {
+    //multiplier graphics
+    public Image fillOne;
+    public Image fillTwo;
+    public Image fillThree;
+    public Image fillFour;
+    public Image fillFive;
+    public Image fillSix;
+    public Image fillSeven;
+    public Image fillEight;
+    public Image fillNine;
+    public Image fillTen;
+    public Image fillEleven;
+    public Image fillTwelve;
 
 	static SheetNoteScript Instance = null;
 
@@ -115,7 +129,32 @@ public class SheetNoteScript : MonoBehaviour
         Colored = ColorToggleScript.Toggle;
        
         Perfect = GameObject.Find( "perfect_note_hit" );
-        
+
+        fillOne = GameObject.Find( "Fill1" ).GetComponentInChildren<Image>();
+        fillTwo = GameObject.Find( "Fill2" ).GetComponentInChildren<Image>();
+        fillThree = GameObject.Find( "Fill3" ).GetComponentInChildren<Image>();
+        fillFour = GameObject.Find( "Fill4" ).GetComponentInChildren<Image>();
+        fillFive = GameObject.Find( "Fill5" ).GetComponentInChildren<Image>();
+        fillSix = GameObject.Find( "Fill6" ).GetComponentInChildren<Image>();
+        fillSeven = GameObject.Find( "Fill7" ).GetComponentInChildren<Image>();
+        fillEight = GameObject.Find( "Fill8" ).GetComponentInChildren<Image>();
+        fillNine = GameObject.Find( "Fill9" ).GetComponentInChildren<Image>();
+        fillTen = GameObject.Find( "Fill10" ).GetComponentInChildren<Image>();
+        fillEleven = GameObject.Find( "Fill11" ).GetComponentInChildren<Image>();
+        fillTwelve = GameObject.Find( "Fill12" ).GetComponentInChildren<Image>();
+
+        fillOne.enabled = false;
+        fillTwo.enabled = false;
+        fillThree.enabled = false;
+        fillFour.enabled = false;
+        fillFive.enabled = false;
+        fillSix.enabled = false;
+        fillSeven.enabled = false;
+        fillEight.enabled = false;
+        fillNine.enabled = false;
+        fillTen.enabled = false;
+        fillEleven.enabled = false;
+        fillTwelve.enabled = false;
 
         Tutorial = gameObject.transform.GetChild(0).GetChild(0).gameObject;
         if( Colored == false )
@@ -217,9 +256,21 @@ public class SheetNoteScript : MonoBehaviour
         print( NotestreakMultiplierEffectPosition.ToString() );
         print( gameObject.transform.position.ToString() );
 
+        if( NoteStreak == 1 )
+        {
+            fillOne.enabled = true;
+        }
+
+        if( NoteStreak == 2 )
+        {
+            fillTwo.enabled = true;
+        }
+
         // x2 Multiplier
         if( NoteStreak == 3 )
         {
+            fillThree.enabled = true;
+
             // Play the 'multiplier increase' sound ditty
             SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
@@ -228,6 +279,16 @@ public class SheetNoteScript : MonoBehaviour
 
             // Double the multiplier value
             Multiplier *= 2;
+        }
+
+        if( NoteStreak == 4 )
+        {
+            fillFour.enabled = true;
+        }
+
+        if( NoteStreak == 5 )
+        {
+            fillFive.enabled = true;
         }
 
         //these are the additional multipliers, we need these later (and the math needs to be reworked to do 10 x2, x3, and x4)
@@ -236,6 +297,8 @@ public class SheetNoteScript : MonoBehaviour
         // x3 Multiplier(?)
         if( NoteStreak == 6 )
         {
+            fillSix.enabled = true;
+
             // Play the 'multiplier increase' sound ditty
             SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
@@ -244,11 +307,23 @@ public class SheetNoteScript : MonoBehaviour
 
             // Double the multiplier value
             Multiplier *= 2;
+        }
+
+        if( NoteStreak == 7 )
+        {
+            fillSeven.enabled = true;
+        }
+
+        if( NoteStreak == 8 )
+        {
+            fillEight.enabled = true;
         }
 
         // x4 Multiplier(?)
         if( NoteStreak == 9 )
         {
+            fillNine.enabled = true;
+
             // Play the 'multiplier increase' sound ditty
             SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
@@ -259,8 +334,36 @@ public class SheetNoteScript : MonoBehaviour
             Multiplier *= 2;
         }
 
+        if( NoteStreak == 10 )
+        {
+            fillTen.enabled = true;
+        }
+
+        if( NoteStreak == 11 )
+        {
+            fillEleven.enabled = true;
+        }
+
+        if( NoteStreak == 12 )
+        {
+            fillTwelve.enabled = true;
+        }
+
         if (NoteStreak == 0)
         {
+            fillTwelve.enabled = false;
+            fillEleven.enabled = false;
+            fillTen.enabled = false;
+            fillNine.enabled = false;
+            fillEight.enabled = false;
+            fillSeven.enabled = false;
+            fillSix.enabled = false;
+            fillFive.enabled = false;
+            fillFour.enabled = false;
+            fillThree.enabled = false;
+            fillTwo.enabled = false;
+            fillOne.enabled = false;
+
             SFXController.GetComponent<SFXControllerScript>().MultiplierFail();
             Multiplier = 0;
         }
