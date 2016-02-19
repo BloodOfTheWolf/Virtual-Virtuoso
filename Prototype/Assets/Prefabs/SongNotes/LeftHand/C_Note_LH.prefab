@@ -28,9 +28,8 @@ GameObject:
   - 65: {fileID: 6521522}
   - 23: {fileID: 2381188}
   - 82: {fileID: 8297374}
-  - 114: {fileID: 11457922}
-  - 114: {fileID: 11471368}
   - 54: {fileID: 5417036}
+  - 114: {fileID: 11491808}
   m_Layer: 0
   m_Name: C_Note_LH
   m_TagString: SheetNote
@@ -249,7 +248,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11457922
+--- !u!114 &11491808
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -257,28 +256,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 110076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91860da4599d246b9b0e568fd6db7663, type: 3}
+  m_Script: {fileID: 11500000, guid: 2430ceb6fa978524297ab90ac49b427a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenCheck: {fileID: 0}
-  RedCheck: {fileID: 0}
-  HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
-  MissEffect: {fileID: 0}
-  NotestreakMultiplierIncreaseEffect: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210,
-    type: 2}
-  Song: {fileID: 0}
---- !u!114 &11471368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 420a2a942ceb14c22bcafceeb709a756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -2
 --- !u!212 &21221388
 SpriteRenderer:
   m_ObjectHideFlags: 1
