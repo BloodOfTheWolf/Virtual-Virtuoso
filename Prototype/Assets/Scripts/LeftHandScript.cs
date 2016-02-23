@@ -5,11 +5,14 @@ public class LeftHandScript : MonoBehaviour
 {
 
     AudioSource sheetaudio;
-
+    
+  
+        
     void Start()
     {
         sheetaudio = GetComponent<AudioSource>();
         sheetaudio.volume = 1.0f;
+  
         //		NoteVol = PianoVolumeScript.PKVolume;
         //		sheetaudio.volume = NoteVol;
     }

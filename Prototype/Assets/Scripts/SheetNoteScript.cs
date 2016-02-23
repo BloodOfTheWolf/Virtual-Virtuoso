@@ -116,7 +116,15 @@ public class SheetNoteScript : MonoBehaviour
 		cam = Camera.main;
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
-        Colored = ColorToggleScript.Toggle;
+        if( ColorToggleScript.Toggle == false )
+        {
+            Colored = false;
+
+        }
+        else
+        {
+            Colored = ColorToggleScript.Toggle;
+        }
        
         Perfect = GameObject.Find( "perfect_note_hit" );
 
@@ -150,8 +158,13 @@ public class SheetNoteScript : MonoBehaviour
         if( Colored == false )
         {
             Tutorial.SetActive( false );
-
+            print( "Colored state " + Colored );
         }
+        else
+        {
+            Tutorial.SetActive( true );
+        }
+        //Tutorial.SetActive( false );
 
         // AG 07-Jan-16
         // Get the center of the sprite and set the particle effect's spawn location
