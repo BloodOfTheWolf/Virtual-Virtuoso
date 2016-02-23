@@ -71,7 +71,7 @@ public class TimingBarScript : MonoBehaviour
         Great.SetActive( false );
         Good.SetActive( false );
         Perfect.SetActive( false );
-        if( other.tag != "SheetNote" || other.tag != "SharpSheetNote" )
+        if( other.tag == "SheetNote" || other.tag == "SharpSheetNote" )
         {
             Miss.SetActive( true );
             print( "triggerexit miss" );
@@ -108,10 +108,12 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
+                                SheetNoteScript.Score = SheetNoteScript.Score + 10;
+                                print( "Score = " + SheetNoteScript.Score );
                                 print( "perfect hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
-                               // SheetNoteScript.;
+                                Sheet.NotestreakMultiplierIncrement();
                             }
 
                         }
@@ -125,9 +127,12 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
+                                SheetNoteScript.Score = SheetNoteScript.Score + 8;
+                                print( "Score = " + SheetNoteScript.Score );
                                 print( "great hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
+                                Sheet.NotestreakMultiplierIncrement();
                             }
 
 
@@ -143,9 +148,12 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
+                                SheetNoteScript.Score = SheetNoteScript.Score + 6;
+                                print( "Score = " + SheetNoteScript.Score );
                                 print( "good hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
+                                Sheet.NotestreakMultiplierIncrement();
                             }
                         }
                     }

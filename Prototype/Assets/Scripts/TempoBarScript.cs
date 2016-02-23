@@ -40,7 +40,7 @@ public class TempoBarScript : MonoBehaviour
        
 		if (other.tag == "SheetNote" || other.tag == "SharpSheetNote") 
 		{
-			print ("hello from tempobar");
+			//print ("hello from tempobar");
 
             // Is note assist mode enabled?
             //if( SaveDataManagerScript.bNoteAssistModeEnabled )
@@ -56,7 +56,7 @@ public class TempoBarScript : MonoBehaviour
 
 		if (other.tag == "Bar") 
 		{
-			print("bar colided");
+			//print("bar colided");
 
             // Update the song's completion state
             SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>().UpdateSongStates( Application.loadedLevelName );

@@ -26,34 +26,24 @@ public class SheetNoteScript : MonoBehaviour
 
     /// Holder for the note's sound effect.
 	AudioSource sheetaudio;
-
     /// 'Hit' icon.
 	public GameObject GreenCheck;
-
     /// 'Missed' icon.
 	public GameObject RedCheck;
-
     /// The player's score.
 	public static int Score;
-
     /// The notestreak value.
 	public static int NoteStreak;
-
     /// The player's highest streak obtained.
 	public static int HighestStreak;
-
     /// The multiplier's base value.
 	public static int Multiplier = 10;
-
     /// The losestreak value.
 	public static int LoseStreak;
-
     /// The total number of notes the player played successfully. Primarily used for the results screen.
 	public static int Hit;
-
     /// The total number of notes the player missed. Primarily used for the results screen.
 	public static int Miss;
-
     /// The total number of notes in the song.  Primarily used for the results screen.
 	public static float Total;
 
@@ -416,7 +406,7 @@ public class SheetNoteScript : MonoBehaviour
 		GUIStyle style = new GUIStyle();
 
         // Set the font size
-		style.fontSize = 30;
+		style.fontSize = 15;
 
         // Draw the temporary text for the score and notestreak
 		GUI.Label( new Rect( (Screen.width/2 + 200), (height + 10), 100, 100 ), "Score: " + Score.ToString(), style );
