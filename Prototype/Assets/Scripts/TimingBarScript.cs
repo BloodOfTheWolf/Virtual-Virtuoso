@@ -113,7 +113,7 @@ public class TimingBarScript : MonoBehaviour
                                 print( "perfect hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierIncrement();
+                                Sheet.NotestreakMultiplierUpdate();
                             }
 
                         }
@@ -132,7 +132,7 @@ public class TimingBarScript : MonoBehaviour
                                 print( "great hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierIncrement();
+                                Sheet.NotestreakMultiplierUpdate();
                             }
 
 
@@ -153,7 +153,7 @@ public class TimingBarScript : MonoBehaviour
                                 print( "good hit" );
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierIncrement();
+                                Sheet.NotestreakMultiplierUpdate();
                             }
                         }
                     }

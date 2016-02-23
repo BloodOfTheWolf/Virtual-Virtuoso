@@ -22,6 +22,8 @@ public class SheetNoteScript : MonoBehaviour
     public Image fillEleven;
     public Image fillTwelve;
 
+    public Image[] fillImages;
+
 	static SheetNoteScript Instance = null;
 
     /// Holder for the note's sound effect.
@@ -36,8 +38,10 @@ public class SheetNoteScript : MonoBehaviour
 	public static int NoteStreak;
     /// The player's highest streak obtained.
 	public static int HighestStreak;
+    /// The multiplier's current value.
+	public static int MultiplierCurValue = 10;
     /// The multiplier's base value.
-	public static int Multiplier = 10;
+    public static int MultiplierBaseValue = 10;
     /// The losestreak value.
 	public static int LoseStreak;
     /// The total number of notes the player played successfully. Primarily used for the results screen.
@@ -125,34 +129,28 @@ public class SheetNoteScript : MonoBehaviour
         {
             Colored = ColorToggleScript.Toggle;
         }
-       
+
         Perfect = GameObject.Find( "perfect_note_hit" );
 
-        fillOne = GameObject.Find( "Fill1" ).GetComponentInChildren<Image>();
-        fillTwo = GameObject.Find( "Fill2" ).GetComponentInChildren<Image>();
-        fillThree = GameObject.Find( "Fill3" ).GetComponentInChildren<Image>();
-        fillFour = GameObject.Find( "Fill4" ).GetComponentInChildren<Image>();
-        fillFive = GameObject.Find( "Fill5" ).GetComponentInChildren<Image>();
-        fillSix = GameObject.Find( "Fill6" ).GetComponentInChildren<Image>();
-        fillSeven = GameObject.Find( "Fill7" ).GetComponentInChildren<Image>();
-        fillEight = GameObject.Find( "Fill8" ).GetComponentInChildren<Image>();
-        fillNine = GameObject.Find( "Fill9" ).GetComponentInChildren<Image>();
-        fillTen = GameObject.Find( "Fill10" ).GetComponentInChildren<Image>();
-        fillEleven = GameObject.Find( "Fill11" ).GetComponentInChildren<Image>();
-        fillTwelve = GameObject.Find( "Fill12" ).GetComponentInChildren<Image>();
 
-        fillOne.enabled = false;
-        fillTwo.enabled = false;
-        fillThree.enabled = false;
-        fillFour.enabled = false;
-        fillFive.enabled = false;
-        fillSix.enabled = false;
-        fillSeven.enabled = false;
-        fillEight.enabled = false;
-        fillNine.enabled = false;
-        fillTen.enabled = false;
-        fillEleven.enabled = false;
-        fillTwelve.enabled = false;
+        // 12 elements notestreak UI thing
+        fillImages = new Image[12];
+
+        // For each notestreak UI image,
+        for( int i = 0; i < fillImages.Length; i++ )
+        {
+            var iInt = i + 1;
+            var iStr = "Fill" + iInt.ToString();
+
+            Debug.Log( "SheetNoteScript: Assigning " + iStr );
+
+            // Assign the image component
+            fillImages[i] = GameObject.Find( iStr ).GetComponentInChildren<Image>();
+
+            // And hide it
+            fillImages[i].enabled = false;
+        }
+
 
         Tutorial = gameObject.transform.GetChild(0).GetChild(0).gameObject;
         if( Colored == false )
@@ -198,7 +196,7 @@ public class SheetNoteScript : MonoBehaviour
 
 
             // Update the score
-			Score += Multiplier;
+			Score += MultiplierCurValue;
 
             // Increment the note stats
 			Hit++;
@@ -206,7 +204,7 @@ public class SheetNoteScript : MonoBehaviour
 
             // AG 19-Jan-16
             // Moved the Notestreak code into its own function for the sake of brevity and organization
-            NotestreakMultiplierIncrement();
+            NotestreakMultiplierUpdate();
 			
 			//sheetaudio.Play();
 			//Debug.Break();
@@ -229,9 +227,9 @@ public class SheetNoteScript : MonoBehaviour
 
     // AG 19-Jan-16
     /// <summary>
-    /// Increments the Notestreak multiplier.
+    /// Updates the Notestreak multiplier based on /.
     /// </summary>
-    public void NotestreakMultiplierIncrement()
+    public void NotestreakMultiplierUpdate()
     {
         // Increment the notestreak value
         NoteStreak++;
@@ -259,117 +257,73 @@ public class SheetNoteScript : MonoBehaviour
         print( NotestreakMultiplierEffectPosition.ToString() );
         print( gameObject.transform.position.ToString() );
 
-        if( NoteStreak == 1 )
+
+        if( NoteStreak > 0 )
         {
-            fillOne.enabled = true;
+            // Update the notestreak images depending on which one we're on
+            fillImages[NoteStreak - 1].enabled = true;
+
+            // x2 Multiplier
+            if( NoteStreak == 3 )
+            {
+                // Play the 'multiplier increase' sound ditty
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+                // Spawn the 'notestreak multiplier increment' particle effect
+                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+                // Double the multiplier value
+                MultiplierCurValue *= 2;
+            }
+
+            // x3 Multiplier(?)
+            if( NoteStreak == 6 )
+            {
+                // Play the 'multiplier increase' sound ditty
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+                // Spawn the 'notestreak multiplier increment' particle effect
+                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+                // Double the multiplier value
+                MultiplierCurValue *= 2;
+            }
+
+            // x4 Multiplier(?)
+            if( NoteStreak == 9 )
+            {
+                fillNine.enabled = true;
+
+                // Play the 'multiplier increase' sound ditty
+                SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
+
+                // Spawn the 'notestreak multiplier increment' particle effect
+                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+
+                // Double the multiplier value
+                MultiplierCurValue *= 2;
+            }
         }
-
-        if( NoteStreak == 2 )
+        else
         {
-            fillTwo.enabled = true;
-        }
+            // For each notestreak UI image,
+            for( int i = 0; i < fillImages.Length; i++ )
+            {
+                var iInt = i + 1;
+                var iStr = "Fill" + iInt.ToString();
 
-        // x2 Multiplier
-        if( NoteStreak == 3 )
-        {
-            fillThree.enabled = true;
+                // And hide it
+                fillImages[i].enabled = false;
+            }
 
-            // Play the 'multiplier increase' sound ditty
-            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-
-            // Spawn the 'notestreak multiplier increment' particle effect
-            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
-
-            // Double the multiplier value
-            Multiplier *= 2;
-        }
-
-        if( NoteStreak == 4 )
-        {
-            fillFour.enabled = true;
-        }
-
-        if( NoteStreak == 5 )
-        {
-            fillFive.enabled = true;
+            // Play a sound ditty and reset the multiplier
+            SFXController.GetComponent<SFXControllerScript>().MultiplierFail();
+            MultiplierCurValue = 10;
         }
 
         //these are the additional multipliers, we need these later (and the math needs to be reworked to do 10 x2, x3, and x4)
         // AG 19-Jan-16:    It might be better to have the base Multiplier value set to 1, and then somewhere like in the update function have it multiplied by another 
         //                  variable, like MultiplierFactor, which would be set to 10.
-        // x3 Multiplier(?)
-        if( NoteStreak == 6 )
-        {
-            fillSix.enabled = true;
-
-            // Play the 'multiplier increase' sound ditty
-            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-
-            // Spawn the 'notestreak multiplier increment' particle effect
-            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
-
-            // Double the multiplier value
-            Multiplier *= 2;
-        }
-
-        if( NoteStreak == 7 )
-        {
-            fillSeven.enabled = true;
-        }
-
-        if( NoteStreak == 8 )
-        {
-            fillEight.enabled = true;
-        }
-
-        // x4 Multiplier(?)
-        if( NoteStreak == 9 )
-        {
-            fillNine.enabled = true;
-
-            // Play the 'multiplier increase' sound ditty
-            SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
-
-            // Spawn the 'notestreak multiplier increment' particle effect
-            PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
-
-            // Double the multiplier value
-            Multiplier *= 2;
-        }
-
-        if( NoteStreak == 10 )
-        {
-            fillTen.enabled = true;
-        }
-
-        if( NoteStreak == 11 )
-        {
-            fillEleven.enabled = true;
-        }
-
-        if( NoteStreak == 12 )
-        {
-            fillTwelve.enabled = true;
-        }
-
-        if (NoteStreak == 0)
-        {
-            fillTwelve.enabled = false;
-            fillEleven.enabled = false;
-            fillTen.enabled = false;
-            fillNine.enabled = false;
-            fillEight.enabled = false;
-            fillSeven.enabled = false;
-            fillSix.enabled = false;
-            fillFive.enabled = false;
-            fillFour.enabled = false;
-            fillThree.enabled = false;
-            fillTwo.enabled = false;
-            fillOne.enabled = false;
-
-            SFXController.GetComponent<SFXControllerScript>().MultiplierFail();
-            Multiplier = 0;
-        }
 
         // MULTIPLIER END
         // *********************
@@ -391,7 +345,7 @@ public class SheetNoteScript : MonoBehaviour
 
             // Reset the notestreak
 			NoteStreak = 0;
-			Multiplier = 10;
+            NotestreakMultiplierUpdate();
 
             // Increment the losestreaks
 			LoseStreak += 1;
