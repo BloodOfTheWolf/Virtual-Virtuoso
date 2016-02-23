@@ -71,8 +71,11 @@ public class TimingBarScript : MonoBehaviour
         Great.SetActive( false );
         Good.SetActive( false );
         Perfect.SetActive( false );
-        Miss.SetActive( true );
-        print( "triggerexit miss" );
+        if( other.tag != "SheetNote" || other.tag != "SharpSheetNote" )
+        {
+            Miss.SetActive( true );
+            print( "triggerexit miss" );
+        }
                         
     }
 
@@ -106,7 +109,9 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 print( "perfect hit" );
-                                Sheet.NotestreakMultiplierIncreaseEffect();
+                                Song.GetComponent<MovementScript>().enabled = true;
+                                LeftHand.GetComponent<MovementScript>().enabled = true;
+                               // SheetNoteScript.;
                             }
 
                         }
@@ -121,6 +126,8 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 print( "great hit" );
+                                Song.GetComponent<MovementScript>().enabled = true;
+                                LeftHand.GetComponent<MovementScript>().enabled = true;
                             }
 
 
@@ -137,11 +144,10 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 print( "good hit" );
+                                Song.GetComponent<MovementScript>().enabled = true;
+                                LeftHand.GetComponent<MovementScript>().enabled = true;
                             }
                         }
-                        Song.GetComponent<MovementScript>().enabled = true;
-                        LeftHand.GetComponent<MovementScript>().enabled = true;
-                        
                     }
                 }
             }

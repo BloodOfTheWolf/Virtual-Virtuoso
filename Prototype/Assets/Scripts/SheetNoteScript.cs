@@ -219,7 +219,7 @@ public class SheetNoteScript : MonoBehaviour
     /// <param name="pfx">Particle effect to spawn</param>
     /// <param name="spawnLocation">Location in which to spawn</param>
     /// 
-    void PlayParticleEffect(GameObject pfx, Vector3 spawnLocation)
+    public void PlayParticleEffect(GameObject pfx, Vector3 spawnLocation)
     {
         Instantiate( pfx, spawnLocation, Quaternion.identity );
     }
@@ -228,7 +228,7 @@ public class SheetNoteScript : MonoBehaviour
     /// <summary>
     /// Increments the Notestreak multiplier.
     /// </summary>
-    void NotestreakMultiplierIncrement()
+    public void NotestreakMultiplierIncrement()
     {
         // Increment the notestreak value
         NoteStreak++;
@@ -431,8 +431,4 @@ public class SheetNoteScript : MonoBehaviour
 		sheetaudio.Play();
 	}
 
-    internal void NotestreakMultiplierIncreaseEffect()
-    {
-        throw new System.NotImplementedException();
-    }
 }
