@@ -75,6 +75,7 @@ public class TimingBarScript : MonoBehaviour
         {
             Miss.SetActive( true );
             print( "triggerexit miss" );
+            SheetNoteScript.Miss += 1;
         }
                         
     }
@@ -111,6 +112,7 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNoteScript.Score = SheetNoteScript.Score + 10;
                                 print( "Score = " + SheetNoteScript.Score );
                                 print( "perfect hit" );
+                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.NotestreakMultiplierUpdate();
@@ -130,6 +132,7 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNoteScript.Score = SheetNoteScript.Score + 8;
                                 print( "Score = " + SheetNoteScript.Score );
                                 print( "great hit" );
+                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.NotestreakMultiplierUpdate();
@@ -151,6 +154,7 @@ public class TimingBarScript : MonoBehaviour
                                 SheetNoteScript.Score = SheetNoteScript.Score + 6;
                                 print( "Score = " + SheetNoteScript.Score );
                                 print( "good hit" );
+                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.NotestreakMultiplierUpdate();
