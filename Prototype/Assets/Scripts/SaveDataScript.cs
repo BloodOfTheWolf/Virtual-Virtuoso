@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SaveDataScript : MonoBehaviour
 {
-    public bool bNoteAssistModeEnabled;
+    public bool bNoteAssistModeEnabled = true;
 
     // 0 = available, 1 = not available, 2 = purchased
     public int MusicSetOneState = 0;

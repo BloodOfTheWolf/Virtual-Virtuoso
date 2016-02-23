@@ -9,7 +9,7 @@ public class TempoBarScript : MonoBehaviour
 	// if song notes and barnotes are colliding, show right or wrong image
 	public static int Section;
     public GameObject Song;
-    public GameObject LeftHand;
+    //public GameObject LeftHand;
 
     GameObject SongProgressionManagerObj;
 
@@ -27,7 +27,7 @@ public class TempoBarScript : MonoBehaviour
 	{
 		Section = 0;
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
-        LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
+        //LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
         SongProgressionManagerObj = GameObject.Find( "SongProgressionManager" );
 
         // Find and assign the save data manager object and script
@@ -43,12 +43,12 @@ public class TempoBarScript : MonoBehaviour
 			//print ("hello from tempobar");
 
             // Is note assist mode enabled?
-            //if( SaveDataManagerScript.bNoteAssistModeEnabled )
-            //{
+            if( SaveDataManagerScript.bNoteAssistModeEnabled )
+            {
                 // Halt note movement
                 Song.GetComponent<MovementScript>().enabled = false;
-                LeftHand.GetComponent<MovementScript>().enabled = false;
-            //}
+                //LeftHand.GetComponent<MovementScript>().enabled = false;
+            }
             
             //GetComponent<MovementScript>().enabled = false;
 			Section = Section +1;
