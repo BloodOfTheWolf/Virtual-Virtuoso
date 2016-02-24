@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ResultScript : MonoBehaviour
 {
-	private SheetNoteScript Results;
+    private NoteStreakControllerScript Results;
 	private int Score;
     private int ScoreInitializer;
     Text ScoreText;
@@ -12,7 +12,7 @@ public class ResultScript : MonoBehaviour
 	void Start() 
 	{
         ScoreInitializer = 0;
-		Score = SheetNoteScript.Score;
+        Score = NoteStreakControllerScript.Score;
 
         ScoreText = GetComponent<Text>();
         

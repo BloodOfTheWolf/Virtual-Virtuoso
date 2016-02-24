@@ -16,7 +16,7 @@ public class Results_RankScript : MonoBehaviour {
 	private GameObject Intermediate;
 	private GameObject Advanced;
 
-	private SheetNoteScript Results;
+    private NoteStreakControllerScript Results;
 	private PlayerScoreInfoScript Cash;
 	private float Total;
 	private float Good;
@@ -24,8 +24,8 @@ public class Results_RankScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Total = SheetNoteScript.Total;
-		Good = SheetNoteScript.Hit;
+        Total = NoteStreakControllerScript.Total;
+        Good = NoteStreakControllerScript.Hit;
 
 		Intermediate = GameObject.Find("Intermediate Objects");
 		Intermediate.SetActive (false);

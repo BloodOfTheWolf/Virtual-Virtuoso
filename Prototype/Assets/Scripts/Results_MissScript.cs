@@ -3,14 +3,14 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Results_MissScript : MonoBehaviour {
-	
-	
-	private SheetNoteScript MissedNotes;
+
+
+    private NoteStreakControllerScript MissedNotes;
 	private int Missed;
 	// Use this for initialization
 	void Start () 
 	{
-		Missed = SheetNoteScript.Miss;
+        Missed = NoteStreakControllerScript.Miss;
 		Text MissText = GetComponent<Text> ();
 		MissText.text = Missed.ToString();
 	}

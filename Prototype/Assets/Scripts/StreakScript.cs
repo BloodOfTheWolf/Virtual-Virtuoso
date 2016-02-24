@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class StreakScript : MonoBehaviour
 {
-	private SheetNoteScript Result;
+    private NoteStreakControllerScript Result;
 	private int Streak;
 
 	void Start() 
 	{
-		Streak = SheetNoteScript.HighestStreak;
+        Streak = NoteStreakControllerScript.HighestStreak;
 		Text StreakText = GetComponent<Text> ();
 		StreakText.text = Streak.ToString();
 	}

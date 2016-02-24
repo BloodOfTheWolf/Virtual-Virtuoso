@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public class TimingBarScript : MonoBehaviour
 {
-    SheetNoteScript Sheet;
+    NoteStreakControllerScript Sheet;
     List<GameObject> SheetNotes = new List<GameObject>();
     List<GameObject> FullBarNotes = new List<GameObject>();
     GameObject[] BarNotes;
@@ -16,12 +16,14 @@ public class TimingBarScript : MonoBehaviour
     public GameObject Good;
     public GameObject Miss;
     public GameObject Song;
-    public GameObject LeftHand;
+    //public GameObject LeftHand;
 
     
 	// Use this for initialization
 	void Start () 
     {
+        Sheet = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
+
         BarNotes = GameObject.FindGameObjectsWithTag( "BarNote" );
         for( int i = 0; i < BarNotes.Length; i ++)
         {
@@ -44,7 +46,7 @@ public class TimingBarScript : MonoBehaviour
         Miss = GameObject.Find( "miss_note_hit" );
         Miss.SetActive( false );
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
-        LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
+        //LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
 	}
 	
 	// Update is called once per frame
@@ -109,13 +111,13 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
-                                SheetNoteScript.Score = SheetNoteScript.Score + 10;
-                                print( "Score = " + SheetNoteScript.Score );
+                                NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 10;
+                                print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "perfect hit" );
                                 SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
-                                LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierUpdate();
+                                //LeftHand.GetComponent<MovementScript>().enabled = true;
+                                Sheet.HitNote();
                             }
 
                         }
@@ -129,13 +131,13 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
-                                SheetNoteScript.Score = SheetNoteScript.Score + 8;
-                                print( "Score = " + SheetNoteScript.Score );
+                                NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 8;
+                                print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "great hit" );
                                 SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
-                                LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierUpdate();
+                                //LeftHand.GetComponent<MovementScript>().enabled = true;
+                                Sheet.HitNote();
                             }
 
 
@@ -151,13 +153,13 @@ public class TimingBarScript : MonoBehaviour
                                 Miss.SetActive( false );
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
-                                SheetNoteScript.Score = SheetNoteScript.Score + 6;
-                                print( "Score = " + SheetNoteScript.Score );
+                                NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 6;
+                                print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "good hit" );
                                 SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
-                                LeftHand.GetComponent<MovementScript>().enabled = true;
-                                Sheet.NotestreakMultiplierUpdate();
+                                //LeftHand.GetComponent<MovementScript>().enabled = true;
+                                Sheet.HitNote();
                             }
                         }
                     }

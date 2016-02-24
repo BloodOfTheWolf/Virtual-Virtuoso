@@ -16,7 +16,7 @@ public class PlayerScoreInfoScript : MonoBehaviour
     public float CanonScoreHigh;
     public float EliseScoreHigh;
     public float EntertainerScoreHigh;
-    private SheetNoteScript Info;
+    private NoteStreakControllerScript Info;
     public string lastLevelPlayed;
     public static int PlayerMoney = 200;
     
@@ -50,37 +50,37 @@ public class PlayerScoreInfoScript : MonoBehaviour
         if( Application.loadedLevelName == "MaryLamb" )
         {
             lastLevelPlayed = "Mary Had a Little Lamb";
-            MaryLambScore = SheetNoteScript.Score;
+            MaryLambScore = NoteStreakControllerScript.Score;
         }
         
         if (Application.loadedLevelName == "HotCrossBuns")
         {
             lastLevelPlayed = "Hot Cross Buns";
-            HotCrossScore = SheetNoteScript.Score;
+            HotCrossScore = NoteStreakControllerScript.Score;
         }
 
         if( Application.loadedLevelName == "Main" )
         {
             lastLevelPlayed = "Twinkle Twinkle Little Star";
-            TwinkleTwinkleScore = SheetNoteScript.Score;
+            TwinkleTwinkleScore = NoteStreakControllerScript.Score;
         }
 
         if( Application.loadedLevelName == "CanonInD" )
         {
             lastLevelPlayed = "Canon in D Minor";
-            CanonScore = SheetNoteScript.Score;
+            CanonScore = NoteStreakControllerScript.Score;
         }
 
         if( Application.loadedLevelName == "FurElise" )
         {
             lastLevelPlayed = "Fur Elise";
-            EliseScore = SheetNoteScript.Score;
+            EliseScore = NoteStreakControllerScript.Score;
         }
 
         if( Application.loadedLevelName == "TheEntertainer" )
         {
             lastLevelPlayed = "The Entertainer";
-            EntertainerScore = SheetNoteScript.Score;
+            EntertainerScore = NoteStreakControllerScript.Score;
         }
 	}
 }
