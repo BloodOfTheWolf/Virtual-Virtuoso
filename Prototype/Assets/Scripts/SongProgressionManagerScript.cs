@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SongProgressionManagerScript : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SongProgressionManagerScript : MonoBehaviour
     public bool bFurEliseDone = false;
     public bool bCanonInDDone = false;
     public bool bEntertainerDone = false;
+    public Image EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
+    public Image CanonLock = GameObject.Find("CanonLock").GetComponent<Image>();
+    public Image EntertainLock = GameObject.Find("EntertainLock").GetComponent<Image>();
     
     /// <summary>
     /// Constructor for our DifficultyState enumerator.
@@ -65,12 +69,25 @@ public class SongProgressionManagerScript : MonoBehaviour
         if( (bTutorialDone) && (bHotCrossBunsDone) && (bMaryLambDone) )
         {
             UnlockDifficulty( DifficultyState.Medium );
+            MediumUnlock();
         }
 
         if( (bFurEliseDone) && (bCanonInDDone) )
         {
             UnlockDifficulty( DifficultyState.Hard );
+            HardUnlock();
         }
+    }
+
+    void MediumUnlock()
+    {
+        EliseLock.enabled = false;
+        CanonLock.enabled = false;
+    }
+
+    void HardUnlock()
+    {
+        EntertainLock.enabled = false;
     }
 
     /// <summary>
@@ -81,5 +98,7 @@ public class SongProgressionManagerScript : MonoBehaviour
     {
         Debug.Log( "SongProgressionManagerScript.UnlockDifficulty(): Unlocked difficulty: " + newDifficulty.ToString() );
         CurrentDifficultyUnlocked = newDifficulty;
+        MediumUnlock();
+        HardUnlock();
     }
 }
