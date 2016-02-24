@@ -23,8 +23,13 @@ public class TempoBarScript : MonoBehaviour
     /// </summary>
     SaveDataScript SaveDataManagerScript;
 
-	void Start() 
-	{
+    /// Our notestreak controller script component.
+    NoteStreakControllerScript NSController;
+
+	void Start()
+    {
+        NSController = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
+
 		Section = 0;
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
         //LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
@@ -41,7 +46,7 @@ public class TempoBarScript : MonoBehaviour
 		if (other.tag == "SheetNote" || other.tag == "SharpSheetNote") 
 		{
 			//print ("hello from tempobar");
-            SheetNoteScript.Total += 1;
+            NoteStreakControllerScript.Total += 1;
             // Is note assist mode enabled?
             if( SaveDataManagerScript.bNoteAssistModeEnabled )
             {

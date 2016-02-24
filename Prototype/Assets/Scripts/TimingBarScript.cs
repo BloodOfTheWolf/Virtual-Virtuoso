@@ -77,7 +77,7 @@ public class TimingBarScript : MonoBehaviour
         {
             Miss.SetActive( true );
             print( "triggerexit miss" );
-            SheetNoteScript.Miss += 1;
+            Sheet.MissNote();
         }
                         
     }
@@ -114,7 +114,6 @@ public class TimingBarScript : MonoBehaviour
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 10;
                                 print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "perfect hit" );
-                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();
@@ -134,7 +133,6 @@ public class TimingBarScript : MonoBehaviour
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 8;
                                 print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "great hit" );
-                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();
@@ -156,7 +154,6 @@ public class TimingBarScript : MonoBehaviour
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 6;
                                 print( "Score = " + NoteStreakControllerScript.Score );
                                 print( "good hit" );
-                                SheetNoteScript.Hit += 1;
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();

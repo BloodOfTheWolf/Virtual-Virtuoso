@@ -133,7 +133,7 @@ public class SheetNoteScript : MonoBehaviour
             //Perfect.SetActive( true );
 			RedCheck.SetActive(false);
 
-            NSController.HitNote();
+            //NSController.HitNote();
 			
 			//sheetaudio.Play();
 			//Debug.Break();
@@ -168,7 +168,7 @@ public class SheetNoteScript : MonoBehaviour
 
 			print("trigger exit called");
 
-            NSController.MissNote();
+            //NSController.MissNote();
 		}
 
         // Don't show the 'hit' or 'failed' icon
