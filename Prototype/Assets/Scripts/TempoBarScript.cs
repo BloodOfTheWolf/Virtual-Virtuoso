@@ -46,7 +46,7 @@ public class TempoBarScript : MonoBehaviour
 		if (other.tag == "SheetNote" || other.tag == "SharpSheetNote") 
 		{
 			//print ("hello from tempobar");
-            NoteStreakControllerScript.Total += 1;
+            //NoteStreakControllerScript.Total += 1;
             // Is note assist mode enabled?
             if( SaveDataManagerScript.bNoteAssistModeEnabled )
             {

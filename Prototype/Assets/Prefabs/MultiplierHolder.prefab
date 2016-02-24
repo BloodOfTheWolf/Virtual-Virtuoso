@@ -1134,7 +1134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImages: []
-  NotestreakMultiplierIncreaseEffect: {fileID: 0}
+  NotestreakMultiplierIncreaseEffect: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210,
+    type: 2}
 --- !u!114 &11494786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1835,7 +1836,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: NotestreakMultiplierIncreaseEffect
+      value: 
+      objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188086}
