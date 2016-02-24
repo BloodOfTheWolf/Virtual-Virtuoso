@@ -2,44 +2,43 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ColorToggleScript : MonoBehaviour {
-
+public class ColorToggleScript : MonoBehaviour
+{
+    public GameObject SaveDataObj;
+    public SaveDataScript SaveDataScript;
 
     public static bool Toggle;
-    Text DifficultySetting;
-    Image ColorToggleSprite;
+
+    public Image ColorToggleSprite;
     public Sprite ToggleOn;
     public Sprite ToggleOff;
-	// Use this for initialization
-	void Start () 
+	
+	void Start()
     {
-        DifficultySetting = this.gameObject.GetComponentInChildren<Text>();
-        Toggle = false;
+        SaveDataObj = GameObject.Find( "SaveData" );
+        SaveDataScript = SaveDataObj.GetComponent<SaveDataScript>();
+
+        UpdateButtonImage();
+
         ColorToggleSprite = GetComponent<Image>();
 	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	
-	}
 
-    public void OnClick()
+    void Update()
     {
-        if(Toggle == false)
+        UpdateButtonImage();
+    }
+
+    public void UpdateButtonImage()
+    {
+        if( SaveDataScript.bNoteColorModeEnabled )
         {
             Toggle = true;
-            //DifficultySetting.text = "Color Toggle ON";
             ColorToggleSprite.sprite = ToggleOn;
-            print( Toggle );
         }
         else
         {
             Toggle = false;
-            //DifficultySetting.text = "Color Toggle OFF";
             ColorToggleSprite.sprite = ToggleOff;
-            print( Toggle );
         }
-
     }
 }

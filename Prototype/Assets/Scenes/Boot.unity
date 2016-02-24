@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bNoteAssistModeEnabled: 1
+  bNoteColorModeEnabled: 1
   MusicSetOneState: 0
   MusicSetTwoState: 0
   MusicSetThreeState: 0

@@ -112,6 +112,9 @@ public class NoteStreakControllerScript : MonoBehaviour
     /// </summary>
     public void MissNote()
     {
+        // Play the 'failed' sound ditty
+        SFXController.GetComponent<SFXControllerScript>().NoteFail();
+
         // Increment the note stats
         Miss++;
         Total++;
@@ -169,8 +172,11 @@ public class NoteStreakControllerScript : MonoBehaviour
 
         if( NoteStreak > 0 )
         {
-            // Update the notestreak images depending on which one we're on
-            fillImages[NoteStreak - 1].enabled = true;
+            if( NoteStreak <= 12 )
+            {
+                // Update the notestreak images depending on which one we're on
+                fillImages[NoteStreak - 1].enabled = true;
+            }
 
             // x2 Multiplier
             if( NoteStreak == 3 )

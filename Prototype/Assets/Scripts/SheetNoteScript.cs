@@ -160,7 +160,7 @@ public class SheetNoteScript : MonoBehaviour
 		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
 		{
             // Play the 'failed' sound ditty
-            SFXController.GetComponent<SFXControllerScript>().NoteFail();
+            //SFXController.GetComponent<SFXControllerScript>().NoteFail();
 
             // Show the 'missed' icon
 			RedCheck.SetActive(true);

@@ -308,6 +308,21 @@ public class UIEvents : MonoBehaviour
         }
     }
 
+    public void ToggleNoteColorMode()
+    {
+        // Is Note Color mode enabled?
+        if( SaveDataScript.bNoteColorModeEnabled )
+        {
+            SaveDataScript.bNoteColorModeEnabled = false;
+            Debug.Log( "UIEvents.ToggleNoteColorMode(): Note Color mode is now disabled" );
+        }
+        else
+        {
+            SaveDataScript.bNoteColorModeEnabled = true;
+            Debug.Log( "UIEvents.ToggleNoteColorMode(): Note Color mode is now enabled" );
+        }
+    }
+
     void LoadTutorial()
     {
         GameStateController.Instance.ChangeState( GameStateController.GameState.Tutorial );
