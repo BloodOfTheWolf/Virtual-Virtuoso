@@ -98,9 +98,9 @@ public class FireworksScript : MonoBehaviour
         Debug.Log( "FireworksScript.SpawnObjects(): Entered" );
 
         int xx, yy, zz;
-        xx = Random.Range( 0, Screen.width );
-        yy = Random.Range( 0, Screen.height );
-        zz = Random.Range( 10, 10 );
+        xx = Random.Range( -7, 7 );
+        yy = Random.Range( -4, 4 );
+        zz = Random.Range( -5, -5 );
 
         pfxInst = Instantiate( ParticleSystemObject, new Vector3( xx, yy, zz ), Quaternion.Euler( 0, 0, 0 ) ) as GameObject;
         Destroy( pfxInst, pfxInst.GetComponent<ParticleSystem>().duration );
