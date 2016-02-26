@@ -22,8 +22,6 @@ public class BGMSliderScript : MonoBehaviour {
              gameObject.GetComponent<Slider>().value = BGVolumeVal ;
             
         }
-
-
 	
 	}
 
