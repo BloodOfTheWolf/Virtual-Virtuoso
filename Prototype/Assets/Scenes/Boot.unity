@@ -946,6 +946,9 @@ MonoBehaviour:
   bFurEliseDone: 0
   bCanonInDDone: 0
   bEntertainerDone: 0
+  EliseLock: {fileID: 0}
+  CanonLock: {fileID: 0}
+  EntertainLock: {fileID: 0}
   CurrentDifficultyUnlocked: 0
 --- !u!4 &824917495
 Transform:
