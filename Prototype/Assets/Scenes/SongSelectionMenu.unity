@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93237e655c05ef640866343c2b30d946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIButton: 16
+  UIButton: 17
 --- !u!1 &23140811
 GameObject:
   m_ObjectHideFlags: 0

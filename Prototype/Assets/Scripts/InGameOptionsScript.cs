@@ -37,6 +37,7 @@ public class InGameOptionsScript : MonoBehaviour
 
     public void RetryPressed()
     {
+        Time.timeScale = 1.0f;
         Application.LoadLevel( Application.loadedLevelName );
     }
 
@@ -53,6 +54,7 @@ public class InGameOptionsScript : MonoBehaviour
 
     public void QuitPressed()
     {
+        Time.timeScale = 1.0f;
         Application.LoadLevel( 5 );
     }
 
