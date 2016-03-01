@@ -74,8 +74,8 @@ public class SheetNoteScript : MonoBehaviour
         NSController = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
 
 		sheetaudio = GetComponent<AudioSource>();
-        GreenCheck = GameObject.Find( "greencheck" );
-        RedCheck = GameObject.Find( "RedCheck" );
+        //GreenCheck = GameObject.Find( "greencheck" );
+        //RedCheck = GameObject.Find( "RedCheck" );
 		cam = Camera.main;
 		height = 2f * cam.orthographicSize;
 		width = height * cam.aspect;
@@ -125,13 +125,13 @@ public class SheetNoteScript : MonoBehaviour
         
 		if ((this.tag == "SheetNote" && other.tag == "BarNote") || (this.tag == "SharpSheetNote" && other.tag == "SharpBarNote") ) 
 		{
-            print( "sheetnotescrip sheetnote pos" + this.gameObject.transform.position.y );
-            print( "sheetnotescrip barnote pos" + other.gameObject.transform.position.y );
+            //print( "sheetnotescrip sheetnote pos" + this.gameObject.transform.position.y );
+            //print( "sheetnotescrip barnote pos" + other.gameObject.transform.position.y );
             // Show the 'hit' icon
-			GreenCheck.SetActive(true);
+			//GreenCheck.SetActive(true);
 			//this.gameObject.SetActive(false);
             //Perfect.SetActive( true );
-			RedCheck.SetActive(false);
+			//RedCheck.SetActive(false);
 
             //NSController.HitNote();
 			
@@ -157,19 +157,19 @@ public class SheetNoteScript : MonoBehaviour
 	void OnTriggerExit(Collider other)
 	{
         
-		if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
-		{
+        //if (GreenCheck.activeInHierarchy || !(GreenCheck.activeInHierarchy)) // if you miss
+        //{
             // Play the 'failed' sound ditty
             //SFXController.GetComponent<SFXControllerScript>().NoteFail();
 
             // Show the 'missed' icon
-			RedCheck.SetActive(true);
-			GreenCheck.SetActive(false);
+            //RedCheck.SetActive(true);
+            //GreenCheck.SetActive(false);
 
-			print("trigger exit called");
+            //print("trigger exit called");
 
             //NSController.MissNote();
-		}
+		//}
 
         // Don't show the 'hit' or 'failed' icon
 		//GreenCheck.SetActive(false);

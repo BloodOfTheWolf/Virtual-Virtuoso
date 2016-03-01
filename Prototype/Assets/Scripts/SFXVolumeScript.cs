@@ -7,14 +7,16 @@ public class SFXVolumeScript : MonoBehaviour
 
     Slider SFXSlider;
     public static float SFXVolume;
+    static bool Started = false;
 
     void Start()
     {
 
-        if( SFXVolume == 0 )
+        if( SFXVolume == 0 && Started == false )
         {
 
             SFXVolume = gameObject.GetComponent<Slider>().value;
+            Started = true;
 
         }
         else

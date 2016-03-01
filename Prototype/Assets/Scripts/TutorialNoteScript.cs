@@ -10,21 +10,24 @@ public class TutorialNoteScript : MonoBehaviour
 	 //private float NoteVol;
 
 	AudioSource sheetaudio;
+    bool played;
 	
 	void Start()
 	{
 		sheetaudio = GetComponent<AudioSource>();
+        played = false;
 //		NoteVol = PianoVolumeScript.PKVolume;
 //		sheetaudio.volume = NoteVol; 
 	}
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Bar") 
+		if (other.tag == "Bar" && played == false) 
 		{
 			NotetoLit.SetActive(true);
 			sheetaudio.Play();
-			print("tutorial collided");
+            played = true;
+			//print("tutorial collided");
 		}
 	}
 
