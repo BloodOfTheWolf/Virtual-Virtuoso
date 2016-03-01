@@ -259,24 +259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91860da4599d246b9b0e568fd6db7663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillOne: {fileID: 0}
-  fillTwo: {fileID: 0}
-  fillThree: {fileID: 0}
-  fillFour: {fileID: 0}
-  fillFive: {fileID: 0}
-  fillSix: {fileID: 0}
-  fillSeven: {fileID: 0}
-  fillEight: {fileID: 0}
-  fillNine: {fileID: 0}
-  fillTen: {fileID: 0}
-  fillEleven: {fileID: 0}
-  fillTwelve: {fileID: 0}
   GreenCheck: {fileID: 0}
   RedCheck: {fileID: 0}
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
-  NotestreakMultiplierIncreaseEffect: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210,
-    type: 2}
   Perfect: {fileID: 0}
 --- !u!212 &21233568
 SpriteRenderer:
@@ -371,6 +357,10 @@ Prefab:
       propertyPath: NotestreakMultiplierIncreaseEffect
       value: 
       objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 190686}
