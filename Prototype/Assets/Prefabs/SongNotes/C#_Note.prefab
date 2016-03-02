@@ -46,6 +46,7 @@ GameObject:
   - 82: {fileID: 8293256}
   - 114: {fileID: 11488330}
   - 54: {fileID: 5435272}
+  - 114: {fileID: 11477900}
   m_Layer: 0
   m_Name: C#_Note
   m_TagString: SheetNote
@@ -248,6 +249,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11477900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 2
+  NoteOctave: 1
+  AccidentalType: 1
 --- !u!114 &11488330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,6 +374,18 @@ Prefab:
       objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: AccidentalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteOctave
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

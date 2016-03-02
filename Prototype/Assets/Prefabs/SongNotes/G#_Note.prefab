@@ -30,6 +30,7 @@ GameObject:
   - 82: {fileID: 8287716}
   - 114: {fileID: 11404044}
   - 54: {fileID: 5470626}
+  - 114: {fileID: 11414932}
   m_Layer: 0
   m_Name: G#_Note
   m_TagString: SheetNote
@@ -264,6 +265,20 @@ MonoBehaviour:
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
   Perfect: {fileID: 0}
+--- !u!114 &11414932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 6
+  NoteOctave: 1
+  AccidentalType: 1
 --- !u!212 &21238866
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -359,6 +374,18 @@ Prefab:
       objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: AccidentalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteOctave
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

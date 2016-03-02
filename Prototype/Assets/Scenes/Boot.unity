@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1acf912d000c745a5133cacef6f4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerValue: 1.5
+  TimerValue: 1
   TimerText: {fileID: 523622538}
 --- !u!4 &1656194742
 Transform:

@@ -11,9 +11,9 @@ public class SongProgressionManagerScript : MonoBehaviour
     public bool bFurEliseDone = false;
     public bool bCanonInDDone = false;
     public bool bEntertainerDone = false;
-    public Image EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
-    public Image CanonLock = GameObject.Find("CanonLock").GetComponent<Image>();
-    public Image EntertainLock = GameObject.Find("EntertainLock").GetComponent<Image>();
+    public Image EliseLock;
+    public Image CanonLock;
+    public Image EntertainLock;
     
     /// <summary>
     /// Constructor for our DifficultyState enumerator.
@@ -34,6 +34,10 @@ public class SongProgressionManagerScript : MonoBehaviour
     {
         DontDestroyOnLoad( this.gameObject );
         UnlockDifficulty( DifficultyState.Easy );
+
+        EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
+        CanonLock = GameObject.Find("CanonLock").GetComponent<Image>();
+        EntertainLock = GameObject.Find("EntertainLock").GetComponent<Image>();
     }
 
     /// <summary>

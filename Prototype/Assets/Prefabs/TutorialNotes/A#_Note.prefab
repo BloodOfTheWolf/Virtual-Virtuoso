@@ -63,6 +63,7 @@ GameObject:
   - 114: {fileID: 11427232}
   - 54: {fileID: 5494518}
   - 114: {fileID: 11407696}
+  - 114: {fileID: 11408676}
   m_Layer: 0
   m_Name: A#_Note
   m_TagString: SheetNote
@@ -194,6 +195,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -260,6 +262,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NotetoLit: {fileID: 0}
+--- !u!114 &11408676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 0
+  NoteOctave: 1
+  AccidentalType: 1
 --- !u!114 &11427232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,7 +372,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: AccidentalType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165032}

@@ -46,6 +46,7 @@ GameObject:
   - 82: {fileID: 8276420}
   - 114: {fileID: 11435284}
   - 54: {fileID: 5454950}
+  - 114: {fileID: 11493418}
   m_Layer: 0
   m_Name: E_Note
   m_TagString: SheetNote
@@ -264,6 +265,20 @@ MonoBehaviour:
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
   Perfect: {fileID: 0}
+--- !u!114 &11493418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 4
+  NoteOctave: 1
+  AccidentalType: 0
 --- !u!212 &21203494
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -359,6 +374,14 @@ Prefab:
       objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteOctave
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

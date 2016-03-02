@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11413458}
   - 54: {fileID: 5477350}
   - 114: {fileID: 11460918}
+  - 114: {fileID: 11497186}
   m_Layer: 0
   m_Name: A_Note
   m_TagString: SheetNote
@@ -194,6 +195,7 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
+  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -272,6 +274,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NotetoLit: {fileID: 0}
+--- !u!114 &11497186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 0
+  NoteOctave: 1
+  AccidentalType: 0
 --- !u!212 &21219836
 SpriteRenderer:
   m_ObjectHideFlags: 1

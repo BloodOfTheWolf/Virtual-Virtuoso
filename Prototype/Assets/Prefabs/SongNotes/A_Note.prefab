@@ -30,6 +30,7 @@ GameObject:
   - 82: {fileID: 8277734}
   - 114: {fileID: 11435694}
   - 54: {fileID: 5427190}
+  - 114: {fileID: 11419360}
   m_Layer: 0
   m_Name: A_Note
   m_TagString: SheetNote
@@ -248,6 +249,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &11419360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoteType: 0
+  NoteOctave: 1
+  AccidentalType: 0
 --- !u!114 &11435694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,6 +374,10 @@ Prefab:
       objectReference: {fileID: 183984, guid: 3a7e2ca31d5bdb44fb5d890cfe533210, type: 2}
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteOctave
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
