@@ -12,12 +12,22 @@ public class FireworksScript : MonoBehaviour
     /// <summary>
     /// The base duration of the timer in seconds.
     /// </summary>
-    public float TimerBaseValue = 1.0f;
+    float TimerBaseValue;
+
+    /// <summary>
+    /// The minimum duration of the timer in seconds.
+    /// </summary>
+    public float TimerMinValue = 1.0f;
+
+    /// <summary>
+    /// The maximum duration of the timer in seconds.
+    /// </summary>
+    public float TimerMaxValue = 2.0f;
 
     /// <summary>
     /// The timer's current value.
     /// </summary>
-    float TimerCurValue;
+    public float TimerCurValue;
 
     /// <summary>
     /// Asset containing the ParticleSystem.
@@ -33,6 +43,8 @@ public class FireworksScript : MonoBehaviour
     void Start()
     {
         Debug.Log( "FireworksScript.Start(): Entered" );
+
+        TimerBaseValue = DecideTimerValue();
 
         TimerCurValue = TimerBaseValue;
 
@@ -86,7 +98,16 @@ public class FireworksScript : MonoBehaviour
         SpawnObjects();
         PlayEffects();
 
-        StartTimer( 1.0f );
+        TimerBaseValue = Random.Range( TimerMinValue, TimerMaxValue );
+
+        StartTimer( DecideTimerValue() );
+    }
+
+    float DecideTimerValue()
+    {
+        var value = Random.Range( TimerMinValue, TimerMaxValue );
+
+        return value;
     }
 
 

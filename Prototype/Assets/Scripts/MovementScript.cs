@@ -22,8 +22,6 @@ public class MovementScript : MonoBehaviour
 	
 	void Update() 
 	{
-           Vector3 force = this.transform.position += new Vector3( 1, 0, 0 ) * speed * Time.deltaTime;
-           
+        Vector3 force = this.transform.position += new Vector3( 1, 0, 0 ) * speed * Time.deltaTime;
 	}
-	
 }

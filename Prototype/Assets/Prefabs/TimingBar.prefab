@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 178752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05000019, y: 1.70000005, z: 0}
+  m_LocalPosition: {x: -6.44999981, y: 1.70000005, z: 0}
   m_LocalScale: {x: 3.59570909, y: 3.57939935, z: 2.19585443}
   m_Children:
   - {fileID: 414968}
@@ -190,7 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Song: {fileID: 0}
-  LeftHand: {fileID: 0}
 --- !u!114 &11481622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -207,7 +206,6 @@ MonoBehaviour:
   Good: {fileID: 0}
   Miss: {fileID: 0}
   Song: {fileID: 0}
-  LeftHand: {fileID: 0}
 --- !u!212 &21209542
 SpriteRenderer:
   m_ObjectHideFlags: 1

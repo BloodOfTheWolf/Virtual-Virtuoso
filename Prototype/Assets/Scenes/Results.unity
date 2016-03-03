@@ -197,7 +197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c085dcfc0f68ef4c936ca66f4804e8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerBaseValue: 1
+  TimerMinValue: .5
+  TimerMaxValue: 3.5
+  TimerCurValue: 0
   ParticleSystemObject: {fileID: 147499196}
 --- !u!1 &147499196
 GameObject:
