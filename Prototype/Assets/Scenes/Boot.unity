@@ -1076,6 +1076,7 @@ GameObject:
   - 4: {fileID: 1399529514}
   - 114: {fileID: 1399529513}
   - 82: {fileID: 1399529512}
+  - 114: {fileID: 1399529515}
   m_Layer: 0
   m_Name: SFXController
   m_TagString: Untagged
@@ -1191,6 +1192,138 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1399529515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399529511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e9c3a634c14aa4bb630fe91c035610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentInstrument: 0
+  C1: {fileID: 0}
+  D1: {fileID: 0}
+  E1: {fileID: 0}
+  F1: {fileID: 0}
+  G1: {fileID: 0}
+  A2: {fileID: 0}
+  B2: {fileID: 0}
+  C2: {fileID: 0}
+  D2: {fileID: 0}
+  E2: {fileID: 0}
+  F2: {fileID: 0}
+  G2: {fileID: 0}
+  A3: {fileID: 0}
+  B3: {fileID: 0}
+  C1_Sharp: {fileID: 0}
+  D1_Sharp: {fileID: 0}
+  F1_Sharp: {fileID: 0}
+  G1_Sharp: {fileID: 0}
+  A2_Sharp: {fileID: 0}
+  C2_Sharp: {fileID: 0}
+  D2_Sharp: {fileID: 0}
+  F2_Sharp: {fileID: 0}
+  G2_Sharp: {fileID: 0}
+  A3_Sharp: {fileID: 0}
+  Piano_C1: {fileID: 0}
+  Piano_D1: {fileID: 0}
+  Piano_E1: {fileID: 0}
+  Piano_F1: {fileID: 0}
+  Piano_G1: {fileID: 0}
+  Piano_A2: {fileID: 0}
+  Piano_B2: {fileID: 0}
+  Piano_C2: {fileID: 0}
+  Piano_D2: {fileID: 0}
+  Piano_E2: {fileID: 0}
+  Piano_F2: {fileID: 0}
+  Piano_G2: {fileID: 0}
+  Piano_A3: {fileID: 0}
+  Piano_B3: {fileID: 0}
+  Piano_C1_Sharp: {fileID: 0}
+  Piano_D1_Sharp: {fileID: 0}
+  Piano_F1_Sharp: {fileID: 0}
+  Piano_G1_Sharp: {fileID: 0}
+  Piano_A2_Sharp: {fileID: 0}
+  Piano_C2_Sharp: {fileID: 0}
+  Piano_D2_Sharp: {fileID: 0}
+  Piano_F2_Sharp: {fileID: 0}
+  Piano_G2_Sharp: {fileID: 0}
+  Piano_A3_Sharp: {fileID: 0}
+  Dulcimer_C1: {fileID: 0}
+  Dulcimer_D1: {fileID: 0}
+  Dulcimer_E1: {fileID: 0}
+  Dulcimer_F1: {fileID: 0}
+  Dulcimer_G1: {fileID: 0}
+  Dulcimer_A2: {fileID: 0}
+  Dulcimer_B2: {fileID: 0}
+  Dulcimer_C2: {fileID: 0}
+  Dulcimer_D2: {fileID: 0}
+  Dulcimer_E2: {fileID: 0}
+  Dulcimer_F2: {fileID: 0}
+  Dulcimer_G2: {fileID: 0}
+  Dulcimer_A3: {fileID: 0}
+  Dulcimer_B3: {fileID: 0}
+  Dulcimer_C1_Sharp: {fileID: 0}
+  Dulcimer_D1_Sharp: {fileID: 0}
+  Dulcimer_F1_Sharp: {fileID: 0}
+  Dulcimer_G1_Sharp: {fileID: 0}
+  Dulcimer_A2_Sharp: {fileID: 0}
+  Dulcimer_C2_Sharp: {fileID: 0}
+  Dulcimer_D2_Sharp: {fileID: 0}
+  Dulcimer_F2_Sharp: {fileID: 0}
+  Dulcimer_G2_Sharp: {fileID: 0}
+  Dulcimer_A3_Sharp: {fileID: 0}
+  Harpsichord_C1: {fileID: 0}
+  Harpsichord_D1: {fileID: 0}
+  Harpsichord_E1: {fileID: 0}
+  Harpsichord_F1: {fileID: 0}
+  Harpsichord_G1: {fileID: 0}
+  Harpsichord_A2: {fileID: 0}
+  Harpsichord_B2: {fileID: 0}
+  Harpsichord_C2: {fileID: 0}
+  Harpsichord_D2: {fileID: 0}
+  Harpsichord_E2: {fileID: 0}
+  Harpsichord_F2: {fileID: 0}
+  Harpsichord_G2: {fileID: 0}
+  Harpsichord_A3: {fileID: 0}
+  Harpsichord_B3: {fileID: 0}
+  Harpsichord_C1_Sharp: {fileID: 0}
+  Harpsichord_D1_Sharp: {fileID: 0}
+  Harpsichord_F1_Sharp: {fileID: 0}
+  Harpsichord_G1_Sharp: {fileID: 0}
+  Harpsichord_A2_Sharp: {fileID: 0}
+  Harpsichord_C2_Sharp: {fileID: 0}
+  Harpsichord_D2_Sharp: {fileID: 0}
+  Harpsichord_F2_Sharp: {fileID: 0}
+  Harpsichord_G2_Sharp: {fileID: 0}
+  Harpsichord_A3_Sharp: {fileID: 0}
+  PipeOrgan_C1: {fileID: 0}
+  PipeOrgan_D1: {fileID: 0}
+  PipeOrgan_E1: {fileID: 0}
+  PipeOrgan_F1: {fileID: 0}
+  PipeOrgan_G1: {fileID: 0}
+  PipeOrgan_A2: {fileID: 0}
+  PipeOrgan_B2: {fileID: 0}
+  PipeOrgan_C2: {fileID: 0}
+  PipeOrgan_D2: {fileID: 0}
+  PipeOrgan_E2: {fileID: 0}
+  PipeOrgan_F2: {fileID: 0}
+  PipeOrgan_G2: {fileID: 0}
+  PipeOrgan_A3: {fileID: 0}
+  PipeOrgan_B3: {fileID: 0}
+  PipeOrgan_C1_Sharp: {fileID: 0}
+  PipeOrgan_D1_Sharp: {fileID: 0}
+  PipeOrgan_F1_Sharp: {fileID: 0}
+  PipeOrgan_G1_Sharp: {fileID: 0}
+  PipeOrgan_A2_Sharp: {fileID: 0}
+  PipeOrgan_C2_Sharp: {fileID: 0}
+  PipeOrgan_D2_Sharp: {fileID: 0}
+  PipeOrgan_F2_Sharp: {fileID: 0}
+  PipeOrgan_G2_Sharp: {fileID: 0}
+  PipeOrgan_A3_Sharp: {fileID: 0}
 --- !u!1 &1479028623
 GameObject:
   m_ObjectHideFlags: 0

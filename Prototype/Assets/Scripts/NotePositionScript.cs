@@ -3,6 +3,9 @@ using System.Collections;
 
 public class NotePositionScript : MonoBehaviour
 {
+    public NoteSoundManager NoteScript;
+    public AudioSource SFXAudioSource;
+
     /// <summary>
     /// Types of notes.
     /// </summary>
@@ -65,6 +68,12 @@ public class NotePositionScript : MonoBehaviour
 
         // Fix the note's Y-position
         AdjustNotePosition();
+
+        // Get the NoteSoundManager script
+        NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
+
+        // Get the NoteSoundManager script
+        SFXAudioSource = GameObject.Find( "SFXController" ).GetComponent<AudioSource>();
 	}
 
     /// <summary>
