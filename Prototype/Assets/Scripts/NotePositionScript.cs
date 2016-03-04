@@ -6,6 +6,8 @@ public class NotePositionScript : MonoBehaviour
     public NoteSoundManager NoteScript;
     public AudioSource SFXAudioSource;
 
+    public AudioClip SoundToPlay;
+
     /// <summary>
     /// Types of notes.
     /// </summary>
@@ -73,7 +75,7 @@ public class NotePositionScript : MonoBehaviour
         NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
 
         // Get the NoteSoundManager script
-        SFXAudioSource = GameObject.Find( "SFXController" ).GetComponent<AudioSource>();
+        SFXAudioSource = gameObject.GetComponent<AudioSource>();
 	}
 
     /// <summary>
@@ -115,9 +117,17 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.A2; }
+                else{ SoundToPlay = NoteScript.A2_Sharp; }
+                
                 NewYPosition = 2.2f;
             break;
             case 3:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.A3; }
+                else{ SoundToPlay = NoteScript.A3_Sharp; }
+                
                 NewYPosition = 4.625f;
             break;
             }
@@ -126,9 +136,17 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.B2; }
+                else{ SoundToPlay = NoteScript.B2; }
+                
                 NewYPosition = 2.575f;
             break;
             case 3:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.B3; }
+                else{ SoundToPlay = NoteScript.B3; }
+                
                 NewYPosition = 5.0f;
             break;
             }
@@ -137,13 +155,18 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 1:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.C1; }
+                else{ SoundToPlay = NoteScript.C1_Sharp; }
+                
                 NewYPosition = 0.575f;
             break;
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.C2; }
+                else{ SoundToPlay = NoteScript.C2_Sharp; }
+                
                 NewYPosition = 2.9f;
-            break;
-            case 3:
-                NewYPosition = 5.325f;
             break;
             }
         break;
@@ -151,9 +174,17 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 1:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.D1; }
+                else{ SoundToPlay = NoteScript.D1_Sharp; }
+                
                 NewYPosition = 0.9f;
             break;
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.D2; }
+                else{ SoundToPlay = NoteScript.D2_Sharp; }
+                
                 NewYPosition = 3.25f;
             break;
             }
@@ -162,9 +193,17 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 1:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.E1; }
+                else{ SoundToPlay = NoteScript.E1; }
+                
                 NewYPosition = 1.225f;
             break;
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.E2; }
+                else{ SoundToPlay = NoteScript.E2; }
+                
                 NewYPosition = 3.575f;
             break;
             }
@@ -173,9 +212,17 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 1:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.F1; }
+                else{ SoundToPlay = NoteScript.F1_Sharp; }
+                
                 NewYPosition = 1.55f;
             break;
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.F2; }
+                else{ SoundToPlay = NoteScript.F2_Sharp; }
+                
                 NewYPosition = 3.925f;
             break;
             }
@@ -184,14 +231,25 @@ public class NotePositionScript : MonoBehaviour
             switch( NoteOctave )
             {
             case 1:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.G1; }
+                else{ SoundToPlay = NoteScript.G1_Sharp; }
+                
                 NewYPosition = 1.9f;
             break;
             case 2:
+                if( AccidentalType == Accidental.Natural )
+                    { SoundToPlay = NoteScript.G2; }
+                else{ SoundToPlay = NoteScript.G2_Sharp; }
+                
                 NewYPosition = 4.25f;
             break;
             }
         break;
         }
+
+        // Set the note's play sound
+        SFXAudioSource.clip = SoundToPlay;
 
         // Set the note's new position
         gameObject.transform.position.Set( gameObject.transform.position.x, NewYPosition, gameObject.transform.position.z );

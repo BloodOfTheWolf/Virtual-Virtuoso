@@ -1228,53 +1228,53 @@ MonoBehaviour:
   F2_Sharp: {fileID: 0}
   G2_Sharp: {fileID: 0}
   A3_Sharp: {fileID: 0}
-  Piano_C1: {fileID: 0}
-  Piano_D1: {fileID: 0}
-  Piano_E1: {fileID: 0}
-  Piano_F1: {fileID: 0}
-  Piano_G1: {fileID: 0}
-  Piano_A2: {fileID: 0}
-  Piano_B2: {fileID: 0}
-  Piano_C2: {fileID: 0}
-  Piano_D2: {fileID: 0}
-  Piano_E2: {fileID: 0}
-  Piano_F2: {fileID: 0}
-  Piano_G2: {fileID: 0}
+  Piano_C1: {fileID: 8300000, guid: 54550b09bd3ae074eacd99b400bd0552, type: 3}
+  Piano_D1: {fileID: 8300000, guid: c900a536a85480447b842847e6a4c7e9, type: 3}
+  Piano_E1: {fileID: 8300000, guid: a51aa1684904c9744af6d9b883020777, type: 3}
+  Piano_F1: {fileID: 8300000, guid: 53b252ddfe2192e458e34f65d0fa02df, type: 3}
+  Piano_G1: {fileID: 8300000, guid: 7b7871444e1adf04fbb1337478cd7726, type: 3}
+  Piano_A2: {fileID: 8300000, guid: 5d98fed54bdc7f843b49ffd1612080ac, type: 3}
+  Piano_B2: {fileID: 8300000, guid: 9353559efe0af2e48a577a6a3268c05c, type: 3}
+  Piano_C2: {fileID: 8300000, guid: 279ed5e7228440d43b98133cb42be965, type: 3}
+  Piano_D2: {fileID: 8300000, guid: 7f81165a075ec194bad7d72c48c9c596, type: 3}
+  Piano_E2: {fileID: 8300000, guid: 85aad6bf80531d24e9e1cebeb4d900c1, type: 3}
+  Piano_F2: {fileID: 8300000, guid: df0db33466af79d40beff573962eac45, type: 3}
+  Piano_G2: {fileID: 8300000, guid: a43a9ef6fd0e0a547a35506f50c68d67, type: 3}
   Piano_A3: {fileID: 0}
   Piano_B3: {fileID: 0}
-  Piano_C1_Sharp: {fileID: 0}
-  Piano_D1_Sharp: {fileID: 0}
-  Piano_F1_Sharp: {fileID: 0}
-  Piano_G1_Sharp: {fileID: 0}
-  Piano_A2_Sharp: {fileID: 0}
-  Piano_C2_Sharp: {fileID: 0}
-  Piano_D2_Sharp: {fileID: 0}
-  Piano_F2_Sharp: {fileID: 0}
-  Piano_G2_Sharp: {fileID: 0}
+  Piano_C1_Sharp: {fileID: 8300000, guid: c25ecdb486b54c14cb74fb5b9febcb8b, type: 3}
+  Piano_D1_Sharp: {fileID: 8300000, guid: ca1d4f308d4d6c94d9d9dcc4349ef193, type: 3}
+  Piano_F1_Sharp: {fileID: 8300000, guid: 228a88e7ef1e8eb46b58e871f542670f, type: 3}
+  Piano_G1_Sharp: {fileID: 8300000, guid: b887077ace0f13645acd50975ae20747, type: 3}
+  Piano_A2_Sharp: {fileID: 8300000, guid: 7673b5bfdf5527a4bb44bb718d4c01ec, type: 3}
+  Piano_C2_Sharp: {fileID: 8300000, guid: d18963332b879f545a04c8e7ffb3c2a0, type: 3}
+  Piano_D2_Sharp: {fileID: 8300000, guid: 41fdac384b3faaf4e86559a313c29822, type: 3}
+  Piano_F2_Sharp: {fileID: 8300000, guid: 806db3421b62f7d44b16405c37290a53, type: 3}
+  Piano_G2_Sharp: {fileID: 8300000, guid: f0eebc81b40b40243a518c1954c3894a, type: 3}
   Piano_A3_Sharp: {fileID: 0}
-  Dulcimer_C1: {fileID: 0}
-  Dulcimer_D1: {fileID: 0}
-  Dulcimer_E1: {fileID: 0}
-  Dulcimer_F1: {fileID: 0}
-  Dulcimer_G1: {fileID: 0}
-  Dulcimer_A2: {fileID: 0}
-  Dulcimer_B2: {fileID: 0}
-  Dulcimer_C2: {fileID: 0}
-  Dulcimer_D2: {fileID: 0}
-  Dulcimer_E2: {fileID: 0}
-  Dulcimer_F2: {fileID: 0}
-  Dulcimer_G2: {fileID: 0}
+  Dulcimer_C1: {fileID: 8300000, guid: 3873ed42f0da02f4d8b1bbf97b46e608, type: 3}
+  Dulcimer_D1: {fileID: 8300000, guid: 553a57690c13ec541a65f6e7ee24acc4, type: 3}
+  Dulcimer_E1: {fileID: 8300000, guid: 8e1881a7841663f4ca9fd8e8f7cfd201, type: 3}
+  Dulcimer_F1: {fileID: 8300000, guid: 292f215cacf10f0489b6dd4e0d414e87, type: 3}
+  Dulcimer_G1: {fileID: 8300000, guid: b1b0e80fab389314d84fd5747397660c, type: 3}
+  Dulcimer_A2: {fileID: 8300000, guid: 689e06da44920b94b8bb93c7738002ed, type: 3}
+  Dulcimer_B2: {fileID: 8300000, guid: eaa99e9837142bb43a75d0415949a1fc, type: 3}
+  Dulcimer_C2: {fileID: 8300000, guid: 9a3036b19c3da4641abcfb85d42ad722, type: 3}
+  Dulcimer_D2: {fileID: 8300000, guid: 3b29b0067bd74824996cd830803f35e8, type: 3}
+  Dulcimer_E2: {fileID: 8300000, guid: 03633323acde43e40abe3fbc8b9e2e07, type: 3}
+  Dulcimer_F2: {fileID: 8300000, guid: 30f30619f3fa5c0499214a7b8e1d9338, type: 3}
+  Dulcimer_G2: {fileID: 8300000, guid: 1dd49fd0db83dd14286e5ee6b82796c2, type: 3}
   Dulcimer_A3: {fileID: 0}
   Dulcimer_B3: {fileID: 0}
-  Dulcimer_C1_Sharp: {fileID: 0}
-  Dulcimer_D1_Sharp: {fileID: 0}
-  Dulcimer_F1_Sharp: {fileID: 0}
-  Dulcimer_G1_Sharp: {fileID: 0}
-  Dulcimer_A2_Sharp: {fileID: 0}
-  Dulcimer_C2_Sharp: {fileID: 0}
-  Dulcimer_D2_Sharp: {fileID: 0}
-  Dulcimer_F2_Sharp: {fileID: 0}
-  Dulcimer_G2_Sharp: {fileID: 0}
+  Dulcimer_C1_Sharp: {fileID: 8300000, guid: 3956d21f8f5d6e34d895c8c7bea4df60, type: 3}
+  Dulcimer_D1_Sharp: {fileID: 8300000, guid: 021c6015ce71b384f808822bce962020, type: 3}
+  Dulcimer_F1_Sharp: {fileID: 8300000, guid: 68bbe875249375b4390f466c2e2f5776, type: 3}
+  Dulcimer_G1_Sharp: {fileID: 8300000, guid: 2898222c144f1a942ad6cf827336ab8d, type: 3}
+  Dulcimer_A2_Sharp: {fileID: 8300000, guid: b604225d7aadd10429657c3c9d1436ea, type: 3}
+  Dulcimer_C2_Sharp: {fileID: 8300000, guid: 5faad916ceb5fd341810f09f8d33c3f8, type: 3}
+  Dulcimer_D2_Sharp: {fileID: 8300000, guid: 28268b9ff1e395048a22abfbbe89f058, type: 3}
+  Dulcimer_F2_Sharp: {fileID: 8300000, guid: de91eaee8c70d804c84966655cc8e6ec, type: 3}
+  Dulcimer_G2_Sharp: {fileID: 8300000, guid: e1407b1fef6d9f843be0f834a0916d5b, type: 3}
   Dulcimer_A3_Sharp: {fileID: 0}
   Harpsichord_C1: {fileID: 0}
   Harpsichord_D1: {fileID: 0}

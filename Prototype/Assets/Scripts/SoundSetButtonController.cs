@@ -26,6 +26,8 @@ public class SoundSetButtonController : MonoBehaviour
 
     GameObject SFXController;
 
+    NoteSoundManager NoteSoundScript;
+
 	public PlayerScoreInfoScript Cash;
 
     // Use this for initialization
@@ -41,7 +43,11 @@ public class SoundSetButtonController : MonoBehaviour
         SoundSelected = "";
         ConfirmPurchase.enabled = false;
 
+        SFXController = GameObject.Find( "SFXController" );
+        NoteSoundScript = SFXController.GetComponent<NoteSoundManager>();
+
     }
+
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
@@ -115,6 +121,19 @@ public class SoundSetButtonController : MonoBehaviour
         SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
 		ConfirmPurchase.enabled = false;
 		MenuActive = false;
+
+        switch( SoundSelected )
+        {
+        case "Sound One":
+            NoteSoundScript.ChangeInstrument( Instruments.Dulcimer );
+            break;
+        case "Sound Two":
+            NoteSoundScript.ChangeInstrument( Instruments.Harpsichord );
+            break;
+        case "Sound Three":
+            NoteSoundScript.ChangeInstrument( Instruments.PipeOrgan );
+            break;
+        }
     }
 
     public void PurchaseCancelled()

@@ -6274,6 +6274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 2
+  NoteOctave: 1
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11405628
 MonoBehaviour:
@@ -6298,6 +6303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 5
+  NoteOctave: 1
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11408882
 MonoBehaviour:
@@ -6334,6 +6344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 3
+  NoteOctave: 2
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11417088
 MonoBehaviour:
@@ -6370,6 +6385,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 3
+  NoteOctave: 1
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11424658
 MonoBehaviour:
@@ -6406,6 +6426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 1
+  NoteOctave: 3
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11432986
 MonoBehaviour:
@@ -6418,6 +6443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 3
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11438820
 MonoBehaviour:
@@ -6502,6 +6532,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 2
+  NoteOctave: 3
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11449016
 MonoBehaviour:
@@ -6526,6 +6561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 5
+  NoteOctave: 2
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11452308
 MonoBehaviour:
@@ -6538,6 +6578,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 2
+  NoteOctave: 2
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11452740
 MonoBehaviour:
@@ -6550,6 +6595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 6
+  NoteOctave: 2
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11454240
 MonoBehaviour:
@@ -6574,6 +6624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 5
+  NoteOctave: 2
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11456022
 MonoBehaviour:
@@ -6586,6 +6641,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 2
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11457398
 MonoBehaviour:
@@ -6610,6 +6670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 0
+  NoteOctave: 3
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11461458
 MonoBehaviour:
@@ -6622,6 +6687,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 1
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11462518
 MonoBehaviour:
@@ -6646,6 +6716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 5
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11465376
 MonoBehaviour:
@@ -6670,6 +6745,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 3
+  NoteOctave: 2
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11468872
 MonoBehaviour:
@@ -6682,6 +6762,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 0
+  NoteOctave: 1
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11469676
 MonoBehaviour:
@@ -6718,6 +6803,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 6
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11476576
 MonoBehaviour:
@@ -6730,6 +6820,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 6
+  NoteOctave: 1
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11481898
 MonoBehaviour:
@@ -6742,6 +6837,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 0
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11482216
 MonoBehaviour:
@@ -6754,6 +6854,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 0
+  NoteOctave: 3
+  AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11486338
 MonoBehaviour:
@@ -6778,6 +6883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 6
+  NoteOctave: 2
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11486930
 MonoBehaviour:
@@ -6814,6 +6924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 4
+  NoteOctave: 1
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11497106
 MonoBehaviour:
@@ -6838,6 +6953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 4
+  NoteOctave: 2
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11498954
 MonoBehaviour:
@@ -6862,6 +6982,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af882adeac3b54be49969f13cf0f416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SoundToPlay: {fileID: 0}
+  NoteType: 2
+  NoteOctave: 2
+  AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!212 &21201484
 SpriteRenderer:
@@ -8877,6 +9002,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Center.y
       value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: AccidentalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteOctave
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NoteType
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
