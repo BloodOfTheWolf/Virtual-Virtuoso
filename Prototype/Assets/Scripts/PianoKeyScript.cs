@@ -61,94 +61,91 @@ public class PianoKeyScript : MonoBehaviour
 
     //private Ray ray;
     private RaycastHit RayHitInfo = new RaycastHit();
-   // public static int CurrTouch =0;
+    //public static int CurrTouch =0;
 
-		// Use this for initialization
-		void Awake () 
+
+	void Awake() 
+	{
+		Colored = ColorToggleScript.Toggle;
+		// only to be done once. not in update
+		audio = GetComponent<AudioSource>();
+		NoteVol = PianoVolumeScript.PKVolume;
+		audio.volume = NoteVol;
+
+		Tutorial = gameObject.transform.GetChild (1).gameObject;
+		if (Colored == false) 
 		{
-			Colored = ColorToggleScript.Toggle;
-			// only to be done once. not in update
-		    audio = GetComponent<AudioSource>();
-			NoteVol = PianoVolumeScript.PKVolume;
-			audio.volume = NoteVol;
+		Tutorial.SetActive(false);
 
-			Tutorial = gameObject.transform.GetChild (1).gameObject;
-			if (Colored == false) 
+		}
+		LitNote = gameObject.transform.GetChild (0).gameObject;
+        //notesHitBox = GameObject.FindWithTag(ajorHitbox)
+
+
+        // Get the NoteSoundManager script
+        NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
+
+        UpdateKeySound();
+	}
+		
+	
+	void Update()
+	{
+        if(Input.touches.Length > 0)
+        {
+			OldTouches = new GameObject[TouchList.Count];
+			TouchList.CopyTo(OldTouches);
+			TouchList.Clear();
+			foreach(Touch touch in Input.touches)
 			{
-			Tutorial.SetActive(false);
+			Ray ray = Camera.main.ScreenPointToRay(touch.position);
+
+			if(Physics.Raycast(ray , out RayHitInfo ))
+			{
+				GameObject recipient = RayHitInfo.transform.gameObject;
+				TouchList.Add(recipient);
+
+				if( touch.phase == TouchPhase.Began)
+				{
+					recipient.SendMessage("OnTouchDown");
+				}
+				if( touch.phase == TouchPhase.Ended)
+				{
+					recipient.SendMessage("OnTouchUp");
+				}
+			}
+
+
 
 			}
-			LitNote = gameObject.transform.GetChild (0).gameObject;
-            //notesHitBox = GameObject.FindWithTag(ajorHitbox)
 
-
-            // Get the NoteSoundManager script
-            NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
-
-            UpdateKeySound();
-		}
-		
-		// Update is called once per frame
-		void Update ()
-		{
-            if(Input.touches.Length > 0)
-            {
-				OldTouches = new GameObject[TouchList.Count];
-				TouchList.CopyTo(OldTouches);
-				TouchList.Clear();
-				foreach(Touch touch in Input.touches)
+			foreach(GameObject g in OldTouches)
+			{
+				if(!TouchList.Contains(g))
 				{
-				Ray ray = Camera.main.ScreenPointToRay(touch.position);
-
-				if(Physics.Raycast(ray , out RayHitInfo ))
-				{
-					GameObject recipient = RayHitInfo.transform.gameObject;
-					TouchList.Add(recipient);
-
-					if( touch.phase == TouchPhase.Began)
-					{
-						recipient.SendMessage("OnTouchDown");
-					}
-					if( touch.phase == TouchPhase.Ended)
-					{
-						recipient.SendMessage("OnTouchUp");
-					}
+				    g.SendMessage("OnTouchUp");
 				}
-
-
-
-				}
-
-				foreach(GameObject g in OldTouches)
-				{
-					if(!TouchList.Contains(g))
-					{
-					g.SendMessage("OnTouchUp");
-
-					}
-
-				}
-//                for(int i = 0; i < Input.touchCount ; i++)
+			}
+//            for(int i = 0; i < Input.touchCount ; i++)
+//            {
+//                CurrTouch = i;
+//                if(Input.GetTouch(i).phase == TouchPhase.Began)
 //                {
-//                    CurrTouch = i;
-//                    if(Input.GetTouch(i).phase == TouchPhase.Began)
+//                    ray = Camera.main.ScreenPointToRay( Input.GetTouch( i ).position );
+//                    if(Physics.Raycast(ray, out RayHitInfo))
 //                    {
-//                        ray = Camera.main.ScreenPointToRay( Input.GetTouch( i ).position );
-//                        if(Physics.Raycast(ray, out RayHitInfo))
-//                        {
-//							OnMouseDown();
-//                        }
+//						OnMouseDown();
 //                    }
-//
-//                    if(Input.GetTouch(i).phase == TouchPhase.Ended)
-//                    {
-//						OnMouseUp();
-//                    }
-//
 //                }
-            }
-			
-		}
+//
+//                if(Input.GetTouch(i).phase == TouchPhase.Ended)
+//                {
+//					OnMouseUp();
+//                }
+//
+//            }
+        }
+	}
 		
 	void OnMouseDown()
 	{

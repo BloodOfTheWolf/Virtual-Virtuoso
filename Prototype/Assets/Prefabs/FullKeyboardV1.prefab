@@ -6690,7 +6690,7 @@ MonoBehaviour:
   NoteScript: {fileID: 0}
   SoundToPlay: {fileID: 0}
   NoteType: 1
-  NoteOctave: 1
+  NoteOctave: 2
   AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11462518
@@ -6765,7 +6765,7 @@ MonoBehaviour:
   NoteScript: {fileID: 0}
   SoundToPlay: {fileID: 0}
   NoteType: 0
-  NoteOctave: 1
+  NoteOctave: 2
   AccidentalType: 1
   barnotes: {fileID: 0}
 --- !u!114 &11469676
@@ -6840,7 +6840,7 @@ MonoBehaviour:
   NoteScript: {fileID: 0}
   SoundToPlay: {fileID: 0}
   NoteType: 0
-  NoteOctave: 1
+  NoteOctave: 2
   AccidentalType: 0
   barnotes: {fileID: 0}
 --- !u!114 &11482216
@@ -9009,7 +9009,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: NoteOctave
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: NoteType

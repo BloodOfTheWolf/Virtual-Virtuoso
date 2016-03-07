@@ -185,7 +185,7 @@ public class NoteStreakControllerScript : MonoBehaviour
                 SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
                 // Spawn the 'notestreak multiplier increment' particle effect
-                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+                //PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
 
                 // Double the multiplier value
                 MultiplierCurValue *= 2;
@@ -198,7 +198,7 @@ public class NoteStreakControllerScript : MonoBehaviour
                 SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
                 // Spawn the 'notestreak multiplier increment' particle effect
-                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+                //PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
 
                 // Double the multiplier value
                 MultiplierCurValue *= 2;
@@ -211,7 +211,7 @@ public class NoteStreakControllerScript : MonoBehaviour
                 SFXController.GetComponent<SFXControllerScript>().MultiplierIncrease();
 
                 // Spawn the 'notestreak multiplier increment' particle effect
-                PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
+                //PlayParticleEffect( NotestreakMultiplierIncreaseEffect, NotestreakMultiplierEffectPosition );
 
                 // Double the multiplier value
                 MultiplierCurValue *= 2;

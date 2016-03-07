@@ -19,8 +19,7 @@ public class TimingBarScript : MonoBehaviour
     //public GameObject LeftHand;
 
     
-	// Use this for initialization
-	void Start () 
+	void Start() 
     {
         Sheet = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
 
@@ -49,12 +48,13 @@ public class TimingBarScript : MonoBehaviour
         //LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
 	}
 	
-	// Update is called once per frame
+
 	void Update() 
     {
         CheckCollision();
         //print( "checking collision" );
 	}
+
 
     void OnTriggerEnter( Collider other )
     {
@@ -64,6 +64,7 @@ public class TimingBarScript : MonoBehaviour
             print( "Added a  note" );     
         }
     }
+
 
     void OnTriggerExit( Collider other )
     {
@@ -81,6 +82,7 @@ public class TimingBarScript : MonoBehaviour
         }
                         
     }
+
 
     void CheckCollision()
     {
@@ -108,7 +110,8 @@ public class TimingBarScript : MonoBehaviour
                                 Perfect.SetActive( true );
                                 Good.SetActive( false );
                                 Great.SetActive( false );
-                                Miss.SetActive( false );
+                                Miss.SetActive(false);
+                                SheetNotes[j].GetComponent<SheetNoteScript>().HitNote();
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 10;
@@ -127,7 +130,8 @@ public class TimingBarScript : MonoBehaviour
                                 Great.SetActive( true );
                                 Good.SetActive( false );
                                 Perfect.SetActive( false );
-                                Miss.SetActive( false );
+                                Miss.SetActive(false);
+                                SheetNotes[j].GetComponent<SheetNoteScript>().HitNote();
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 8;
@@ -148,7 +152,8 @@ public class TimingBarScript : MonoBehaviour
                                 Great.SetActive( false );
                                 Good.SetActive( true );
                                 Perfect.SetActive( false );
-                                Miss.SetActive( false );
+                                Miss.SetActive(false);
+                                SheetNotes[j].GetComponent<SheetNoteScript>().HitNote();
                                 SheetNotes[j].SetActive( false );
                                 SheetNotes.Remove( SheetNotes[j] );
                                 NoteStreakControllerScript.Score = NoteStreakControllerScript.Score + 6;

@@ -58,6 +58,7 @@ public class SheetNoteScript : MonoBehaviour
 
     public GameObject Perfect;
 
+
 	public static SheetNoteScript GetInstance()
 	{
 		if (Instance == null) 
@@ -68,7 +69,7 @@ public class SheetNoteScript : MonoBehaviour
 		return Instance;
 	}
 
-	// Use this for initialization
+
 	void Start() 
 	{
         NSController = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
@@ -114,11 +115,13 @@ public class SheetNoteScript : MonoBehaviour
         SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
+
 	// Need to get the SFX Controller object
 	void Update() 
 	{
         SFXController = GameObject.Find( "SFXController" );
 	}
+
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -144,6 +147,7 @@ public class SheetNoteScript : MonoBehaviour
 		}
 	}
 
+
     // AG 07-Jan-16
     /// Plays the specified ParticleSystem prefab 'pfx' at the specified Vector3 location 'spawnLocation'.
     /// <param name="pfx">Particle effect to spawn</param>
@@ -153,6 +157,24 @@ public class SheetNoteScript : MonoBehaviour
     {
         Instantiate( pfx, spawnLocation, Quaternion.identity );
     }
+
+    /// <summary>
+    /// Call this to play this note's /HitEffect/ particle effect.
+    /// </summary>
+    public void HitNote()
+    {
+        PlayParticleEffect(HitEffect, gameObject.transform.position);
+    }
+
+
+    /// <summary>
+    /// Call this to play this note's /MissEffect/ particle effect.
+    /// </summary>
+    public void MissNote()
+    {
+        PlayParticleEffect(MissEffect, gameObject.transform.position);
+    }
+
 
 	void OnTriggerExit(Collider other)
 	{
@@ -180,7 +202,8 @@ public class SheetNoteScript : MonoBehaviour
     /// Plays the note's sound effect.
     /// </summary>
 	public void PlayNote()
-	{
+    {
+        Debug.Log("Play(): Entered");
 		sheetaudio.Play();
 	}
 
