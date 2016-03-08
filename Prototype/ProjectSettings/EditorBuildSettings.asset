@@ -23,7 +23,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/HotCrossBuns.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MaryLamb.unity
   - enabled: 1
     path: Assets/Scenes/FurElise.unity
