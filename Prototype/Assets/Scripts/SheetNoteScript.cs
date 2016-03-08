@@ -13,10 +13,10 @@ public class SheetNoteScript : MonoBehaviour
 
     /// Holder for the note's sound effect.
 	AudioSource sheetaudio;
-    /// 'Hit' icon.
-	public GameObject GreenCheck;
-    /// 'Missed' icon.
-	public GameObject RedCheck;
+    ///// 'Hit' icon.
+    //public GameObject GreenCheck;
+    ///// 'Missed' icon.
+    //public GameObject RedCheck;
 
     /// The player's camera. Used for GUI purposes.
 	Camera cam;

@@ -13,40 +13,40 @@ public class PianoKeyScript : MonoBehaviour
     /// <summary>
     /// Types of notes.
     /// </summary>
-    public enum Note
-    {
-        A,
-        B,
-        C,
-        D,
-        E,
-        F,
-        G,
-    };
+    //public enum Note
+    //{
+    //    A,
+    //    B,
+    //    C,
+    //    D,
+    //    E,
+    //    F,
+    //    G,
+    //};
 
     /// <summary>
     /// Types of accidentals.
     /// </summary>
-    public enum Accidental
-    {
-        Natural,
-        Sharp
-    };
+    //public enum Accidental
+    //{
+    //    Natural,
+    //    Sharp
+    //};
 
     /// <summary>
     /// What type of note (letter) is this?
     /// </summary>
-    public Note NoteType;
+    //public Note NoteType;
 
     /// <summary>
     /// What octave is this note?
     /// </summary>
-    public int NoteOctave = 1;
+    //public int NoteOctave = 1;
 
     /// <summary>
     /// Is this note a natural or a sharp?
     /// </summary>
-    public Accidental AccidentalType = Accidental.Natural;
+    //public Accidental AccidentalType = Accidental.Natural;
 
 
 	AudioSource audio;
@@ -55,6 +55,7 @@ public class PianoKeyScript : MonoBehaviour
 	private float NoteVol;
 	private GameObject Tutorial;
 	private bool Colored;
+    private bool Dulcimer = false;
 
 	private List<GameObject> TouchList = new List<GameObject>();
 	private GameObject[] OldTouches;
@@ -69,6 +70,15 @@ public class PianoKeyScript : MonoBehaviour
 		Colored = ColorToggleScript.Toggle;
 		// only to be done once. not in update
 		audio = GetComponent<AudioSource>();
+        if(Dulcimer == false)
+        {
+            audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Piano" );
+
+        }
+        else
+        {
+            audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Dulc" );
+        }
 		NoteVol = PianoVolumeScript.PKVolume;
 		audio.volume = NoteVol;
 
@@ -85,7 +95,7 @@ public class PianoKeyScript : MonoBehaviour
         // Get the NoteSoundManager script
         NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
 
-        UpdateKeySound();
+        //UpdateKeySound();
 	}
 		
 	
@@ -179,120 +189,120 @@ public class PianoKeyScript : MonoBehaviour
 	{
 	}
 
-    void UpdateKeySound()
-    {
-        // Determine the proper Y-position to set the note to
-        switch( NoteType )
-        {
-        case Note.A:
-            switch( NoteOctave )
-            {
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.A2; }
-                else{ SoundToPlay = NoteScript.A2_Sharp; }
-            break;
-            case 3:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.A3; }
-                else{ SoundToPlay = NoteScript.A3_Sharp; }
-            break;
-            }
-        break;
-        case Note.B:
-            switch( NoteOctave )
-            {
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.B2; }
-                else{ SoundToPlay = NoteScript.B2; }
-            break;
-            case 3:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.B3; }
-                else{ SoundToPlay = NoteScript.B3; }
-            break;
-            }
-        break;
-        case Note.C:
-            switch( NoteOctave )
-            {
-            case 1:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.C1; }
-                else{ SoundToPlay = NoteScript.C1_Sharp; }
-            break;
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.C2; }
-                else{ SoundToPlay = NoteScript.C2_Sharp; }
-            break;
-            }
-        break;
-        case Note.D:
-            switch( NoteOctave )
-            {
-            case 1:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.D1; }
-                else{ SoundToPlay = NoteScript.D1_Sharp; }
-            break;
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.D2; }
-                else{ SoundToPlay = NoteScript.D2_Sharp; }
-            break;
-            }
-        break;
-        case Note.E:
-            switch( NoteOctave )
-            {
-            case 1:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.E1; }
-                else{ SoundToPlay = NoteScript.E1; }
-            break;
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.E2; }
-                else{ SoundToPlay = NoteScript.E2; }
-            break;
-            }
-        break;
-        case Note.F:
-            switch( NoteOctave )
-            {
-            case 1:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.F1; }
-                else{ SoundToPlay = NoteScript.F1_Sharp; }
-            break;
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.F2; }
-                else{ SoundToPlay = NoteScript.F2_Sharp; }
-            break;
-            }
-        break;
-        case Note.G:
-            switch( NoteOctave )
-            {
-            case 1:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.G1; }
-                else{ SoundToPlay = NoteScript.G1_Sharp; }
-            break;
-            case 2:
-                if( AccidentalType == Accidental.Natural )
-                    { SoundToPlay = NoteScript.G2; }
-                else{ SoundToPlay = NoteScript.G2_Sharp; }
-            break;
-            }
-        break;
-        }
+    //void UpdateKeySound()
+    //{
+    //    // Determine the proper Y-position to set the note to
+    //    switch( NoteType )
+    //    {
+    //    case Note.A:
+    //        switch( NoteOctave )
+    //        {
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.A2; }
+    //            else{ SoundToPlay = NoteScript.A2_Sharp; }
+    //        break;
+    //        case 3:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.A3; }
+    //            else{ SoundToPlay = NoteScript.A3_Sharp; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.B:
+    //        switch( NoteOctave )
+    //        {
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.B2; }
+    //            else{ SoundToPlay = NoteScript.B2; }
+    //        break;
+    //        case 3:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.B3; }
+    //            else{ SoundToPlay = NoteScript.B3; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.C:
+    //        switch( NoteOctave )
+    //        {
+    //        case 1:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.C1; }
+    //            else{ SoundToPlay = NoteScript.C1_Sharp; }
+    //        break;
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.C2; }
+    //            else{ SoundToPlay = NoteScript.C2_Sharp; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.D:
+    //        switch( NoteOctave )
+    //        {
+    //        case 1:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.D1; }
+    //            else{ SoundToPlay = NoteScript.D1_Sharp; }
+    //        break;
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.D2; }
+    //            else{ SoundToPlay = NoteScript.D2_Sharp; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.E:
+    //        switch( NoteOctave )
+    //        {
+    //        case 1:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.E1; }
+    //            else{ SoundToPlay = NoteScript.E1; }
+    //        break;
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.E2; }
+    //            else{ SoundToPlay = NoteScript.E2; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.F:
+    //        switch( NoteOctave )
+    //        {
+    //        case 1:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.F1; }
+    //            else{ SoundToPlay = NoteScript.F1_Sharp; }
+    //        break;
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.F2; }
+    //            else{ SoundToPlay = NoteScript.F2_Sharp; }
+    //        break;
+    //        }
+    //    break;
+    //    case Note.G:
+    //        switch( NoteOctave )
+    //        {
+    //        case 1:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.G1; }
+    //            else{ SoundToPlay = NoteScript.G1_Sharp; }
+    //        break;
+    //        case 2:
+    //            if( AccidentalType == Accidental.Natural )
+    //                { SoundToPlay = NoteScript.G2; }
+    //            else{ SoundToPlay = NoteScript.G2_Sharp; }
+    //        break;
+    //        }
+    //    break;
+    //    }
 
-        // Set the note's play sound
-        audio.clip = SoundToPlay;
-    }
+    //    // Set the note's play sound
+    //    audio.clip = SoundToPlay;
+    //}
 
 }
