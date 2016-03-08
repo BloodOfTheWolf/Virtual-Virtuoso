@@ -14,6 +14,12 @@ public class BGMusicSetController : MonoBehaviour
     public Button MusicSetThreeBtn;
     public Button MusicSetFourBtn;
 
+    public static bool SetOneBought;
+    public static bool SetTwoBought;
+    public static bool SetThreeBought;
+    public static bool SetFourBought;
+
+
     enum PurchaseChoice
     {
         MusicSetOne,
@@ -42,6 +48,11 @@ public class BGMusicSetController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        print( "SetThreeBought state = " + SetThreeBought );
+        if(SetThreeBought == true)
+        {
+            MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+        }
         MusicSetOneBtn.GetComponentInChildren<Text>().text = "MusicSetOne";
         MusicSetTwoBtn.GetComponentInChildren<Text>().text = "MusicSetTwo";
         MusicSetThreeBtn.GetComponentInChildren<Text>().text = "MusicSetThree";
@@ -132,15 +143,31 @@ public class BGMusicSetController : MonoBehaviour
         {
         case PurchaseChoice.MusicSetOne:
             MusicSetOneBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetOneBought = true;
+
             break;
         case PurchaseChoice.MusicSetTwo:
             MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetTwoBought = true;
             break;
         case PurchaseChoice.MusicSetThree:
             MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetThreeBought = true;
+            if( Resources.Load<AudioClip>( "Songs/mus_sonata_01" ) != null )
+            {
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_01" );
+                SongholderScript.BGSong.Play();
+            }
+            else
+            {
+                Debug.Break();
+            }
+            //BackgroundMusic.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("mus_sonata_01");
+            //BackgroundMusic.GetComponent<AudioSource>().Play();
             break;
         case PurchaseChoice.MusicSetFour:
             MusicSetFourBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetFourBought = true;
             break;
         }
     }

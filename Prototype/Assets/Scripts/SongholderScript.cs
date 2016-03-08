@@ -11,7 +11,7 @@ public class SongholderScript : MonoBehaviour {
 	public static AudioSource BGSong;
 	Slider BGMSlider;
 
-	public static List<AudioSource> songs = new List<AudioSource>();
+	//public static List<AudioSource> songs = new List<AudioSource>();
 
 
 	// Use this for initialization

@@ -61,12 +61,12 @@ public class TempoBarScript : MonoBehaviour
 
 		if (other.tag == "Bar") 
 		{
-			//print("bar colided");
+			print("bar colided");
 
             // Update the song's completion state
-            SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>().UpdateSongStates( Application.loadedLevelName );
 
 			Application.LoadLevel("Results");
+            SongProgressionManagerObj.GetComponent<SongProgressionManagerScript>().UpdateSongStates( Application.loadedLevelName );
 			//Application.Quit();
 			//UnityEditor.EditorApplication.isPlaying = false;
 		}

@@ -70,7 +70,7 @@ public class SongProgressionManagerScript : MonoBehaviour
             break;
         }
 
-        if( (bTutorialDone) && (bHotCrossBunsDone) && (bMaryLambDone) )
+        if( (bTutorialDone) && (bHotCrossBunsDone) /*&& (bMaryLambDone)*/ )
         {
             UnlockDifficulty( DifficultyState.Medium );
             MediumUnlock();

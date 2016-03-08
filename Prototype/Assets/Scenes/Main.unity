@@ -1300,6 +1300,18 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 456446, guid: 2592518f16cf54fdb8ab37eaf183e1d4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 456446, guid: 2592518f16cf54fdb8ab37eaf183e1d4, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .370000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 453356, guid: 2592518f16cf54fdb8ab37eaf183e1d4, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 2592518f16cf54fdb8ab37eaf183e1d4, type: 2}
@@ -2288,7 +2300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &480160340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2300,25 +2312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f892e822e0c8241b4989eeaf43d8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WelcomeCanvas: {fileID: 702984217}
-  PianoCanvas: {fileID: 204703143}
-  NotesCanvas: {fileID: 937904701}
-  PlaybarCanvas: {fileID: 90099630}
-  CorrectCanvas: {fileID: 1981486448}
-  IncorrectCanvas: {fileID: 1583276334}
-  YourTurnCanvas: {fileID: 951535318}
-  FinishSongCanvas: {fileID: 1915763552}
-  CongratsCanvas: {fileID: 589150527}
-  TutorialControlOne: {fileID: 34046546}
-  TutorialControlTwo: {fileID: 1520420821}
-  TutorialControlThree: {fileID: 1437577567}
-  TutorialControlFour: {fileID: 1767551634}
-  TutorialControlFive: {fileID: 16497285}
-  TutorialControlSix: {fileID: 366936058}
-  TutorialControlSeven: {fileID: 2058523139}
-  TutorialControlEight: {fileID: 1261334614}
-  TutorialControlNine: {fileID: 316963548}
-  TempoBar: {fileID: 0}
   TimesOpened: 0
 --- !u!4 &480160341
 Transform:
@@ -2346,7 +2339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &487105688
 Transform:
   m_ObjectHideFlags: 0
