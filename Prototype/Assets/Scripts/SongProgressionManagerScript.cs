@@ -7,7 +7,6 @@ public class SongProgressionManagerScript : MonoBehaviour
 {
     public bool bTutorialDone = false;
     public bool bHotCrossBunsDone = false;
-    public bool bMaryLambDone = false;
     public bool bFurEliseDone = false;
     public bool bCanonInDDone = false;
     public bool bEntertainerDone = false;
@@ -30,15 +29,24 @@ public class SongProgressionManagerScript : MonoBehaviour
     /// </summary>
     public DifficultyState CurrentDifficultyUnlocked;
 
+
     void Start()
     {
         DontDestroyOnLoad( this.gameObject );
         UnlockDifficulty( DifficultyState.Easy );
-
-        EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
-        CanonLock = GameObject.Find("CanonLock").GetComponent<Image>();
-        EntertainLock = GameObject.Find("EntertainLock").GetComponent<Image>();
     }
+
+
+    /// <summary>
+    /// Call this to remind the parent object to update the lock image vars.
+    /// </summary>
+    public void GetSongLockComponents()
+    {
+        EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
+        CanonLock = GameObject.Find( "CanonLock" ).GetComponent<Image>();
+        EntertainLock = GameObject.Find( "EntertainLock" ).GetComponent<Image>();
+    }
+
 
     /// <summary>
     /// Updates the state of a given song depending on /songLevelName/.
@@ -56,9 +64,6 @@ public class SongProgressionManagerScript : MonoBehaviour
         case "HotCrossBuns":
             bHotCrossBunsDone = true;
             break;
-        case "MaryLamb":
-            bMaryLambDone = true;
-            break;
         case "FurElise":
             bFurEliseDone = true;
             break;
@@ -70,7 +75,7 @@ public class SongProgressionManagerScript : MonoBehaviour
             break;
         }
 
-        if( (bTutorialDone) && (bHotCrossBunsDone) /*&& (bMaryLambDone)*/ )
+        if( (bTutorialDone) && (bHotCrossBunsDone) )
         {
             UnlockDifficulty( DifficultyState.Medium );
             MediumUnlock();
@@ -83,16 +88,19 @@ public class SongProgressionManagerScript : MonoBehaviour
         }
     }
 
+
     void MediumUnlock()
     {
         EliseLock.enabled = false;
         CanonLock.enabled = false;
     }
 
+
     void HardUnlock()
     {
         EntertainLock.enabled = false;
     }
+
 
     /// <summary>
     /// Updates the player's current difficulty state to /newDifficulty/.

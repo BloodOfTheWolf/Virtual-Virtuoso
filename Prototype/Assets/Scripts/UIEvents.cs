@@ -35,7 +35,6 @@ public class UIEvents : MonoBehaviour
     {
         Tutorial,
         HotCrossBuns,
-        MaryLamb,
         FurElise,
         CanonInD,
         Entertainer
@@ -78,23 +77,6 @@ public class UIEvents : MonoBehaviour
         else
         {
             Debug.Log( "UIEvents.SelectHotCrossBuns(): Song not yet unlocked!" );
-
-            //insert functionality here
-        }
-    }
-
-    public void SelectMaryLamb()
-    {
-        // Has the player unlocked the song?
-        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Easy )
-        {
-            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-            currentChoice = SongChoice.MaryLamb;
-            PlaySongPreview( currentChoice );
-        }
-        else
-        {
-            Debug.Log( "UIEvents.SelectMaryLamb(): Song not yet unlocked!" );
 
             //insert functionality here
         }
@@ -178,10 +160,6 @@ public class UIEvents : MonoBehaviour
             //insert functionality here
             
             break;
-        case SongChoice.MaryLamb:
-            //insert functionality here
-            
-            break;
         case SongChoice.FurElise:
             //insert functionality here
             
@@ -234,9 +212,6 @@ public class UIEvents : MonoBehaviour
                 case SongChoice.HotCrossBuns:
                     LoadHotCrossBuns();
                     break;
-                case SongChoice.MaryLamb:
-                    LoadMaryLamb();
-                    break;
                 case SongChoice.FurElise:
                     LoadFurElise();
                     break;
@@ -270,6 +245,7 @@ public class UIEvents : MonoBehaviour
         CurrencyCanvasScript.HideCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SongSelection );
+        SongProgressionScript.GetSongLockComponents();
     }
 
     public void LoadMarketplace()
@@ -331,11 +307,6 @@ public class UIEvents : MonoBehaviour
     void LoadHotCrossBuns()
     {
         GameStateController.Instance.ChangeState( GameStateController.GameState.HotCrossBuns );
-    }
-
-    void LoadMaryLamb()
-    {
-        GameStateController.Instance.ChangeState( GameStateController.GameState.MaryLamb );
     }
 
     void LoadFurElise()

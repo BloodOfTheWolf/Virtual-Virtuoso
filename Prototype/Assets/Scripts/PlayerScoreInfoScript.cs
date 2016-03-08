@@ -4,13 +4,11 @@ using UnityEngine.UI;
 
 public class PlayerScoreInfoScript : MonoBehaviour
 {
-    public float MaryLambScore;
     public float HotCrossScore;
     public float TwinkleTwinkleScore;
     public float CanonScore;
     public float EliseScore;
     public float EntertainerScore;
-    public float MaryLambScoreHigh;
     public float HotCrossScoreHigh;
     public float TwinkleTwinkleScoreHigh;
     public float CanonScoreHigh;
@@ -28,13 +26,11 @@ public class PlayerScoreInfoScript : MonoBehaviour
     // Use this for initialization
 	void Start () 
     {
-        MaryLambScore = 0;
         HotCrossScore = 0;
         TwinkleTwinkleScore = 0;
         CanonScore = 0;
         EliseScore = 0;
         EntertainerScore = 0;
-        MaryLambScoreHigh = 0;
         HotCrossScoreHigh = 0;
         TwinkleTwinkleScoreHigh = 0;
         CanonScoreHigh = 0;
@@ -47,12 +43,6 @@ public class PlayerScoreInfoScript : MonoBehaviour
 	void Update () 
     {
         //checks to see the player's highest score, and if the new score is higher than that
-        if( Application.loadedLevelName == "MaryLamb" )
-        {
-            lastLevelPlayed = "Mary Had a Little Lamb";
-            MaryLambScore = NoteStreakControllerScript.Score;
-        }
-        
         if (Application.loadedLevelName == "HotCrossBuns")
         {
             lastLevelPlayed = "Hot Cross Buns";

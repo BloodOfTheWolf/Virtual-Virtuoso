@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Results_BestScoreScript : MonoBehaviour 
 {
     private PlayerScoreInfoScript Info;
-    float MaryLambScoreHigh;
     float HotCrossScoreHigh;
     float TwinkleTwinkleScoreHigh;
     float CanonScoreHigh;
@@ -31,15 +30,6 @@ public class Results_BestScoreScript : MonoBehaviour
 	void Update () 
     {
         //check last level played, and then check the new score against the player's current highest
-        if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Mary Had a Little Lamb" )
-        {
-            if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScoreHigh )
-            {
-                PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScore;
-            }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().MaryLambScoreHigh);
-        }
-
         if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Hot Cross Buns" )
         {
             if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScore > PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh )

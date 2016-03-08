@@ -942,7 +942,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bTutorialDone: 0
   bHotCrossBunsDone: 0
-  bMaryLambDone: 0
   bFurEliseDone: 0
   bCanonInDDone: 0
   bEntertainerDone: 0
@@ -1614,13 +1613,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c4e8072a2ae6242aeb5d08eac6f34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaryLambScore: 0
   HotCrossScore: 0
   TwinkleTwinkleScore: 0
   CanonScore: 0
   EliseScore: 0
   EntertainerScore: 0
-  MaryLambScoreHigh: 0
   HotCrossScoreHigh: 0
   TwinkleTwinkleScoreHigh: 0
   CanonScoreHigh: 0

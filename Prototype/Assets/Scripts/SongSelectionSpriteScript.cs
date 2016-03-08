@@ -6,7 +6,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
 
     public Image TutorialSelected;
     public Image HotCrossSelected;
-    public Image MaryLambSelected;
     public Image FurEliseSelected;
     public Image CanonSelected;
     public Image EntertainerSelected;
@@ -15,7 +14,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = true;
         HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
@@ -25,7 +23,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = true;
         HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
@@ -35,17 +32,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = false;
         HotCrossSelected.enabled = true;
-        MaryLambSelected.enabled = false;
-        FurEliseSelected.enabled = false;
-        CanonSelected.enabled = false;
-        EntertainerSelected.enabled = false;
-    }
-
-    public void MaryLambActive()
-    {
-        TutorialSelected.enabled = false;
-        HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = true;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
@@ -55,7 +41,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = false;
         HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = false;
         FurEliseSelected.enabled = true;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
@@ -65,7 +50,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = false;
         HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = true;
         EntertainerSelected.enabled = false;
@@ -75,7 +59,6 @@ public class SongSelectionSpriteScript : MonoBehaviour {
     {
         TutorialSelected.enabled = false;
         HotCrossSelected.enabled = false;
-        MaryLambSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = true;

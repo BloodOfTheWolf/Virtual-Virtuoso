@@ -37,7 +37,6 @@ public class GameStateController : MonoBehaviour
         SongSelection,
         Tutorial,
         HotCrossBuns,
-        MaryLamb,
         FurElise,
         CanonInD,
         Entertainer
@@ -107,10 +106,6 @@ public class GameStateController : MonoBehaviour
             break;
         case GameState.HotCrossBuns:
             Application.LoadLevel( "HotCrossBuns" );
-            RemoveFrontEndObjects();
-            break;
-        case GameState.MaryLamb:
-            Application.LoadLevel( "MaryLamb" );
             RemoveFrontEndObjects();
             break;
         case GameState.FurElise:

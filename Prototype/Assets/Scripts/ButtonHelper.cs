@@ -15,7 +15,6 @@ public class ButtonHelper : MonoBehaviour
         LoadExit,
         SelectTutorial,
         SelectHotCrossBuns,
-        SelectMaryLamb,
         SelectFurElise,
         SelectCanonInD,
         SelectEntertainer,
@@ -61,9 +60,6 @@ public class ButtonHelper : MonoBehaviour
             break;
         case ButtonType.SelectHotCrossBuns:
             UIEventsObj.GetComponent<UIEvents>().SelectHotCrossBuns();
-            break;
-        case ButtonType.SelectMaryLamb:
-            UIEventsObj.GetComponent<UIEvents>().SelectMaryLamb();
             break;
         case ButtonType.SelectFurElise:
             UIEventsObj.GetComponent<UIEvents>().SelectFurElise();

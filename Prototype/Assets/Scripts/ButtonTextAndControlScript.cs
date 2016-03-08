@@ -8,13 +8,11 @@ public class ButtonTextAndControlScript : MonoBehaviour {
 	public Button BackButton;
     public Button Tutorial_Button;
     public Button HotCrossBuns_Button;
-    public Button MaryLamb_Button;
     public Button FurElise_Button;
     public Button CanonInD_Button;
     public Button Entertainer_Button;
     public Button Tutorial_Composer;
     public Button HotCrossBuns_Composer;
-    public Button MaryLamb_Composer;
     public Button FurElise_Composer;
     public Button CanonInD_Composer;
     public Button Entertainer_Composer;
@@ -26,7 +24,6 @@ public class ButtonTextAndControlScript : MonoBehaviour {
     {
         Tutorial_Button.GetComponentInChildren<Text>().text         = "Twinkle Twinkle Little Star (Tutorial)";
         HotCrossBuns_Button.GetComponentInChildren<Text>().text     = "Hot Cross Buns";
-        MaryLamb_Button.GetComponentInChildren<Text>().text         = "Mary Had a Little Lamb";
         FurElise_Button.GetComponentInChildren<Text>().text         = "Für Elise";
         CanonInD_Button.GetComponentInChildren<Text>().text         = "Canon In D";
         Entertainer_Button.GetComponentInChildren<Text>().text      = "The Entertainer";
