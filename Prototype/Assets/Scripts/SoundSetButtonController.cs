@@ -26,7 +26,7 @@ public class SoundSetButtonController : MonoBehaviour
 
     GameObject SFXController;
 
-    NoteSoundManager NoteSoundScript;
+    //NoteSoundManager NoteSoundScript;
 
 	public PlayerScoreInfoScript Cash;
 
@@ -44,7 +44,7 @@ public class SoundSetButtonController : MonoBehaviour
         ConfirmPurchase.enabled = false;
 
         SFXController = GameObject.Find( "SFXController" );
-        NoteSoundScript = SFXController.GetComponent<NoteSoundManager>();
+        //NoteSoundScript = SFXController.GetComponent<NoteSoundManager>();
 
     }
 
@@ -122,18 +122,18 @@ public class SoundSetButtonController : MonoBehaviour
 		ConfirmPurchase.enabled = false;
 		MenuActive = false;
 
-        switch( SoundSelected )
-        {
-        case "Sound One":
-            NoteSoundScript.ChangeInstrument( Instruments.Dulcimer );
-            break;
-        case "Sound Two":
-            NoteSoundScript.ChangeInstrument( Instruments.Harpsichord );
-            break;
-        case "Sound Three":
-            NoteSoundScript.ChangeInstrument( Instruments.PipeOrgan );
-            break;
-        }
+        //switch( SoundSelected )
+        //{
+        //case "Sound One":
+        //    NoteSoundScript.ChangeInstrument( Instruments.Dulcimer );
+        //    break;
+        //case "Sound Two":
+        //    NoteSoundScript.ChangeInstrument( Instruments.Harpsichord );
+        //    break;
+        //case "Sound Three":
+        //    NoteSoundScript.ChangeInstrument( Instruments.PipeOrgan );
+        //    break;
+        //}
     }
 
     public void PurchaseCancelled()

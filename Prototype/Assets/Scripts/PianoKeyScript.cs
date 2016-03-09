@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 public class PianoKeyScript : MonoBehaviour
 {
-    public NoteSoundManager NoteScript;
+    //public NoteSoundManager NoteScript;
 
-    public AudioClip SoundToPlay;
+    //public AudioClip SoundToPlay;
 
     /// <summary>
     /// Types of notes.
@@ -93,7 +93,7 @@ public class PianoKeyScript : MonoBehaviour
 
 
         // Get the NoteSoundManager script
-        NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
+        //NoteScript = GameObject.Find( "SFXController" ).GetComponent<NoteSoundManager>();
 
         //UpdateKeySound();
 	}
