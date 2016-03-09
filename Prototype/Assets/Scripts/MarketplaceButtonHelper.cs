@@ -21,6 +21,10 @@ public class MarketplaceButtonHelper : MonoBehaviour
 
     public ButtonState currentButtonState = ButtonState.Available;
 
+    public Toggle SetToggle;
+    public Text PriceText;
+    public int Price = 0;
+
     void Start()
     {
         ControllerObjectScript = GameObject.Find( "BGMusicMenu" ).GetComponent<BGMusicSetController>();
@@ -35,12 +39,21 @@ public class MarketplaceButtonHelper : MonoBehaviour
         case ButtonState.Available:
             gameObject.GetComponent<Image>().sprite = AvailableImage;
             SaveDataObjScript.MusicSetOneState = 0;
+            SetToggle.interactable = false;
+            this.GetComponent<Button>().interactable = true;
+            PriceText.text = Price.ToString();
             break;
         case ButtonState.NotAvailable:
             gameObject.GetComponent<Image>().sprite = NotAvailableImage;
+            SetToggle.interactable = false;
+            this.GetComponent<Button>().interactable = false;
+            PriceText.text = "N/A";
             break;
         case ButtonState.Purchased:
-            gameObject.GetComponent<Image>().sprite = PurchasedImage;
+            //gameObject.GetComponent<Image>().sprite = PurchasedImage;
+            SetToggle.interactable = true;
+            this.GetComponent<Button>().interactable = false;
+            PriceText.text = "PURCHASED";
             break;
         }
     }
