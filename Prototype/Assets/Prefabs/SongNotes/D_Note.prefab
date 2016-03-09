@@ -77,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -.730000019, z: -.00999999978}
+  m_LocalPosition: {x: 1.30759561, y: .811735034, z: -.00999999978}
   m_LocalScale: {x: .5, y: .150000006, z: 1}
   m_Children:
   - {fileID: 444378}
@@ -90,8 +90,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137892}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: .117120706, y: -.986241579, z: 0}
-  m_LocalScale: {x: 2.36437654, y: 1.72100055, z: 4.38073063}
+  m_LocalPosition: {x: .109999999, y: -.349999994, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444378}
   m_RootOrder: 1
@@ -102,8 +102,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.86666775, z: 0}
-  m_LocalScale: {x: 1.36611068, y: 4.12001705, z: .650529087}
+  m_LocalPosition: {x: 0, y: 2.27999997, z: 0}
+  m_LocalScale: {x: 2.0999999, y: 6.5, z: .650529087}
   m_Children:
   - {fileID: 461018}
   - {fileID: 443254}
@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 107578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -.0199999996}
-  m_LocalScale: {x: .238633677, y: .239481196, z: .23558864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 444378}
   m_RootOrder: 0
@@ -260,6 +260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteScript: {fileID: 0}
+  SFXAudioSource: {fileID: 0}
+  SoundToPlay: {fileID: 0}
   NoteType: 3
   NoteOctave: 1
   AccidentalType: 0
@@ -274,8 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91860da4599d246b9b0e568fd6db7663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GreenCheck: {fileID: 0}
-  RedCheck: {fileID: 0}
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
   Perfect: {fileID: 0}
@@ -303,7 +304,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b2a20c0ecc3341f18c0f9e151326b7e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a589f02bd1be3834387ffd80174a577a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21232722
 SpriteRenderer:
@@ -355,7 +356,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ed8049f9136d7fc468d52c0206da6009, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce5504aedb4de1f469961097d29c1de5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
