@@ -89,7 +89,7 @@ public class ButtonHelper : MonoBehaviour
             break;
         case ButtonType.LoadBackgroundMusicSelection:
             UIEventsObj.GetComponent<UIEvents>().LoadBackgroundMusicSelection();
-            BGMusicSetScript.UpdateVars();
+            //BGMusicSetScript.UpdateVars();
             break;
         case ButtonType.ToggleNoteAssistMode:
             UIEventsObj.GetComponent<UIEvents>().ToggleNoteAssistMode();
@@ -102,10 +102,10 @@ public class ButtonHelper : MonoBehaviour
             Debug.Log( "ButtonHelper.DoAction().DebugUnlockAllSongs: Unlocking all songs" );
             break;
         case ButtonType.MarketplaceConfirmPurchase:
-            BGMusicSetScript.AcceptPurchase();
+            //BGMusicSetScript.AcceptPurchase();
             break;
         case ButtonType.MarketplaceCancelPurchase:
-            BGMusicSetScript.CancelPurchase();
+            //BGMusicSetScript.CancelPurchase();
             break;
         case ButtonType.MusicSet:
             BGMusicSetScript.MusicSetSelected( gameObject.GetComponent<MarketplaceButtonHelper>().SetIndex );
