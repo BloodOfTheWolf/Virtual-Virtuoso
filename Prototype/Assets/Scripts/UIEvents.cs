@@ -30,7 +30,7 @@ public class UIEvents : MonoBehaviour
     public GameObject SaveDataObj;
     public SaveDataScript SaveDataScript;
 
-    //create new enumeration for each song button
+    // Create new enumeration for each song button
     public enum SongChoice
     {
         Tutorial,
@@ -43,7 +43,7 @@ public class UIEvents : MonoBehaviour
     SongChoice previousChoice;
     SongChoice currentChoice = SongChoice.Tutorial;
 
-    //song selection handlers
+    // Song selection handlers
 
     //***********************
     // EASY SONGS

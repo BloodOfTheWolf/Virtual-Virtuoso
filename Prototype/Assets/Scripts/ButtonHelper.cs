@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ButtonHelper : MonoBehaviour
 {
     GameObject UIEventsObj;
+    BGMusicSetController BGMusicSetScript;
     Button myselfButton;
 
     public enum ButtonType
@@ -25,8 +26,11 @@ public class ButtonHelper : MonoBehaviour
         LoadBackgroundMusicSelection,
         ToggleNoteAssistMode,
         ToggleNoteColorMode,
-        DebugUnlockAllSongs
-
+        DebugUnlockAllSongs,
+        MarketplaceConfirmPurchase,
+        MarketplaceCancelPurchase,
+        MusicSet,
+        SoundSet
     };
 
     public ButtonType UIButton;
@@ -34,6 +38,7 @@ public class ButtonHelper : MonoBehaviour
 	void Start()
     {
         UIEventsObj = GameObject.Find( "UIEvents" );
+        BGMusicSetScript = GameObject.Find( "BGMusicController" ).GetComponent<BGMusicSetController>();
 
         myselfButton = GetComponent<Button>();
         myselfButton.onClick.AddListener( () => DoAction( UIButton ) );
@@ -84,6 +89,7 @@ public class ButtonHelper : MonoBehaviour
             break;
         case ButtonType.LoadBackgroundMusicSelection:
             UIEventsObj.GetComponent<UIEvents>().LoadBackgroundMusicSelection();
+            BGMusicSetScript.UpdateVars();
             break;
         case ButtonType.ToggleNoteAssistMode:
             UIEventsObj.GetComponent<UIEvents>().ToggleNoteAssistMode();
@@ -94,6 +100,18 @@ public class ButtonHelper : MonoBehaviour
         case ButtonType.DebugUnlockAllSongs:
             UIEventsObj.GetComponent<UIEvents>().SongProgressionScript.UnlockDifficulty( SongProgressionManagerScript.DifficultyState.Hard );
             Debug.Log( "ButtonHelper.DoAction().DebugUnlockAllSongs: Unlocking all songs" );
+            break;
+        case ButtonType.MarketplaceConfirmPurchase:
+            BGMusicSetScript.AcceptPurchase();
+            break;
+        case ButtonType.MarketplaceCancelPurchase:
+            BGMusicSetScript.CancelPurchase();
+            break;
+        case ButtonType.MusicSet:
+            BGMusicSetScript.MusicSetSelected( gameObject.GetComponent<MarketplaceButtonHelper>().SetIndex );
+            break;
+        case ButtonType.SoundSet:
+            
             break;
         }
     }

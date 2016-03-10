@@ -16,19 +16,12 @@ public class MarketplaceButtonController : MonoBehaviour
 		marketMenu = marketMenu.GetComponent<Canvas>();
 		soundSetButton = soundSetButton.GetComponent<Button>();
 		bgMusicButton = bgMusicButton.GetComponent<Button>();
-		backButton = backButton.GetComponent<Button>();
 	}
 
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
     }
-	
-	public void BackButtonPress()
-	{
-        SFXController.GetComponent<SFXControllerScript>().QuitButtonPressed();
-		Application.LoadLevel( "MainMenu" );
-	}
 	
 	public void SoundSetSelect()
 	{
