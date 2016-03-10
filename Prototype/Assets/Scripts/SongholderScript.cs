@@ -13,7 +13,7 @@ public class SongholderScript : MonoBehaviour {
     public static int CurrentSong;
     public static bool FindToggle;
     public static bool ItsPlaying;
-
+    
 
 	//public static List<AudioSource> songs = new List<AudioSource>();
 
@@ -153,6 +153,42 @@ public class SongholderScript : MonoBehaviour {
         FindToggle = GameObject.Find( "RondoToggle" ).GetComponent<Toggle>().isOn = true;
         break;
 
+        }
+    }
+
+    public static void CheckAvailable()
+    {
+        if(BGMusicSetController.SetOneBought == false)
+        {
+            FindToggle = GameObject.Find( "EtudeToggle" ).GetComponent<Toggle>().interactable = false;
+        }
+        else
+        {
+            FindToggle = GameObject.Find( "EtudeToggle" ).GetComponent<Toggle>().interactable = true;
+        }
+        if( BGMusicSetController.SetTwoBought == false )
+        {
+            FindToggle = GameObject.Find( "SonataToggle" ).GetComponent<Toggle>().interactable = false;
+        }
+        else
+        {
+            FindToggle = GameObject.Find( "SonataToggle" ).GetComponent<Toggle>().interactable = true;
+        }
+        if( BGMusicSetController.SetThreeBought == false )
+        {
+            FindToggle = GameObject.Find( "JesuToggle" ).GetComponent<Toggle>().interactable = false;
+        }
+        else
+        {
+            FindToggle = GameObject.Find( "JesuToggle" ).GetComponent<Toggle>().interactable = true;
+        }
+        if( BGMusicSetController.SetFourBought == false )
+        {
+            FindToggle = GameObject.Find( "RondoToggle" ).GetComponent<Toggle>().interactable = false;
+        }
+        else
+        {
+            FindToggle = GameObject.Find( "RondoToggle" ).GetComponent<Toggle>().interactable = true;
         }
     }
 

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BackgroundSongToggleScript : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class BackgroundSongToggleScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        
+        SongholderScript.CheckAvailable();
 	
 	}
 	
