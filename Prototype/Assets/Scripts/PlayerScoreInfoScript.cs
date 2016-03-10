@@ -18,11 +18,11 @@ public class PlayerScoreInfoScript : MonoBehaviour
     public string lastLevelPlayed;
     public static int PlayerMoney = 1000;
 
-    public int TwinkleStars = 0;
-    public int CrossStars = 0;
-    public int CanonStars = 0;
-    public int EliseStars = 0;
-    public int EntertainerStars = 0;
+    public static int TwinkleStars ;
+    public static int CrossStars ;
+    public static int CanonStars ;
+    public static int EliseStars ;
+    public static int EntertainerStars ;
     public Results_StarControlScript Stars;
     GameObject StarToEnable;
     
