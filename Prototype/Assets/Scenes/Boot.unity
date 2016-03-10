@@ -806,38 +806,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5d62ad673d713d4a82723d37498a023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MusicSetOneBtn: {fileID: 0}
+  MusicSetTwoBtn: {fileID: 0}
+  MusicSetThreeBtn: {fileID: 0}
+  MusicSetFourBtn: {fileID: 0}
   MusicSetButtons:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  MusicSetScripts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  MusicSetsBought: 00000000
-  MusicSetPrices: 00000000000000000000000000000000
-  MusicSetShortNames:
-  - 
-  - 
-  - 
-  - 
-  MusicSetLongNames:
-  - 
-  - 
-  - 
-  - 
-  MusicSetSoundPaths:
-  - 
-  - 
-  - 
-  - 
-  currentSelectedSet: 0
-  PurchaseMessage: 
-  MenuActive: 0
-  PurchaseMenu: {fileID: 0}
-  SFXController: {fileID: 0}
+  ConfirmPurchase: {fileID: 0}
   BackgroundMusic: {fileID: 0}
   CurrentMoney: {fileID: 0}
 --- !u!4 &701662739

@@ -38,7 +38,7 @@ public class ButtonHelper : MonoBehaviour
 	void Start()
     {
         UIEventsObj = GameObject.Find( "UIEvents" );
-        BGMusicSetScript = GameObject.Find( "BGMusicController" ).GetComponent<BGMusicSetController>();
+        //BGMusicSetScript = GameObject.Find( "BGMusicController" ).GetComponent<BGMusicSetController>();
 
         myselfButton = GetComponent<Button>();
         myselfButton.onClick.AddListener( () => DoAction( UIButton ) );
@@ -49,6 +49,7 @@ public class ButtonHelper : MonoBehaviour
         switch( buttonToDo )
         {
         case ButtonType.LoadSongSelection:
+        print( "done" );
             UIEventsObj.GetComponent<UIEvents>().LoadSongSelection();
             break;
         case ButtonType.LoadOptions:
