@@ -42,8 +42,35 @@ public class MarketplaceButtonHelper : MonoBehaviour
     public Toggle SetToggle;
     public Text PriceText;
 
+
+
     void Start()
     {
+        
+
+        //switch( currentButtonState )
+        //{
+        //case ButtonState.Available:
+        //gameObject.GetComponent<Image>().sprite = AvailableImage;
+        ////SaveDataObjScript.MusicSetOneState = 0;
+        //SetToggle.interactable = false;
+        //this.GetComponent<Button>().interactable = true;
+        //PriceText.text = SetPrice.ToString();
+        //break;
+        //case ButtonState.NotAvailable:
+        //gameObject.GetComponent<Image>().sprite = NotAvailableImage;
+        //SetToggle.interactable = false;
+        //this.GetComponent<Button>().interactable = false;
+        //PriceText.text = "N/A";
+        //break;
+        //case ButtonState.Purchased:
+        ////gameObject.GetComponent<Image>().sprite = PurchasedImage;
+        //SetToggle.interactable = true;
+        //this.GetComponent<Button>().interactable = false;
+        //PriceText.text = "PURCHASED";
+        //break;
+        //}
+
         ControllerObjectScript = GameObject.Find( "BGMusicMenu" ).GetComponent<BGMusicSetController>();
         SaveDataObj = GameObject.Find( "SaveData" );
         SaveDataObjScript = SaveDataObj.GetComponent<SaveDataScript>();
@@ -54,24 +81,24 @@ public class MarketplaceButtonHelper : MonoBehaviour
         switch( currentButtonState )
         {
         case ButtonState.Available:
-            gameObject.GetComponent<Image>().sprite = AvailableImage;
-            SaveDataObjScript.MusicSetOneState = 0;
-            SetToggle.interactable = false;
-            this.GetComponent<Button>().interactable = true;
-            PriceText.text = SetPrice.ToString();
-            break;
+        gameObject.GetComponent<Image>().sprite = AvailableImage;
+        //SaveDataObjScript.MusicSetOneState = 0;
+        SetToggle.interactable = false;
+        this.GetComponent<Button>().interactable = true;
+        PriceText.text = SetPrice.ToString();
+        break;
         case ButtonState.NotAvailable:
-            gameObject.GetComponent<Image>().sprite = NotAvailableImage;
-            SetToggle.interactable = false;
-            this.GetComponent<Button>().interactable = false;
-            PriceText.text = "N/A";
-            break;
+        gameObject.GetComponent<Image>().sprite = NotAvailableImage;
+        SetToggle.interactable = false;
+        this.GetComponent<Button>().interactable = false;
+        PriceText.text = "N/A";
+        break;
         case ButtonState.Purchased:
-            //gameObject.GetComponent<Image>().sprite = PurchasedImage;
-            SetToggle.interactable = true;
-            this.GetComponent<Button>().interactable = false;
-            PriceText.text = "PURCHASED";
-            break;
+        //gameObject.GetComponent<Image>().sprite = PurchasedImage;
+        SetToggle.interactable = true;
+        this.GetComponent<Button>().interactable = false;
+        PriceText.text = "PURCHASED";
+        break;
         }
     }
 

@@ -49,25 +49,29 @@ public class BGMusicSetController : MonoBehaviour
     void Start()
     {
         // Store each MusicSetScript
-        for( int set = 0; set < MusicSetButtons.Length; set++ )
-        {
-            MusicSetScripts[set] = MusicSetButtons[set].GetComponent<MarketplaceButtonHelper>();
-            MusicSetShortNames[set] = MusicSetScripts[set].SetShortName;
-            MusicSetLongNames[set] = MusicSetScripts[set].SetLongName;
-            MusicSetPrices[set] = MusicSetScripts[set].SetPrice;
-            MusicSetSoundPaths[set] = MusicSetScripts[set].MusicSetSoundPath;
-            MusicSetsBought[set] = MusicSetScripts[set].MusicSetBought;
-        }
+        
 
-        print( "SetThreeBought state = " + SetThreeBought );
-        if(SetThreeBought == true)
+       // print( "SetThreeBought state = " + SetThreeBought );
+        if( SetOneBought == true )
+        {
+            MusicSetOneBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+        }
+        if( SetTwoBought == true )
+        {
+            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+        }
+        if( SetThreeBought == true )
         {
             MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
         }
-        MusicSetOneBtn.GetComponentInChildren<Text>().text = "MusicSetOne";
-        MusicSetTwoBtn.GetComponentInChildren<Text>().text = "MusicSetTwo";
-        MusicSetThreeBtn.GetComponentInChildren<Text>().text = "MusicSetThree";
-        MusicSetFourBtn.GetComponentInChildren<Text>().text = "MusicSetFour";
+        if(SetFourBought == true)
+        {
+            MusicSetFourBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+        }
+        //MusicSetOneBtn.GetComponentInChildren<Text>().text = "MusicSetOne";
+        //MusicSetTwoBtn.GetComponentInChildren<Text>().text = "MusicSetTwo";
+        //MusicSetThreeBtn.GetComponentInChildren<Text>().text = "MusicSetThree";
+        //MusicSetFourBtn.GetComponentInChildren<Text>().text = "MusicSetFour";
         //BackButton.GetComponentInChildren<Text>().text = "Back";      // See my comment in variable init area     -- AG 18-Feb-16
         ConfirmPurchase.enabled = false;
     }
@@ -79,10 +83,10 @@ public class BGMusicSetController : MonoBehaviour
 
 	public void BeginPurchase()
 	{
-		if (CheckTransaction( MusicSetPrices[currentSelectedSet] )) 
+		if (CheckTransaction( 200)) 
 		{
 			ConfirmPurchase.enabled = true;
-			ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy " + MusicSetLongNames[currentSelectedSet] + "? There are no refunds.";
+			ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy Song 3? There are no refunds.";
 			
 			//			else
 			//			{
@@ -103,14 +107,14 @@ public class BGMusicSetController : MonoBehaviour
 
         // Update the currently selected set
         currentSelectedSet = selectedSet;
-
+        print( "Cureent selected = " + selectedSet );
         // Begin the transaction (of a lifetime)
         BeginPurchase();
     }
 
     public void PurchaseAccept()
     {
-		PlayerScoreInfoScript.PlayerMoney = PlayerScoreInfoScript.PlayerMoney - MusicSetPrices[currentSelectedSet];
+		PlayerScoreInfoScript.PlayerMoney = PlayerScoreInfoScript.PlayerMoney - 200;
 		print (" You have : " + PlayerScoreInfoScript.PlayerMoney);
         SFXController.GetComponent<SFXControllerScript>().ItemPurchased();
 		ConfirmPurchase.enabled = false;
@@ -122,21 +126,42 @@ public class BGMusicSetController : MonoBehaviour
         switch( currentSelectedSet )
         {
         case 0:
-            MusicSetScripts[currentSelectedSet].SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            MusicSetOneBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
             SetOneBought = true;
+            if( Resources.Load<AudioClip>( "Songs/mus_sonata_01" ) != null )
+            {
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_01" );
+                SongholderScript.BGSong.Play();
+                break;
+            }
+            else
+            {
+                Debug.Break();
+            }
 
             break;
         case 1:
-            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
-            SetTwoBought = true;
-            break;
-        case 2:
             MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
             SetThreeBought = true;
             if( Resources.Load<AudioClip>( "Songs/mus_sonata_01" ) != null )
             {
-                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( MusicSetSoundPaths[currentSelectedSet] );
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_01" );
                 SongholderScript.BGSong.Play();
+                break;
+            }
+            else
+            {
+                Debug.Break();
+            }
+            break;
+        case 2:
+            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetTwoBought = true;
+            if( Resources.Load<AudioClip>( "Songs/mus_jesu_32khz" ) != null )
+            {
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_jesu_32khz" );
+                SongholderScript.BGSong.Play();
+                break;
             }
             else
             {
@@ -148,6 +173,16 @@ public class BGMusicSetController : MonoBehaviour
         case 3:
             MusicSetFourBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
             SetFourBought = true;
+            if( Resources.Load<AudioClip>( "Songs/mus_rondo_32khz" ) != null )
+            {
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_rondo_32khz" );
+                SongholderScript.BGSong.Play();
+                break;
+            }
+            else
+            {
+                Debug.Break();
+            }
             break;
         }
     }
@@ -165,7 +200,7 @@ public class BGMusicSetController : MonoBehaviour
     /// <returns>True if the player has enough, false if the player doesn't have enough.</returns>
 	public bool CheckTransaction(int cost)
 	{
-        if( PlayerScoreInfoScript.PlayerMoney > cost )
+        if( PlayerScoreInfoScript.PlayerMoney >= 200 )
 		{
 			MenuActive = true;
 			return true;

@@ -436,9 +436,14 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: dc31aa1617b9b1546ba01c8657958992, type: 3}
   PurchasedImage: {fileID: 21300000, guid: dc31aa1617b9b1546ba01c8657958992, type: 3}
   currentButtonState: 1
+  SetIndex: 0
+  SetShortName: 
+  SetLongName: 
+  SetPrice: 0
+  MusicSetSoundPath: 
+  MusicSetBought: 0
   SetToggle: {fileID: 1943439409}
   PriceText: {fileID: 1397367929}
-  Price: 200
 --- !u!1 &409476696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,12 +1284,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1067557770}
-        m_MethodName: SoundTwoSelected
-        m_Mode: 1
+        m_MethodName: InstrumentSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1339,9 +1344,14 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: dc31aa1617b9b1546ba01c8657958992, type: 3}
   PurchasedImage: {fileID: 21300000, guid: dc31aa1617b9b1546ba01c8657958992, type: 3}
   currentButtonState: 0
+  SetIndex: 0
+  SetShortName: 
+  SetLongName: 
+  SetPrice: 200
+  MusicSetSoundPath: 
+  MusicSetBought: 0
   SetToggle: {fileID: 471186385}
   PriceText: {fileID: 1658281859}
-  Price: 200
 --- !u!1 &845354693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,11 +1734,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbd1c6361175914cae5b2b76d32df48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SoundSetOne: {fileID: 1941429077}
-  SoundSetTwo: {fileID: 769611110}
-  SoundSetThree: {fileID: 1133546917}
-  SoundSetFour: {fileID: 379315882}
-  SoundSetFive: {fileID: 0}
+  InstrumentSetOne: {fileID: 1941429077}
+  InstrumentSetTwo: {fileID: 769611110}
+  InstrumentSetThree: {fileID: 1133546917}
   price: 150
   ConfirmPurchase: {fileID: 2021438050}
   Cash: {fileID: 0}
@@ -1808,12 +1816,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1067557770}
-        m_MethodName: SoundThreeSelected
-        m_Mode: 1
+        m_MethodName: InstrumentSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1868,9 +1876,14 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: 24c8c7c453f2965479c936c85e8ee21b, type: 3}
   PurchasedImage: {fileID: 21300000, guid: 24c8c7c453f2965479c936c85e8ee21b, type: 3}
   currentButtonState: 0
+  SetIndex: 0
+  SetShortName: 
+  SetLongName: 
+  SetPrice: 200
+  MusicSetSoundPath: 
+  MusicSetBought: 0
   SetToggle: {fileID: 664002400}
   PriceText: {fileID: 298706293}
-  Price: 200
 --- !u!1 &1167026995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2351,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200
+  m_Text: '200
+
+'
 --- !u!222 &1549694633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2562,8 +2577,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1067557770}
-        m_MethodName: SoundOneSelected
-        m_Mode: 1
+        m_MethodName: InstrumentSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2619,12 +2634,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AvailableImage: {fileID: 21300000, guid: 5211cb6c41520cd4898069a1323c49ec, type: 3}
-  NotAvailableImage: {fileID: 0}
-  PurchasedImage: {fileID: 0}
+  NotAvailableImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
+  PurchasedImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   currentButtonState: 0
+  SetIndex: 0
+  SetShortName: 
+  SetLongName: 
+  SetPrice: 200
+  MusicSetSoundPath: 
+  MusicSetBought: 0
   SetToggle: {fileID: 558095651}
   PriceText: {fileID: 1549694632}
-  Price: 200
 --- !u!1 &1943439407
 GameObject:
   m_ObjectHideFlags: 0
