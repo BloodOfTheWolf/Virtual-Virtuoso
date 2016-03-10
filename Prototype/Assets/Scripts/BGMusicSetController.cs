@@ -86,7 +86,7 @@ public class BGMusicSetController : MonoBehaviour
 		if (CheckTransaction( 200)) 
 		{
 			ConfirmPurchase.enabled = true;
-			ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy Song 3? There are no refunds.";
+			ConfirmPurchase.GetComponentInChildren<Text>().text = "Are you sure you want to buy this song? There are no refunds.";
 			
 			//			else
 			//			{

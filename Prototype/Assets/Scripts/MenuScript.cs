@@ -74,7 +74,7 @@ public class MenuScript : MonoBehaviour
         switch( NewMenu )
         {
         case "Options":
-            Debug.Log( "Options entered" );
+            quitMenu.enabled = false;
 		    options.enabled = true;
             musicSets.enabled = false;
             soundSets.enabled = false;
@@ -84,6 +84,7 @@ public class MenuScript : MonoBehaviour
             exitText.enabled = false;
         break;
         case "MusicSets":
+            quitMenu.enabled = false;
             options.enabled = false;
             musicSets.enabled = true;
             soundSets.enabled = false;
@@ -93,6 +94,7 @@ public class MenuScript : MonoBehaviour
             exitText.enabled = false;
         break;
         case "SoundSets":
+            quitMenu.enabled = false;
             options.enabled = false;
             musicSets.enabled = false;
             soundSets.enabled = true;
@@ -100,7 +102,17 @@ public class MenuScript : MonoBehaviour
             marketText.enabled = false;
             optionsText.enabled = false;
             exitText.enabled = false;
-        break;
+            break;
+        case "Quit":
+            quitMenu.enabled = true;
+            options.enabled = false;
+            musicSets.enabled = false;
+            soundSets.enabled = true;
+            startText.enabled = false;
+            marketText.enabled = false;
+            optionsText.enabled = false;
+            exitText.enabled = false;
+            break;
         }
 	}
 	
@@ -112,6 +124,7 @@ public class MenuScript : MonoBehaviour
         switch( ActiveMenu )
         {
         case "Options":
+            quitMenu.enabled = false;
 		    options.enabled = false;
             musicSets.enabled = false;
             soundSets.enabled = false;
@@ -121,6 +134,7 @@ public class MenuScript : MonoBehaviour
 		    exitText.enabled = true;
         break;
         case "MusicSets":
+            quitMenu.enabled = false;
             options.enabled = true;
             musicSets.enabled = false;
             soundSets.enabled = false;
@@ -130,6 +144,7 @@ public class MenuScript : MonoBehaviour
             exitText.enabled = false;
         break;
         case "SoundSets":
+            quitMenu.enabled = false;
             options.enabled = true;
             musicSets.enabled = false;
             soundSets.enabled = false;
@@ -137,6 +152,17 @@ public class MenuScript : MonoBehaviour
             marketText.enabled = false;
             optionsText.enabled = false;
             exitText.enabled = false;
+        break;
+        case "Quit":
+            quitMenu.enabled = false;
+            options.enabled = false;
+            musicSets.enabled = false;
+            soundSets.enabled = false;
+            startText.enabled = false;
+            marketText.enabled = false;
+            optionsText.enabled = false;
+            exitText.enabled = false;
+            Application.Quit();
         break;
         }
 	}
@@ -168,6 +194,16 @@ public class MenuScript : MonoBehaviour
         break;
         case "SoundSets":
             options.enabled = true;
+            musicSets.enabled = false;
+            soundSets.enabled = false;
+            startText.enabled = false;
+            marketText.enabled = false;
+            optionsText.enabled = false;
+            exitText.enabled = false;
+        break;
+        case "Quit":
+            quitMenu.enabled = false;
+            options.enabled = false;
             musicSets.enabled = false;
             soundSets.enabled = false;
             startText.enabled = false;

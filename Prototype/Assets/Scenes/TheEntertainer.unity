@@ -8637,19 +8637,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22492906, guid: 5de22c8180c6db24a9c4d4ead8e235c4, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 194.5
+      value: 754
       objectReference: {fileID: 0}
     - target: {fileID: 22492906, guid: 5de22c8180c6db24a9c4d4ead8e235c4, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 474
+      value: 135.5
       objectReference: {fileID: 0}
     - target: {fileID: 22492906, guid: 5de22c8180c6db24a9c4d4ead8e235c4, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 389
+      value: 1508
       objectReference: {fileID: 0}
     - target: {fileID: 22492906, guid: 5de22c8180c6db24a9c4d4ead8e235c4, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 948
+      value: 271
       objectReference: {fileID: 0}
     - target: {fileID: 22448352, guid: 5de22c8180c6db24a9c4d4ead8e235c4, type: 2}
       propertyPath: m_RootOrder

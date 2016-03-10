@@ -40,8 +40,14 @@ public class PlayerScoreInfoScript : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update()
     {
+        // Cap the player's money at 999,999
+        if( PlayerMoney > 999999 )
+        {
+            PlayerMoney = 999999;
+        }
+
         //checks to see the player's highest score, and if the new score is higher than that
         if (Application.loadedLevelName == "HotCrossBuns")
         {
