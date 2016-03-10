@@ -60,8 +60,17 @@ public class NotePositionScript : MonoBehaviour
     ///// If a note's height is lesser than this, it's octave 2.
     ///// </summary>
     //float Octave2Ceiling = 4.0f;
+
+    GameObject[] BarnotesPosition;
+    GameObject[] SharpBarnotesPosition;
+    GameObject[] Notes;
+    GameObject[] SharpNotes;
     void Awake()
     {
+        BarnotesPosition = GameObject.FindGameObjectsWithTag( "BarNote" );
+        SharpBarnotesPosition = GameObject.FindGameObjectsWithTag( "SharpBarNote" );
+        Notes = GameObject.FindGameObjectsWithTag( "SheetNote" );
+        SharpNotes = GameObject.FindGameObjectsWithTag( "SharpSheetNote" );
         AdjustNotePosition();
 
     }
@@ -108,16 +117,57 @@ public class NotePositionScript : MonoBehaviour
     /// <summary>
     /// Call this to correct the note's Y-position based on its /NoteOctave/ and /NoteType/.
     /// </summary>
-    void AdjustNotePosition()
+    public void AdjustNotePosition()
     {
 
-        Vector3 Position = new Vector3( this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z );
-        Vector3 NewPosition = new Vector3( GameObject.Find( "BarNote" + this.name ).transform.position.x, GameObject.Find( "BarNote" + this.name ).transform.position.y, GameObject.Find( "BarNote" + this.name ).transform.position.z );
+        for( int i = 0; i < Notes.Length; i++ )
+        {
+            //print( "enter notepos 1 for" );
+            Vector3 CurrPos = Notes[i].transform.position;
+            for( int j = 0; j < BarnotesPosition.Length; j++ )
+            {
+               // print( "enter notepos 2 for" );
+                if("BarNote" + Notes[i].gameObject.name == BarnotesPosition[j].gameObject.name)
+                {
+                   // print( "enter notepos if" );
+                    Vector3 NewPos = BarnotesPosition[j].transform.position;
+                    CurrPos.y = NewPos.y;
+                    Notes[i].transform.position = new Vector3( CurrPos.x, CurrPos.y, CurrPos.z );
+                   // print( "Position from scvript set " + Notes[i].transform.position.y + "    " +  BarnotesPosition[j].transform.position.y);
+                }
+            }
+               // CurrPos.y = NewPos.y;
+            
+            //Notes[i]
+        }
+        for( int i = 0; i < SharpNotes.Length; i++ )
+        {
+            //print( "enter notepos 1 for" );
+            Vector3 CurrPos = SharpNotes[i].transform.position;
+            for( int j = 0; j < SharpBarnotesPosition.Length; j++ )
+            {
+                // print( "enter notepos 2 for" );
+                if( "BarNote" + SharpNotes[i].gameObject.name == SharpBarnotesPosition[j].gameObject.name )
+                {
+                   // print( "enter notepos if" );
+                    Vector3 NewPos = SharpBarnotesPosition[j].transform.position;
+                    CurrPos.y = NewPos.y;
+                    SharpNotes[i].transform.position = new Vector3( CurrPos.x, CurrPos.y, CurrPos.z );
+                   // print( "Sharp Position from scvript set " + SharpNotes[i].transform.position.y + "    " + SharpBarnotesPosition[j].transform.position.y );
+                }
+            }
+            // CurrPos.y = NewPos.y;
+
+            //Notes[i]
+        }
+
+        //Vector3 Position = new Vector3( this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z );
+        //Vector3 NewPosition = new Vector3( GameObject.Find( "BarNote" + this.name ).transform.position.x, GameObject.Find( "BarNote" + this.name ).transform.position.y, GameObject.Find( "BarNote" + this.name ).transform.position.z );
         
-        //Position.y = NewPosition.y;
-        Vector3 temp = this.transform.position;
-        temp.y = NewPosition.y;
-        this.transform.position = temp;
+        ////Position.y = NewPosition.y;
+        //Vector3 temp = this.transform.position;
+        //temp.y = NewPosition.y;
+        //this.transform.position = temp;
         //Position.y =  GameObject.Find( "BarNote" + this.name ).transform.position.y;
         //print( "Position set" );
         

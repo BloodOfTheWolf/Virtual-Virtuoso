@@ -97,7 +97,7 @@ public class SheetNoteScript : MonoBehaviour
         if( Colored == false )
         {
             Tutorial.SetActive( false );
-            print( "Colored state " + Colored );
+            //print( "Colored state " + Colored );
         }
         else
         {
@@ -112,7 +112,7 @@ public class SheetNoteScript : MonoBehaviour
 
         // Find and assign the save data manager object and script
         SaveDataManagerObj = GameObject.Find( "SaveData" );
-        SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
+        //SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
 

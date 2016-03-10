@@ -62,7 +62,6 @@ GameObject:
   - 82: {fileID: 8264908}
   - 114: {fileID: 11409230}
   - 54: {fileID: 5482700}
-  - 114: {fileID: 11408146}
   m_Layer: 0
   m_Name: A#_Note
   m_TagString: SheetNote
@@ -307,23 +306,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11408146
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NoteScript: {fileID: 0}
-  SFXAudioSource: {fileID: 0}
-  SoundToPlay: {fileID: 0}
-  NoteType: 0
-  NoteOctave: 1
-  AccidentalType: 1
 --- !u!114 &11409230
 MonoBehaviour:
   m_ObjectHideFlags: 1

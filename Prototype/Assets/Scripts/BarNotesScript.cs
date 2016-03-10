@@ -15,6 +15,7 @@ public class BarNotesScript : MonoBehaviour
 		if (other.tag == "SheetNote") 
 		{
 			this.gameObject.SetActive (false);
+            print( "object set inactive" );
 		}
 	}
 }

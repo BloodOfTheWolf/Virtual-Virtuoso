@@ -67,7 +67,7 @@ public class NoteStreakControllerScript : MonoBehaviour
             var iInt = i + 1;
             var iStr = "Fill" + iInt.ToString();
 
-            Debug.Log( "SheetNoteScript: Assigning " + iStr );
+            //Debug.Log( "SheetNoteScript: Assigning " + iStr );
 
             // Assign the image component
             fillImages[i] = GameObject.Find( iStr ).GetComponentInChildren<Image>();
@@ -153,11 +153,11 @@ public class NoteStreakControllerScript : MonoBehaviour
         if( NoteStreak >= HighestStreak )
         {
             HighestStreak = NoteStreak;
-            print( "Highest streak =" + HighestStreak );
+            //print( "Highest streak =" + HighestStreak );
         }
 
         // Print the values to the log
-        print( "NoteStreak: " + NoteStreak );
+        //print( "NoteStreak: " + NoteStreak );
 
 
         // *********************
@@ -166,8 +166,8 @@ public class NoteStreakControllerScript : MonoBehaviour
         // TODO: Fix NotestreakMultiplierEffectPosition's value.
         // Set the position of the 'notestreak multiplier increment' particle effect
         NotestreakMultiplierEffectPosition = new Vector3( 0, 0, 0 );
-        print( NotestreakMultiplierEffectPosition.ToString() );
-        print( gameObject.transform.position.ToString() );
+       // print( NotestreakMultiplierEffectPosition.ToString() );
+        //print( gameObject.transform.position.ToString() );
 
 
         if( NoteStreak > 0 )

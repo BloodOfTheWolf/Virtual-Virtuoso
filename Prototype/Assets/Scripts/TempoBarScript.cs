@@ -37,7 +37,7 @@ public class TempoBarScript : MonoBehaviour
 
         // Find and assign the save data manager object and script
         SaveDataManagerObj = GameObject.Find( "SaveData" );
-        SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
+        //SaveDataManagerScript = SaveDataManagerObj.GetComponent<SaveDataScript>();
 	}
 
 	void OnTriggerEnter(Collider other)

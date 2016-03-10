@@ -30,7 +30,6 @@ GameObject:
   - 82: {fileID: 8294578}
   - 114: {fileID: 11436002}
   - 54: {fileID: 5428752}
-  - 114: {fileID: 11489698}
   m_Layer: 0
   m_Name: G_Note
   m_TagString: SheetNote
@@ -263,23 +262,6 @@ MonoBehaviour:
   HitEffect: {fileID: 100000, guid: 624359039ddfc43a6b27f8c6c1cc5499, type: 2}
   MissEffect: {fileID: 0}
   Perfect: {fileID: 0}
---- !u!114 &11489698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 125808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NoteScript: {fileID: 0}
-  SFXAudioSource: {fileID: 0}
-  SoundToPlay: {fileID: 0}
-  NoteType: 6
-  NoteOctave: 1
-  AccidentalType: 0
 --- !u!212 &21245984
 SpriteRenderer:
   m_ObjectHideFlags: 1

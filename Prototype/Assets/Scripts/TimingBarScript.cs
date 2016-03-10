@@ -10,6 +10,9 @@ public class TimingBarScript : MonoBehaviour
     List<GameObject> FullBarNotes = new List<GameObject>();
     GameObject[] BarNotes;
     GameObject[] SharpBarNotes;
+    //GameObject[] NormalPositions;
+    //GameObject[] SharpPositions;
+    //NotePositionScript Position;
 
     public GameObject Perfect;
     public GameObject Great;
@@ -24,15 +27,30 @@ public class TimingBarScript : MonoBehaviour
         Sheet = GameObject.Find( "MultiplierCanvas" ).GetComponent<NoteStreakControllerScript>();
 
         BarNotes = GameObject.FindGameObjectsWithTag( "BarNote" );
+
+        //NormalPositions = GameObject.FindGameObjectsWithTag( "SheetNote" );
+        //SharpPositions = GameObject.FindGameObjectsWithTag( "SharpSheetNote" );
+
+        //if(NormalPositions != null)
+        //{
+        //    for(int i = 0; i < NormalPositions.Length ; i++)
+        //    {
+        //        NormalPositions[i].SendMessage( "AdjustNotePosition" );
+        //        print( "Position adjusted" );
+        //    }
+        //}
+
         for( int i = 0; i < BarNotes.Length; i ++)
         {
             FullBarNotes.Add(BarNotes[i].gameObject);
+            
             BarNotes[i].SetActive( false );
         }
         SharpBarNotes = GameObject.FindGameObjectsWithTag( "SharpBarNote" );
         for( int i = 0; i < SharpBarNotes.Length; i++ )
         {
             FullBarNotes.Add( SharpBarNotes[i].gameObject );
+            
             SharpBarNotes[i].SetActive( false );
         }
        
@@ -46,6 +64,7 @@ public class TimingBarScript : MonoBehaviour
         Miss.SetActive( false );
         Song = GameObject.FindGameObjectWithTag( "SongObject" );
         //LeftHand = GameObject.FindGameObjectWithTag( "LeftHand" );
+        
 	}
 	
 
@@ -61,7 +80,7 @@ public class TimingBarScript : MonoBehaviour
         if( other.tag == "SheetNote" || other.tag == "SharpSheetNote" )
         {
             SheetNotes.Add( other.gameObject );
-            print( "Added a  note" );     
+            //print( "Added a  note" );     
         }
     }
 
@@ -69,7 +88,7 @@ public class TimingBarScript : MonoBehaviour
     void OnTriggerExit( Collider other )
     {
         SheetNotes.Remove( other.gameObject );
-        print( "Removed a  note" );
+       // print( "Removed a  note" );
         other.gameObject.SetActive( false );
         Great.SetActive( false );
         Good.SetActive( false );
@@ -99,8 +118,8 @@ public class TimingBarScript : MonoBehaviour
                     //print( "entered sheetnotes for loop" );
                     if( FullBarNotes[i].transform.position.y < (SheetNotes[j].transform.position.y + 0.15f) && FullBarNotes[i].transform.position.y > (SheetNotes[j].transform.position.y - 0.15f) )
                     {
-                        print( "barnote pos" + FullBarNotes[i].transform.position.y );
-                        print( "sheetnote pos" + SheetNotes[j].transform.position.y );
+                        //print( "barnote pos" + FullBarNotes[i].transform.position.y );
+                        //print( "sheetnote pos" + SheetNotes[j].transform.position.y );
                         //print( "entered sheetnotes  y check" );
                         float distance = Mathf.Abs( FullBarNotes[i].transform.position.x - SheetNotes[j].transform.position.x );
                         if(distance <= 0.2f) // Perfect
@@ -120,6 +139,7 @@ public class TimingBarScript : MonoBehaviour
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();
+                                FullBarNotes[i].SetActive( false );
                             }
 
                         }
@@ -140,6 +160,7 @@ public class TimingBarScript : MonoBehaviour
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();
+                                FullBarNotes[i].SetActive( false );
                             }
 
 
@@ -162,6 +183,7 @@ public class TimingBarScript : MonoBehaviour
                                 Song.GetComponent<MovementScript>().enabled = true;
                                 //LeftHand.GetComponent<MovementScript>().enabled = true;
                                 Sheet.HitNote();
+                                FullBarNotes[i].SetActive( false );
                             }
                         }
                     }
