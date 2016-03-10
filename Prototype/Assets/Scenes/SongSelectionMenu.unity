@@ -1813,7 +1813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &560005239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1880,7 +1880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &683346072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2482,7 +2482,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &979126361
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3244,7 +3244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1184043103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1186370898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4936,7 +4936,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1995765752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5136,6 +5136,7 @@ GameObject:
   - 114: {fileID: 2024682462}
   - 114: {fileID: 2024682463}
   - 114: {fileID: 2024682464}
+  - 114: {fileID: 2024682465}
   m_Layer: 5
   m_Name: SongSelectionCanvas
   m_TagString: Untagged
@@ -5270,6 +5271,33 @@ MonoBehaviour:
   FurEliseSelected: {fileID: 2017769166}
   CanonSelected: {fileID: 202993776}
   EntertainerSelected: {fileID: 1976526017}
+--- !u!114 &2024682465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024682457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58a09c1041a9874d9d4cdf82a214c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CrossStarOne: {fileID: 979126362}
+  CrossStarTwo: {fileID: 560005240}
+  CrossStarThree: {fileID: 1186370899}
+  TwinkleStarOne: {fileID: 1995765753}
+  TwinkleStarTwo: {fileID: 683346073}
+  TwinkleStarThree: {fileID: 1184043104}
+  CanonStarOne: {fileID: 0}
+  CanonStarTwo: {fileID: 0}
+  CanonStarThree: {fileID: 0}
+  EliseStarOne: {fileID: 0}
+  EliseStarTwo: {fileID: 0}
+  EliseStarThree: {fileID: 0}
+  EntertainerStarOne: {fileID: 0}
+  EntertainerStarTwo: {fileID: 0}
+  EntertainerStarThree: {fileID: 0}
+  Stars: {fileID: 0}
 --- !u!1 &2116738835
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class SoundSetRetainerScript : MonoBehaviour 
 {
-    public Image PianoSelect;
 
 
 	void Start () 
@@ -17,4 +16,9 @@ public class SoundSetRetainerScript : MonoBehaviour
     {
 	
 	}
+
+    void LoadPianoSoundSet()
+    {
+
+    }
 }

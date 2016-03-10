@@ -17,6 +17,14 @@ public class PlayerScoreInfoScript : MonoBehaviour
     private NoteStreakControllerScript Info;
     public string lastLevelPlayed;
     public static int PlayerMoney = 1000;
+
+    public int TwinkleStars = 0;
+    public int CrossStars = 0;
+    public int CanonStars = 0;
+    public int EliseStars = 0;
+    public int EntertainerStars = 0;
+    public Results_StarControlScript Stars;
+    GameObject StarToEnable;
     
     void Awake()
     {
@@ -77,6 +85,114 @@ public class PlayerScoreInfoScript : MonoBehaviour
         {
             lastLevelPlayed = "The Entertainer";
             EntertainerScore = NoteStreakControllerScript.Score;
+        }
+
+        if (Application.loadedLevelName == "Results")
+        {
+            if (lastLevelPlayed == "Hot Cross Buns")
+            {
+                if (CrossStars < 3)
+                {
+                    if (Stars.StarLevel == 3)
+                    {
+                        CrossStars = 3;
+                    }
+
+                    else if ((Stars.StarLevel == 2) && (CrossStars < Stars.StarLevel))
+                    {
+                        CrossStars = 2;
+                    }
+
+                    else if( (Stars.StarLevel == 1) && (CrossStars < Stars.StarLevel) )
+                    {
+                        CrossStars = 1;
+                    }
+                }
+            }
+
+            if( lastLevelPlayed == "Twinkle Twinkle Little Star" )
+            {
+                if( TwinkleStars < 3 )
+                {
+                    if( Stars.StarLevel == 3 )
+                    {
+                        TwinkleStars = 3;
+                    }
+
+                    else if( (Stars.StarLevel == 2) && (TwinkleStars < Stars.StarLevel) )
+                    {
+                        TwinkleStars = 2;
+                    }
+
+                    else if( (Stars.StarLevel == 1) && (TwinkleStars < Stars.StarLevel) )
+                    {
+                        TwinkleStars = 1;
+                    }
+                }
+            }
+
+            if( lastLevelPlayed == "Canon in D Minor" )
+            {
+                if( CanonStars < 3 )
+                {
+                    if( Stars.StarLevel == 3 )
+                    {
+                        CanonStars = 3;
+                    }
+
+                    else if( (Stars.StarLevel == 2) && (CanonStars < Stars.StarLevel) )
+                    {
+                        CanonStars = 2;
+                    }
+
+                    else if( (Stars.StarLevel == 1) && (CanonStars < Stars.StarLevel) )
+                    {
+                        CanonStars = 1;
+                    }
+                }
+            }
+
+            if( lastLevelPlayed == "Fur Elise" )
+            {
+                if( EliseStars < 3 )
+                {
+                    if( Stars.StarLevel == 3 )
+                    {
+                        EliseStars = 3;
+                    }
+
+                    else if( (Stars.StarLevel == 2) && (EliseStars < Stars.StarLevel) )
+                    {
+                        EliseStars = 2;
+                    }
+
+                    else if( (Stars.StarLevel == 1) && (EliseStars < Stars.StarLevel) )
+                    {
+                        EliseStars = 1;
+                    }
+                }
+            }
+
+            if( lastLevelPlayed == "The Entertainer" )
+            {
+                if( EntertainerStars < 3 )
+                {
+                    if( Stars.StarLevel == 3 )
+                    {
+                        EntertainerStars = 3;
+                    }
+
+                    else if( (Stars.StarLevel == 2) && (EntertainerStars < Stars.StarLevel) )
+                    {
+                        EntertainerStars = 2;
+                    }
+
+                    else if( (Stars.StarLevel == 1) && (EntertainerStars < Stars.StarLevel) )
+                    {
+                        EntertainerStars = 1;
+                    }
+                }
+            }
         }
 	}
 }

@@ -8817,6 +8817,7 @@ GameObject:
   - 223: {fileID: 1820222614}
   - 114: {fileID: 1820222613}
   - 114: {fileID: 1820222612}
+  - 114: {fileID: 1820222615}
   m_Layer: 5
   m_Name: SoundSetsMenu
   m_TagString: Untagged
@@ -8897,6 +8898,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 30
+--- !u!114 &1820222615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1820222610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21b8fa71b022154e87c69c25eed2e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PianoSelect: {fileID: 0}
 --- !u!1 &1824023184
 GameObject:
   m_ObjectHideFlags: 0

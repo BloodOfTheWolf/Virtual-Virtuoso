@@ -1524,7 +1524,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 127.339996, y: 77.6119995}
+  m_AnchoredPosition: {x: 127.339996, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &336272552
@@ -2014,7 +2014,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 77.6119995}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &580361736
@@ -2602,6 +2602,7 @@ MonoBehaviour:
   StarOneGraphic: {fileID: 1417888120}
   StarTwoGraphic: {fileID: 580361736}
   StarThreeGraphic: {fileID: 336272552}
+  StarLevel: 0
 --- !u!1 &1205198159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2785,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: 0}
   m_AnchorMax: {x: .5, y: 0}
-  m_AnchoredPosition: {x: -126.540001, y: 77.6119995}
+  m_AnchoredPosition: {x: -126.540001, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1417888120
