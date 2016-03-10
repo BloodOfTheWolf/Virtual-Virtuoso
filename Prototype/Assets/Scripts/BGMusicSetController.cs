@@ -128,9 +128,9 @@ public class BGMusicSetController : MonoBehaviour
         case 0:
             MusicSetOneBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
             SetOneBought = true;
-            if( Resources.Load<AudioClip>( "Songs/mus_sonata_01" ) != null )
+            if( Resources.Load<AudioClip>( "Songs/mus_etude_32khz" ) != null )
             {
-                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_01" );
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_etude_32khz" );
                 SongholderScript.BGSong.Play();
                 break;
             }
@@ -141,11 +141,11 @@ public class BGMusicSetController : MonoBehaviour
 
             break;
         case 1:
-            MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
-            SetThreeBought = true;
-            if( Resources.Load<AudioClip>( "Songs/mus_sonata_01" ) != null )
+            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetTwoBought = true;
+            if( Resources.Load<AudioClip>( "Songs/mus_sonata_32khz" ) != null )
             {
-                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_01" );
+                SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_sonata_32khz" );
                 SongholderScript.BGSong.Play();
                 break;
             }
@@ -155,8 +155,8 @@ public class BGMusicSetController : MonoBehaviour
             }
             break;
         case 2:
-            MusicSetTwoBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
-            SetTwoBought = true;
+            MusicSetThreeBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );
+            SetThreeBought = true;
             if( Resources.Load<AudioClip>( "Songs/mus_jesu_32khz" ) != null )
             {
                 SongholderScript.BGSong.clip = Resources.Load<AudioClip>( "Songs/mus_jesu_32khz" );
@@ -167,8 +167,6 @@ public class BGMusicSetController : MonoBehaviour
             {
                 Debug.Break();
             }
-            //BackgroundMusic.GetComponent<AudioSource>().clip = Resources.Load<AudioClip>("mus_sonata_01");
-            //BackgroundMusic.GetComponent<AudioSource>().Play();
             break;
         case 3:
             MusicSetFourBtn.GetComponent<MarketplaceButtonHelper>().SetButtonState( MarketplaceButtonHelper.ButtonState.Purchased );

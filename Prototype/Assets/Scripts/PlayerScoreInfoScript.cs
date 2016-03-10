@@ -16,7 +16,7 @@ public class PlayerScoreInfoScript : MonoBehaviour
     public float EntertainerScoreHigh;
     private NoteStreakControllerScript Info;
     public string lastLevelPlayed;
-    public static int PlayerMoney = 200;
+    public static int PlayerMoney = 1000;
     
     void Awake()
     {
