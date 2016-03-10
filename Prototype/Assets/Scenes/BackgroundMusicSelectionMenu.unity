@@ -636,12 +636,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 460836849}
-        m_MethodName: SoundFourSelected
-        m_Mode: 1
+        m_MethodName: MusicSetSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -696,9 +696,13 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   PurchasedImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   currentButtonState: 0
+  SetIndex: 3
+  SetShortName: Rondo
+  SetLongName: Rondo Alla Turca
+  SetPrice: 200
+  MusicSetSoundPath: Songs/mus_rondo_01_32khz
   SetToggle: {fileID: 1505743238}
   PriceText: {fileID: 447350687}
-  Price: 200
 --- !u!1 &460836844
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +810,11 @@ MonoBehaviour:
   MusicSetTwoBtn: {fileID: 2061537516}
   MusicSetThreeBtn: {fileID: 1412248851}
   MusicSetFourBtn: {fileID: 449830730}
-  price: 150
+  MusicSetButtons:
+  - {fileID: 536088141}
+  - {fileID: 1412248851}
+  - {fileID: 2061537516}
+  - {fileID: 449830730}
   ConfirmPurchase: {fileID: 1509121226}
   BackgroundMusic: {fileID: 0}
   CurrentMoney: {fileID: 0}
@@ -886,8 +894,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 460836849}
-        m_MethodName: SoundOneSelected
-        m_Mode: 1
+        m_MethodName: MusicSetSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -946,9 +954,13 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   PurchasedImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   currentButtonState: 0
+  SetIndex: 0
+  SetShortName: Etude
+  SetLongName: Etude For Piano No.3 In E Major
+  SetPrice: 200
+  MusicSetSoundPath: Songs/mus_etude_01_32khz
   SetToggle: {fileID: 2087713173}
   PriceText: {fileID: 2013847190}
-  Price: 200
 --- !u!1 &597061730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1980,12 +1992,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 460836849}
-        m_MethodName: SoundThreeSelected
-        m_Mode: 1
+        m_MethodName: MusicSetSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2040,9 +2052,13 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   PurchasedImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   currentButtonState: 0
+  SetIndex: 1
+  SetShortName: Sonata
+  SetLongName: Piano Sonata No.23 In F Minor
+  SetPrice: 200
+  MusicSetSoundPath: Songs/mus_sonata_01_32khz
   SetToggle: {fileID: 981766565}
   PriceText: {fileID: 2007000213}
-  Price: 200
 --- !u!1 &1483273794
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,12 +2949,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 460836849}
-        m_MethodName: SoundTwoSelected
-        m_Mode: 1
+        m_MethodName: MusicSetSelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2993,9 +3009,13 @@ MonoBehaviour:
   NotAvailableImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   PurchasedImage: {fileID: 21300000, guid: ed93422d0f16b2b44bfb06de00c88561, type: 3}
   currentButtonState: 0
+  SetIndex: 2
+  SetShortName: Jesu
+  SetLongName: Jesu, Joy Of Man's Desiring
+  SetPrice: 200
+  MusicSetSoundPath: Songs/mus_jesu_01_32khz
   SetToggle: {fileID: 1807462103}
   PriceText: {fileID: 1513318439}
-  Price: 200
 --- !u!1 &2087713172
 GameObject:
   m_ObjectHideFlags: 0

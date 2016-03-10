@@ -21,9 +21,26 @@ public class MarketplaceButtonHelper : MonoBehaviour
 
     public ButtonState currentButtonState = ButtonState.Available;
 
+    /// <summary>
+    /// The numeric index of this set.
+    /// </summary>
+    public int SetIndex = 0;
+
+    /// <summary>
+    /// This set's shorthand name.
+    /// </summary>
+    public string SetShortName;
+
+    /// <summary>
+    /// This set's long name.
+    /// </summary>
+    public string SetLongName;
+    public int SetPrice = 0;
+    public string MusicSetSoundPath;
+    public bool MusicSetBought;
+
     public Toggle SetToggle;
     public Text PriceText;
-    public int Price = 0;
 
     void Start()
     {
@@ -41,7 +58,7 @@ public class MarketplaceButtonHelper : MonoBehaviour
             SaveDataObjScript.MusicSetOneState = 0;
             SetToggle.interactable = false;
             this.GetComponent<Button>().interactable = true;
-            PriceText.text = Price.ToString();
+            PriceText.text = SetPrice.ToString();
             break;
         case ButtonState.NotAvailable:
             gameObject.GetComponent<Image>().sprite = NotAvailableImage;
