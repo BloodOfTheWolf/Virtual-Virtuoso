@@ -70,15 +70,30 @@ public class PianoKeyScript : MonoBehaviour
 		Colored = ColorToggleScript.Toggle;
 		// only to be done once. not in update
 		audio = GetComponent<AudioSource>();
-        if(Dulcimer == false)
+        switch(InstrumentToggleScript.Instrument)
         {
-            audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Piano" );
+        case 1:
+        audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Piano" );
+        break;
+        case 2:
+        audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Dulc" );
+        break;
+        case 3:
+        audio.clip = Resources.Load<AudioClip>( "Harps - Organ/" + this.name + "Harp" );
+        break;
+        case 4:
+        audio.clip = Resources.Load<AudioClip>( "Harps - Organ/" + this.name + "Organ" );
+        break;
+        }
+        //if(Dulcimer == false)
+        //{
+        //    audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Piano" );
 
-        }
-        else
-        {
-            audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Dulc" );
-        }
+        //}
+        //else
+        //{
+        //    audio.clip = Resources.Load<AudioClip>( "Dulcimer-Piano Audio/" + this.name + "Dulc" );
+        //}
 		NoteVol = PianoVolumeScript.PKVolume;
 		audio.volume = NoteVol;
 
