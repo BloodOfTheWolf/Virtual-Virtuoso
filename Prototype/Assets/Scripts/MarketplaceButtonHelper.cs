@@ -39,7 +39,6 @@ public class MarketplaceButtonHelper : MonoBehaviour
     public string MusicSetSoundPath;
     public bool MusicSetBought;
 
-    public Toggle SetToggle;
     public Text PriceText;
 
 
@@ -81,23 +80,20 @@ public class MarketplaceButtonHelper : MonoBehaviour
         switch( currentButtonState )
         {
         case ButtonState.Available:
-        gameObject.GetComponent<Image>().sprite = AvailableImage;
-        //SaveDataObjScript.MusicSetOneState = 0;
-        SetToggle.interactable = false;
-        this.GetComponent<Button>().interactable = true;
-        PriceText.text = SetPrice.ToString();
+            gameObject.GetComponent<Image>().sprite = AvailableImage;
+            //SaveDataObjScript.MusicSetOneState = 0;
+            this.GetComponent<Button>().interactable = true;
+            PriceText.text = SetPrice.ToString();
         break;
         case ButtonState.NotAvailable:
-        gameObject.GetComponent<Image>().sprite = NotAvailableImage;
-        SetToggle.interactable = false;
-        this.GetComponent<Button>().interactable = false;
-        PriceText.text = "N/A";
+            gameObject.GetComponent<Image>().sprite = NotAvailableImage;
+            this.GetComponent<Button>().interactable = false;
+            PriceText.text = "N/A";
         break;
         case ButtonState.Purchased:
-        //gameObject.GetComponent<Image>().sprite = PurchasedImage;
-        SetToggle.interactable = true;
-        this.GetComponent<Button>().interactable = false;
-        PriceText.text = "PURCHASED";
+            //gameObject.GetComponent<Image>().sprite = PurchasedImage;
+            this.GetComponent<Button>().interactable = false;
+            PriceText.text = "PURCHASED";
         break;
         }
     }

@@ -40,6 +40,25 @@ public class NoteStreakControllerScript : MonoBehaviour
     /// The Vector3 position of the notestreak multiplier UI object.
     Vector3 NotestreakMultiplierEffectPosition;
 
+    /// <summary>
+    /// The score's text object.
+    /// </summary>
+    public Text ScoreTextObject;
+
+    /// <summary>
+    /// The base text for the score.
+    /// </summary>
+    string ScoreTextBase = "SCORE: ";
+
+    /// <summary>
+    /// The numeric portion of the score.
+    /// </summary>
+    string ScoreTextValue = "0";
+
+    public Text MultiplierTextObject;
+
+    string MultiplierTextValue = "x1";
+
     /// Our audio controller object.
     GameObject SFXController;
 
@@ -57,6 +76,8 @@ public class NoteStreakControllerScript : MonoBehaviour
         Miss = 0;
         Total = 0.0f;
 
+        MultiplierCurValue = 10;
+        MultiplierBaseValue = 10;
 
         // 12 notestreak UI images
         fillImages = new Image[12];
@@ -81,6 +102,16 @@ public class NoteStreakControllerScript : MonoBehaviour
     void Update()
     {
         SFXController = GameObject.Find( "SFXController" );
+
+        // Convert the score into a comma-separated number string
+        ScoreTextValue = Score.ToString( "N0" );
+
+        // Update the score text with the new score
+        ScoreTextObject.text = ScoreTextBase + ScoreTextValue;
+
+        var MultiplierVal = MultiplierCurValue / 10;
+
+        MultiplierTextObject.text = "x" + MultiplierVal.ToString();
     }
 
 
@@ -261,16 +292,16 @@ public class NoteStreakControllerScript : MonoBehaviour
     
 
     // HUD work
-    void OnGUI()
-    {
+    //void OnGUI()
+    //{
         // Initialize the GUI constructor
-        GUIStyle style = new GUIStyle();
+        //GUIStyle style = new GUIStyle();
 
         // Set the font size
-        style.fontSize = 15;
+        //style.fontSize = 15;
 
         // Draw the temporary text for the score and notestreak
-        GUI.Label( new Rect( (Screen.width / 2 + 200), (height + 10), 100, 100 ), "Score: " + Score.ToString(), style );
-        GUI.Label( new Rect( (Screen.width / 2 - 200), (height + 10), 100, 100 ), "NoteStreak: " + NoteStreak.ToString(), style );
-    }
+        //GUI.Label( new Rect( (Screen.width / 2 + 200), (height + 10), 100, 100 ), "Score: " + Score.ToString(), style );
+        //GUI.Label( new Rect( (Screen.width / 2 - 200), (height + 10), 100, 100 ), "NoteStreak: " + NoteStreak.ToString(), style );
+    //}
 }

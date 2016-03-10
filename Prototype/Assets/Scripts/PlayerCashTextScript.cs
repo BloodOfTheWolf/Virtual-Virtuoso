@@ -41,7 +41,7 @@ public class PlayerCashTextScript : MonoBehaviour
         if( gameObject.GetComponent<Canvas>().enabled )
         {
             // Update the text with the player's current cash
-            CashTextComponent.text = PlayerScoreInfoScript.PlayerMoney.ToString();
+            CashTextComponent.text = PlayerScoreInfoScript.PlayerMoney.ToString( "N0" );
         }
     }
 

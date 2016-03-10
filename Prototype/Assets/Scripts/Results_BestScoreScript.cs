@@ -36,7 +36,7 @@ public class Results_BestScoreScript : MonoBehaviour
             {
                 PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScore;
             }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh);
+            BestText.text = ("BEST SCORE: " + PlayerInfo.GetComponent<PlayerScoreInfoScript>().HotCrossScoreHigh.ToString( "N0" ));
         }
 
         if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Twinkle Twinkle Little Star" )
@@ -45,7 +45,7 @@ public class Results_BestScoreScript : MonoBehaviour
             {
                 PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScore;
             }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScoreHigh);
+            BestText.text = ("BEST SCORE: " + PlayerInfo.GetComponent<PlayerScoreInfoScript>().TwinkleTwinkleScoreHigh.ToString( "N0" ));
         }
 
         if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Canon in D Minor" )
@@ -54,7 +54,7 @@ public class Results_BestScoreScript : MonoBehaviour
             {
                 PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScore;
             }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScoreHigh);
+            BestText.text = ("BEST SCORE: " + PlayerInfo.GetComponent<PlayerScoreInfoScript>().CanonScoreHigh.ToString( "N0" ));
         }
 
         if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "Fur Elise" )
@@ -63,7 +63,7 @@ public class Results_BestScoreScript : MonoBehaviour
             {
                 PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScore;
             }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScoreHigh);
+            BestText.text = ("BEST SCORE: " + PlayerInfo.GetComponent<PlayerScoreInfoScript>().EliseScoreHigh.ToString( "N0" ));
         }
 
         if( PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed == "The Entertainer" )
@@ -72,7 +72,7 @@ public class Results_BestScoreScript : MonoBehaviour
             {
                 PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScoreHigh = PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScore;
             }
-            BestText.text = ("Best Score:" + PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScoreHigh);
+            BestText.text = ("BEST SCORE: " + PlayerInfo.GetComponent<PlayerScoreInfoScript>().EntertainerScoreHigh.ToString( "N0" ));
         }
 
 	}

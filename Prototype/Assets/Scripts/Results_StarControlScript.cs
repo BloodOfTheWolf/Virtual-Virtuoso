@@ -35,12 +35,12 @@ public class Results_StarControlScript : MonoBehaviour
         }
 	}
 	
-	void Update () 
+	void Update() 
     {
-        if (width >= 2.0f)
+        if (width >= 1.0f)
         {
-            width = 2.0f;
-            height = 2.0f;
+            width = 1.0f;
+            height = 1.0f;
         }
         else
         {

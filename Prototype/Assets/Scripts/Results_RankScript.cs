@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Results_RankScript : MonoBehaviour {
-
+public class Results_RankScript : MonoBehaviour
+{
 	public GameObject LetterAplus;
 	public GameObject LetterA;
 	public GameObject LetterB;
@@ -21,17 +21,21 @@ public class Results_RankScript : MonoBehaviour {
 	private float Total;
 	private float Good;
 	private float Rank;
-	// Use this for initialization
-	void Start () 
+
+
+    SFXControllerScript SFXController;
+	
+
+	void Start()
 	{
         Total = NoteStreakControllerScript.Total;
         Good = NoteStreakControllerScript.Hit;
 
 		Intermediate = GameObject.Find("Intermediate Objects");
-		Intermediate.SetActive (false);
+		Intermediate.SetActive(false);
 
 		Advanced = GameObject.Find("Expert Objects");
-		Advanced.SetActive (false);
+		Advanced.SetActive(false);
 
 		Rank = Good / Total;
 		print (Rank);
@@ -39,11 +43,11 @@ public class Results_RankScript : MonoBehaviour {
 		{
 			LetterF.SetActive (true);
 
-			LetterAplus.SetActive (false);
-			LetterA.SetActive (false);
-			LetterB.SetActive (false);
-			LetterC.SetActive (false);
-			LetterD.SetActive (false);
+			LetterAplus.SetActive(false);
+			LetterA.SetActive(false);
+			LetterB.SetActive(false);
+			LetterC.SetActive(false);
+			LetterD.SetActive(false);
             Clear.SetActive( false );
 			TryAgain.SetActive (true);
 			print ("Rank F");
@@ -55,13 +59,13 @@ public class Results_RankScript : MonoBehaviour {
 		{
 			LetterD.SetActive (true);
 
-			LetterAplus.SetActive (false);
-			LetterA.SetActive (false);
-			LetterB.SetActive (false);
-			LetterC.SetActive (false);
-			LetterF.SetActive (false);
+			LetterAplus.SetActive(false);
+			LetterA.SetActive(false);
+			LetterB.SetActive(false);
+			LetterC.SetActive(false);
+			LetterF.SetActive(false);
 			Clear.SetActive(true);
-			TryAgain.SetActive (false);
+			TryAgain.SetActive(false);
 			print ("Rank D");
 			PlayerScoreInfoScript.PlayerMoney += 30;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
@@ -70,13 +74,13 @@ public class Results_RankScript : MonoBehaviour {
 		{
 			LetterC.SetActive (true);
 
-			LetterAplus.SetActive (false);
-			LetterA.SetActive (false);
-			LetterB.SetActive (false);
-			LetterF.SetActive (false);
-			LetterD.SetActive (false);
+			LetterAplus.SetActive(false);
+			LetterA.SetActive(false);
+			LetterB.SetActive(false);
+			LetterF.SetActive(false);
+			LetterD.SetActive(false);
 			Clear.SetActive(true);
-			TryAgain.SetActive (false);
+			TryAgain.SetActive(false);
 			print ("Rank C");
 			PlayerScoreInfoScript.PlayerMoney += 40;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
@@ -85,13 +89,13 @@ public class Results_RankScript : MonoBehaviour {
 		{
 			LetterB.SetActive (true);
 
-			LetterAplus.SetActive (false);
-			LetterA.SetActive (false);
-			LetterF.SetActive (false);
-			LetterC.SetActive (false);
-			LetterD.SetActive (false);
+			LetterAplus.SetActive(false);
+			LetterA.SetActive(false);
+			LetterF.SetActive(false);
+			LetterC.SetActive(false);
+			LetterD.SetActive(false);
 			Clear.SetActive(true);
-			TryAgain.SetActive (false);
+			TryAgain.SetActive(false);
 			PlayerScoreInfoScript.PlayerMoney += 50;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 		} 
@@ -99,36 +103,34 @@ public class Results_RankScript : MonoBehaviour {
 		{
 			LetterA.SetActive (true);
 
-			LetterAplus.SetActive (false);
-			LetterF.SetActive (false);
-			LetterB.SetActive (false);
-			LetterC.SetActive (false);
-			LetterD.SetActive (false);
+			LetterAplus.SetActive(false);
+			LetterF.SetActive(false);
+			LetterB.SetActive(false);
+			LetterC.SetActive(false);
+			LetterD.SetActive(false);
 			Clear.SetActive(true);
-			TryAgain.SetActive (false);
+			TryAgain.SetActive(false);
 			PlayerScoreInfoScript.PlayerMoney += 70;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 		}
-		 else 
+		else 
 		{
 			LetterAplus.SetActive(true);
 
-			LetterF.SetActive (false);
-			LetterA.SetActive (false);
-			LetterB.SetActive (false);
-			LetterC.SetActive (false);
-			LetterD.SetActive (false);
+			LetterF.SetActive(false);
+			LetterA.SetActive(false);
+			LetterB.SetActive(false);
+			LetterC.SetActive(false);
+			LetterD.SetActive(false);
 			Clear.SetActive(true);
-			TryAgain.SetActive (false);
+			TryAgain.SetActive(false);
 			PlayerScoreInfoScript.PlayerMoney += 80;
 			print ("Total money : " + PlayerScoreInfoScript.PlayerMoney);
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () 
+	void Update() 
 	{
-
-	
+        SFXController = GameObject.Find( "SFXController" ).GetComponent<SFXControllerScript>();
 	}
 }

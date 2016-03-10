@@ -10,16 +10,16 @@ public class Results_SongNameScript : MonoBehaviour {
     public string LastLevel;
 
 	// Use this for initialization
-	void Start () 
+	void Start() 
     {
         PlayerInfo = GameObject.Find( "PlayerInfoHolder" );
         LastLevel = PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed;
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void Update() 
     {
-        canvasText.text = (PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed);
+        canvasText.text = (PlayerInfo.GetComponent<PlayerScoreInfoScript>().lastLevelPlayed).ToUpper();
 	}
     void LastLevelPlayed()
     {

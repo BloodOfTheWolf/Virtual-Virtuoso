@@ -24,7 +24,7 @@ public class ResultScript : MonoBehaviour
         while( ScoreInitializer != Score )
         {
             ScoreInitializer += 2;
-            ScoreText.text = ScoreInitializer.ToString();
+            ScoreText.text = ScoreInitializer.ToString( "N0" );
 
         }
 

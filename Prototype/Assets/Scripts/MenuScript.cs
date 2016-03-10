@@ -68,7 +68,7 @@ public class MenuScript : MonoBehaviour
 	public void OptionsButtonPress(string NewMenu)
 	{
         Debug.Log( "MenuScript.OptionsButtonPress(" + NewMenu + "): Entered" );
-        //SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
+        SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         options.enabled = true;
 
         switch( NewMenu )

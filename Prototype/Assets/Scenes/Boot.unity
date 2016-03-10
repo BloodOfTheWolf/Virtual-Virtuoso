@@ -1566,6 +1566,7 @@ GameObject:
   - 224: {fileID: 1479028626}
   - 222: {fileID: 1479028625}
   - 114: {fileID: 1479028624}
+  - 114: {fileID: 1479028627}
   m_Layer: 5
   m_Name: PlayerCashText
   m_TagString: Untagged
@@ -1628,9 +1629,23 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -20}
+  m_AnchoredPosition: {x: -25, y: -5}
   m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 1}
+--- !u!114 &1479028627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479028623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1, y: 1}
+  m_UseGraphicAlpha: 0
 --- !u!1 &1525432147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1924,7 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1acf912d000c745a5133cacef6f4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerValue: 4
+  TimerValue: 1
   TimerText: {fileID: 523622538}
 --- !u!4 &1656194742
 Transform:
