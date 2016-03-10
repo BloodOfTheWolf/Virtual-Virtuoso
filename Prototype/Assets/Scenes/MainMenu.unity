@@ -2079,6 +2079,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 484685816}
   - 114: {fileID: 484685817}
+  - 114: {fileID: 484685818}
   m_Layer: 5
   m_Name: EtudeToggle
   m_TagString: Untagged
@@ -2146,10 +2147,32 @@ MonoBehaviour:
   m_Group: {fileID: 421953212}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 484685818}
+        m_MethodName: ChangeBackgroundSong
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &484685818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484685815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a800cbe4c02127448a36ac433402052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &487655587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2182,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 487655588}
   - 114: {fileID: 487655589}
+  - 114: {fileID: 487655590}
   m_Layer: 5
   m_Name: FirstSongToggle
   m_TagString: Untagged
@@ -2226,10 +2250,32 @@ MonoBehaviour:
   m_Group: {fileID: 421953212}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 487655590}
+        m_MethodName: ChangeBackgroundSong
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!114 &487655590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 487655587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a800cbe4c02127448a36ac433402052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &491663877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,6 +3670,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 747997896}
   - 114: {fileID: 747997897}
+  - 114: {fileID: 747997898}
   m_Layer: 5
   m_Name: RondoToggle
   m_TagString: Untagged
@@ -3691,10 +3738,32 @@ MonoBehaviour:
   m_Group: {fileID: 421953212}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 747997898}
+        m_MethodName: ChangeBackgroundSong
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &747997898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 747997895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a800cbe4c02127448a36ac433402052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &753387341
 GameObject:
   m_ObjectHideFlags: 0
@@ -5400,6 +5469,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1103395852}
   - 114: {fileID: 1103395853}
+  - 114: {fileID: 1103395854}
   m_Layer: 5
   m_Name: SonataToggle
   m_TagString: Untagged
@@ -5467,10 +5537,32 @@ MonoBehaviour:
   m_Group: {fileID: 421953212}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1103395854}
+        m_MethodName: ChangeBackgroundSong
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &1103395854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103395851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a800cbe4c02127448a36ac433402052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135316350
 GameObject:
   m_ObjectHideFlags: 0
@@ -7695,6 +7787,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1644641325}
   - 114: {fileID: 1644641326}
+  - 114: {fileID: 1644641327}
   m_Layer: 5
   m_Name: JesuToggle
   m_TagString: Untagged
@@ -7762,10 +7855,32 @@ MonoBehaviour:
   m_Group: {fileID: 421953212}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1644641327}
+        m_MethodName: ChangeBackgroundSong
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &1644641327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644641324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a800cbe4c02127448a36ac433402052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660225299
 GameObject:
   m_ObjectHideFlags: 0
