@@ -27,7 +27,9 @@ public class Results_RankScript : MonoBehaviour
 	
 
 	void Start()
-	{
+    {
+        SFXController = GameObject.Find( "SFXController" ).GetComponent<SFXControllerScript>();
+
         Total = NoteStreakControllerScript.Total;
         Good = NoteStreakControllerScript.Hit;
 
@@ -40,7 +42,9 @@ public class Results_RankScript : MonoBehaviour
 		Rank = Good / Total;
 		print (Rank);
 		if (Rank <= 0.5f)
-		{
+        {
+            SFXController.SmlApplause();
+
 			LetterF.SetActive (true);
 
 			LetterAplus.SetActive(false);
@@ -55,8 +59,10 @@ public class Results_RankScript : MonoBehaviour
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 
 		}
-		else if (Rank <= 0.7f) 
-		{
+		else if (Rank <= 0.7f)
+        {
+            SFXController.SmlApplause();
+
 			LetterD.SetActive (true);
 
 			LetterAplus.SetActive(false);
@@ -70,8 +76,10 @@ public class Results_RankScript : MonoBehaviour
 			PlayerScoreInfoScript.PlayerMoney += 30;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 		}
-		else if (Rank <= 0.8f) 
-		{
+		else if (Rank <= 0.8f)
+        {
+            SFXController.MedApplause();
+
 			LetterC.SetActive (true);
 
 			LetterAplus.SetActive(false);
@@ -85,8 +93,10 @@ public class Results_RankScript : MonoBehaviour
 			PlayerScoreInfoScript.PlayerMoney += 40;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 		}
-		else if (Rank <= 0.9f) 
-		{
+		else if (Rank <= 0.9f)
+        {
+            SFXController.MedApplause();
+
 			LetterB.SetActive (true);
 
 			LetterAplus.SetActive(false);
@@ -99,8 +109,10 @@ public class Results_RankScript : MonoBehaviour
 			PlayerScoreInfoScript.PlayerMoney += 50;
 			print ("Total money : " +PlayerScoreInfoScript.PlayerMoney);
 		} 
-		else if (Rank <= 0.95f) 
-		{
+		else if (Rank <= 0.95f)
+        {
+            SFXController.LrgApplause();
+
 			LetterA.SetActive (true);
 
 			LetterAplus.SetActive(false);
@@ -115,6 +127,8 @@ public class Results_RankScript : MonoBehaviour
 		}
 		else 
 		{
+            SFXController.MsvApplause();
+
 			LetterAplus.SetActive(true);
 
 			LetterF.SetActive(false);

@@ -10,15 +10,13 @@ public class InGameOptionsScript : MonoBehaviour
     public Button OptionsSetingsConfirm;
     public Button OptionsSetingsCancel;
 
-	// Use this for initialization
-	void Start () 
+	void Start()
     {
         OptionsTab.enabled = false;
         OptionsSettingTab.enabled = false;
 	}
 	
-	// Update is called once per frame
-	public void OptionsPressed () 
+	public void OptionsPressed() 
     {
         if (OptionsTab.enabled == false)
         {

@@ -6,27 +6,38 @@ public class ResultScript : MonoBehaviour
 {
     private NoteStreakControllerScript Results;
 	private int Score;
-    private int ScoreInitializer;
+    private float ScoreInitializer;
     Text ScoreText;
+    float scoreTimer;
+    float scoreTimeLimit;
 	
-	void Start() 
+	void Start()
 	{
         ScoreInitializer = 0;
         Score = NoteStreakControllerScript.Score;
 
         ScoreText = GetComponent<Text>();
-        
+        scoreTimer = 0;
+        scoreTimeLimit = 2.0f;
 	}
 
     void Update()
     {
 
-        while( ScoreInitializer != Score )
-        {
-            ScoreInitializer += 2;
+        //while( ScoreInitializer != Score )
+        //{
+            var ScoreF = (float)Score;
+
+            scoreTimer += Time.deltaTime;
+            float prcComplete = scoreTimer / scoreTimeLimit;
+            // don't modify the start and end values here 
+            // prcComplete will grow linearly but if you change the start/end points
+            // it will add a cumulating error
+            ScoreInitializer = Mathf.Lerp( 0, ScoreF, prcComplete );
+            
             ScoreText.text = ScoreInitializer.ToString( "N0" );
 
-        }
+        //}
 
         //if (ScoreInitializer != Score)
         //{

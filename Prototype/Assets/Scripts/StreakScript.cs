@@ -7,10 +7,10 @@ public class StreakScript : MonoBehaviour
     private NoteStreakControllerScript Result;
 	private int Streak;
 
-	void Start() 
+	void Start()
 	{
         Streak = NoteStreakControllerScript.HighestStreak;
 		Text StreakText = GetComponent<Text> ();
-		StreakText.text = Streak.ToString();
+        StreakText.text = Streak.ToString( "N0" );
 	}
 }

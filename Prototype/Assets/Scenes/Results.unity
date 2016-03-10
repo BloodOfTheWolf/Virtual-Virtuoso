@@ -3874,6 +3874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasText: {fileID: 2000568893}
+  LastLevel: 
 --- !u!114 &2000568896
 MonoBehaviour:
   m_ObjectHideFlags: 0

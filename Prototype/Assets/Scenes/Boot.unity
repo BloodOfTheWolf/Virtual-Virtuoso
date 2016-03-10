@@ -2312,11 +2312,6 @@ MonoBehaviour:
   EliseScoreHigh: 0
   EntertainerScoreHigh: 0
   lastLevelPlayed: 
-  TwinkleStars: 0
-  CrossStars: 0
-  CanonStars: 0
-  EliseStars: 0
-  EntertainerStars: 0
   Stars: {fileID: 0}
 --- !u!4 &1929389577
 Transform:
