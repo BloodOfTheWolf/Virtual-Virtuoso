@@ -6,14 +6,14 @@ public class InGameOptionsScript : MonoBehaviour
 {
     public Button OptionsButton;
     public Canvas OptionsTab;
-    public Canvas OptionsSettingTab;
-    public Button OptionsSetingsConfirm;
-    public Button OptionsSetingsCancel;
+    public GameObject OptionsSettingTab;
+    public Button OptionsSettingsConfirm;
+    public Button OptionsSettingsCancel;
 
 	void Start()
     {
         OptionsTab.enabled = false;
-        OptionsSettingTab.enabled = false;
+        OptionsSettingTab.SetActive(false);
 	}
 	
 	public void OptionsPressed() 
@@ -41,11 +41,11 @@ public class InGameOptionsScript : MonoBehaviour
 
     public void SettingsPressed()
     {
-        if( OptionsSettingTab.enabled == false )
+        if( OptionsSettingTab.activeSelf == false )
         {
             //OptionsButton.interactable = false;
             //Time.timeScale = 0.0f;
-            OptionsSettingTab.enabled = true;
+            OptionsSettingTab.SetActive( true );
             
         }
     }
@@ -58,7 +58,7 @@ public class InGameOptionsScript : MonoBehaviour
 
     public void SettingsConfirmPressed()
     {
-        OptionsSettingTab.enabled = false;
+        OptionsSettingTab.SetActive(false);
         //Time.timeScale = 1.0f;
         //OptionsButton.interactable = true;
     }
