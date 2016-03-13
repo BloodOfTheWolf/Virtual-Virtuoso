@@ -5,16 +5,19 @@ using UnityEngine.UI;
 public class ResultScript : MonoBehaviour
 {
     private NoteStreakControllerScript Results;
-	private int Score;
+	private int Score = NoteStreakControllerScript.Score;
     private float ScoreInitializer;
     Text ScoreText;
     float scoreTimer;
     float scoreTimeLimit;
+
+    public GameObject Controller;
+    bool Complete = false;
 	
 	void Start()
 	{
+        Controller = GameObject.Find( "ResultsScreenProgressControl" );
         ScoreInitializer = 0;
-        Score = NoteStreakControllerScript.Score;
 
         ScoreText = GetComponent<Text>();
         scoreTimer = 0;
@@ -26,6 +29,15 @@ public class ResultScript : MonoBehaviour
 
         //while( ScoreInitializer != Score )
         //{
+
+        if( (Input.GetMouseButtonDown( 0 )) && (ScoreInitializer != Score) )
+        {
+            ScoreInitializer = NoteStreakControllerScript.Score;
+        }
+        
+        //check the ProgressionScript for what step the results screen is on
+        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 0 )
+        {
             var ScoreF = (float)Score;
 
             scoreTimer += Time.deltaTime;
@@ -33,9 +45,22 @@ public class ResultScript : MonoBehaviour
             // don't modify the start and end values here 
             // prcComplete will grow linearly but if you change the start/end points
             // it will add a cumulating error
-            ScoreInitializer = Mathf.Lerp( 0, ScoreF, prcComplete );
-            
-            ScoreText.text = ScoreInitializer.ToString( "N0" );
+
+            if( ScoreInitializer != ScoreF )
+            {
+                ScoreInitializer = Mathf.Lerp( 0, ScoreF, prcComplete );
+
+            }
+        }
+
+        if ((ScoreInitializer == Score)&&(Complete == false))
+        {
+            Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
+            Complete = true;
+        }
+
+        ScoreText.text = ScoreInitializer.ToString( "N0" );
+        
 
         //}
 
