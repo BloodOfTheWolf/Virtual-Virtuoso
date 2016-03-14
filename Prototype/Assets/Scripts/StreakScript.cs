@@ -26,7 +26,7 @@ public class StreakScript : MonoBehaviour
 	{
 
         //check the ProgressionScript for what step the results screen is on
-        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 1 )
+        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 2 )
         {
             if( (Input.GetMouseButtonDown( 0 )) && (StreakInitializer != Streak) )
             {
@@ -45,12 +45,12 @@ public class StreakScript : MonoBehaviour
             {
                 StreakInitializer = Mathf.Lerp( 0, StreakF, prcComplete );
             }
-        }
 
-        if( (StreakInitializer == Streak) && (Complete == false) )
-        {
-            Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
-            Complete = true;
+            if( (StreakInitializer == Streak) && (Complete == false)||(Complete == false)&&(StreakInitializer == 0) )
+            {
+                Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
+                Complete = true;
+            }
         }
 
         StreakText.text = StreakInitializer.ToString( "N0" );

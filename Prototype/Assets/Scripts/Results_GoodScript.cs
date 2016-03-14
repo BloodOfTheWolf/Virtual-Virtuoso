@@ -27,7 +27,7 @@ public class Results_GoodScript : MonoBehaviour
     {
 
         //check the ProgressionScript for what step the results screen is on
-        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 2 )
+        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 3 )
         {
             if( (Input.GetMouseButtonDown( 0 )) && (GoodInitializer != Good) )
             {
@@ -46,12 +46,12 @@ public class Results_GoodScript : MonoBehaviour
             {
                 GoodInitializer = Mathf.Lerp( 0, GoodF, prcComplete );
             }
-        }
 
-        if( (GoodInitializer == Good) && (Complete == false) )
-        {
-            Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
-            Complete = true;
+            if( (GoodInitializer == Good) && (Complete == false) || (Complete == false)&&(GoodInitializer == 0))
+            {
+                Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
+                Complete = true;
+            }
         }
 
         GoodText.text = GoodInitializer.ToString( "N0" );

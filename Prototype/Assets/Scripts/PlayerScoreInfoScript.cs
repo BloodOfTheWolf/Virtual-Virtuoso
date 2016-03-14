@@ -93,17 +93,17 @@ public class PlayerScoreInfoScript : MonoBehaviour
             {
                 if (CrossStars < 3)
                 {
-                    if (Stars.StarLevel == 3)
+                    if( Results_StarControlScript.StarLevel == 3 )
                     {
                         CrossStars = 3;
                     }
 
-                    else if ((Stars.StarLevel == 2) && (CrossStars < Stars.StarLevel))
+                    else if( (Results_StarControlScript.StarLevel == 2) && (CrossStars < Results_StarControlScript.StarLevel) )
                     {
                         CrossStars = 2;
                     }
 
-                    else if( (Stars.StarLevel == 1) && (CrossStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 1) && (CrossStars < Results_StarControlScript.StarLevel) )
                     {
                         CrossStars = 1;
                     }
@@ -114,17 +114,17 @@ public class PlayerScoreInfoScript : MonoBehaviour
             {
                 if( TwinkleStars < 3 )
                 {
-                    if( Stars.StarLevel == 3 )
+                    if( Results_StarControlScript.StarLevel == 3 )
                     {
                         TwinkleStars = 3;
                     }
 
-                    else if( (Stars.StarLevel == 2) && (TwinkleStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 2) && (TwinkleStars < Results_StarControlScript.StarLevel) )
                     {
                         TwinkleStars = 2;
                     }
 
-                    else if( (Stars.StarLevel == 1) && (TwinkleStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 1) && (TwinkleStars < Results_StarControlScript.StarLevel) )
                     {
                         TwinkleStars = 1;
                     }
@@ -135,17 +135,17 @@ public class PlayerScoreInfoScript : MonoBehaviour
             {
                 if( CanonStars < 3 )
                 {
-                    if( Stars.StarLevel == 3 )
+                    if( Results_StarControlScript.StarLevel == 3 )
                     {
                         CanonStars = 3;
                     }
 
-                    else if( (Stars.StarLevel == 2) && (CanonStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 2) && (CanonStars < Results_StarControlScript.StarLevel) )
                     {
                         CanonStars = 2;
                     }
 
-                    else if( (Stars.StarLevel == 1) && (CanonStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 1) && (CanonStars < Results_StarControlScript.StarLevel) )
                     {
                         CanonStars = 1;
                     }
@@ -156,17 +156,17 @@ public class PlayerScoreInfoScript : MonoBehaviour
             {
                 if( EliseStars < 3 )
                 {
-                    if( Stars.StarLevel == 3 )
+                    if( Results_StarControlScript.StarLevel == 3 )
                     {
                         EliseStars = 3;
                     }
 
-                    else if( (Stars.StarLevel == 2) && (EliseStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 2) && (EliseStars < Results_StarControlScript.StarLevel) )
                     {
                         EliseStars = 2;
                     }
 
-                    else if( (Stars.StarLevel == 1) && (EliseStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 1) && (EliseStars < Results_StarControlScript.StarLevel) )
                     {
                         EliseStars = 1;
                     }
@@ -177,17 +177,17 @@ public class PlayerScoreInfoScript : MonoBehaviour
             {
                 if( EntertainerStars < 3 )
                 {
-                    if( Stars.StarLevel == 3 )
+                    if( Results_StarControlScript.StarLevel == 3 )
                     {
                         EntertainerStars = 3;
                     }
 
-                    else if( (Stars.StarLevel == 2) && (EntertainerStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 2) && (EntertainerStars < Results_StarControlScript.StarLevel) )
                     {
                         EntertainerStars = 2;
                     }
 
-                    else if( (Stars.StarLevel == 1) && (EntertainerStars < Stars.StarLevel) )
+                    else if( (Results_StarControlScript.StarLevel == 1) && (EntertainerStars < Results_StarControlScript.StarLevel) )
                     {
                         EntertainerStars = 1;
                     }

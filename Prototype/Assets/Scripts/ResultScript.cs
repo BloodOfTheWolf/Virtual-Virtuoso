@@ -36,7 +36,7 @@ public class ResultScript : MonoBehaviour
         }
         
         //check the ProgressionScript for what step the results screen is on
-        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 0 )
+        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 1 )
         {
             var ScoreF = (float)Score;
 
@@ -51,12 +51,12 @@ public class ResultScript : MonoBehaviour
                 ScoreInitializer = Mathf.Lerp( 0, ScoreF, prcComplete );
 
             }
-        }
 
-        if ((ScoreInitializer == Score)&&(Complete == false))
-        {
-            Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
-            Complete = true;
+            if( (ScoreInitializer == Score) && (Complete == false)||(Complete == false) && (ScoreInitializer == 0) )
+            {
+                Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
+                Complete = true;
+            }
         }
 
         ScoreText.text = ScoreInitializer.ToString( "N0" );

@@ -14,7 +14,7 @@ public class Results_StarControlScript : MonoBehaviour
     private float width = 0.25f;
     private float height = 0.25f;
 
-    public int StarLevel = 0;
+    public static int StarLevel = 0;
 
 	void Start () 
     {

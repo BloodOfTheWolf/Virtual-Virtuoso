@@ -27,7 +27,7 @@ public class Results_MissScript : MonoBehaviour
     {
 
         //check the ProgressionScript for what step the results screen is on
-        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 3 )
+        if( Controller.GetComponent<Results_ProgressionScript>().ResultsStep == 4 )
         {
             if( (Input.GetMouseButtonDown( 0 )) && (MissInitializer != Missed) )
             {
@@ -45,14 +45,16 @@ public class Results_MissScript : MonoBehaviour
             if( MissInitializer != MissF )
             {
                 MissInitializer = Mathf.Lerp( 0, MissF, prcComplete );
+                print( "Missinitializer!= MissF = " + MissInitializer );
             }
-        }
-
-        if( (MissInitializer == Missed) && (Complete == false) )
+        if( (MissInitializer == Missed) && (Complete == false) || (MissInitializer == 0) && (Complete == false))
         {
             Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
             Complete = true;
+            print( "outside if = " + MissInitializer );
         }
+        }
+
 
         MissText.text = MissInitializer.ToString( "N0" );
     }

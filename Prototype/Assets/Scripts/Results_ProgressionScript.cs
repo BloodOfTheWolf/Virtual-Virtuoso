@@ -9,12 +9,18 @@ public class Results_ProgressionScript : MonoBehaviour
     public AudioClip SmallCrash;
     public AudioClip BigCrash;
     public AudioClip DrumRoll;
-    public float Countdown = 0.01f;
+    public float Countdown = 1.0f;
 	
+    void Awake ()
+    {
+        PlayDrumRoll();
+    }
+
 	// Update is called once per frame
 	void Update () 
     {
         Countdown -= Time.deltaTime;
+        Debug.Log( "DrumRoll Playing: " + DrumRollSpawner.isPlaying.ToString() );
 
         //Allows the player to skip the tally
         /*if ((Input.GetMouseButtonDown(0)) && (ResultsStep < 6) && (Countdown <= 0.0f))
@@ -23,8 +29,9 @@ public class Results_ProgressionScript : MonoBehaviour
         }*/
 
         //As long as the timer is less than zero, run the drum roll function
-        if ((Countdown <= 0.0f) && (!DrumRollSpawner.isPlaying) && (ResultsStep < 6))
+        if ((Countdown <= 0.0f) && (DrumRollSpawner.isPlaying == false) && (ResultsStep < 5))
         {
+            Debug.Log( "Running DrumRoll: " + ResultsStep.ToString() );
             PlayDrumRoll();
         }
 	}
