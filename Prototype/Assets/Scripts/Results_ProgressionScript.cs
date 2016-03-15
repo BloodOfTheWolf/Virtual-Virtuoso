@@ -20,7 +20,7 @@ public class Results_ProgressionScript : MonoBehaviour
 	void Update () 
     {
         Countdown -= Time.deltaTime;
-        Debug.Log( "DrumRoll Playing: " + DrumRollSpawner.isPlaying.ToString() );
+        //Debug.Log( "DrumRoll Playing: " + DrumRollSpawner.isPlaying.ToString() );
 
         //Allows the player to skip the tally
         /*if ((Input.GetMouseButtonDown(0)) && (ResultsStep < 6) && (Countdown <= 0.0f))

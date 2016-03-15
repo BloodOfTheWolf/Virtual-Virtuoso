@@ -40,12 +40,12 @@ public class SongProgressionManagerScript : MonoBehaviour
     /// <summary>
     /// Call this to remind the parent object to update the lock image vars.
     /// </summary>
-    public void GetSongLockComponents()
-    {
-        EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
-        CanonLock = GameObject.Find( "CanonLock" ).GetComponent<Image>();
-        EntertainLock = GameObject.Find( "EntertainLock" ).GetComponent<Image>();
-    }
+    //public void GetSongLockComponents()
+    //{
+    //    EliseLock = GameObject.Find( "EliseLock" ).GetComponent<Image>();
+    //    CanonLock = GameObject.Find( "CanonLock" ).GetComponent<Image>();
+    //    EntertainLock = GameObject.Find( "EntertainLock" ).GetComponent<Image>();
+    //}
 
 
     /// <summary>
@@ -78,28 +78,28 @@ public class SongProgressionManagerScript : MonoBehaviour
         if( (bTutorialDone) && (bHotCrossBunsDone) )
         {
             UnlockDifficulty( DifficultyState.Medium );
-            MediumUnlock();
+           // MediumUnlock();
         }
 
-        if( (bFurEliseDone) && (bCanonInDDone) )
+        if( (bFurEliseDone) && (bEntertainerDone) )
         {
             UnlockDifficulty( DifficultyState.Hard );
-            HardUnlock();
+            //HardUnlock();
         }
     }
 
 
-    void MediumUnlock()
-    {
-        EliseLock.enabled = false;
-        CanonLock.enabled = false;
-    }
+    //void MediumUnlock()
+    //{
+    //    EliseLock.enabled = false;
+    //    CanonLock.enabled = false;
+    //}
 
 
-    void HardUnlock()
-    {
-        EntertainLock.enabled = false;
-    }
+    //void HardUnlock()
+    //{
+    //    EntertainLock.enabled = false;
+    //}
 
 
     /// <summary>
@@ -110,7 +110,7 @@ public class SongProgressionManagerScript : MonoBehaviour
     {
         Debug.Log( "SongProgressionManagerScript.UnlockDifficulty(): Unlocked difficulty: " + newDifficulty.ToString() );
         CurrentDifficultyUnlocked = newDifficulty;
-        MediumUnlock();
-        HardUnlock();
+        //MediumUnlock();
+        //HardUnlock();
     }
 }

@@ -102,30 +102,10 @@ public class UIEvents : MonoBehaviour
         }
     }
 
-    public void SelectCanonInD()
-    {
-        // Has the player unlocked the song?
-        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Medium )
-        {
-            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
-            currentChoice = SongChoice.CanonInD;
-            PlaySongPreview( currentChoice );
-        }
-        else
-        {
-            Debug.Log( "UIEvents.SelectCanonInD(): Song not yet unlocked!" );
-
-            //insert functionality here
-        }
-    }
-
-    //***********************
-    // HARD SONGS
-    //***********************
     public void SelectEntertainer()
     {
         // Has the player unlocked the song?
-        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Hard )
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Medium )
         {
             SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
             currentChoice = SongChoice.Entertainer;
@@ -134,6 +114,28 @@ public class UIEvents : MonoBehaviour
         else
         {
             Debug.Log( "UIEvents.SelectEntertainer(): Song not yet unlocked!" );
+
+            //insert functionality here
+        }
+    }
+
+    //***********************
+    // HARD SONGS
+    //***********************
+    
+
+    public void SelectCanonInD()
+    {
+        // Has the player unlocked the song?
+        if( SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Hard )
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.CanonInD;
+            PlaySongPreview( currentChoice );
+        }
+        else
+        {
+            Debug.Log( "UIEvents.SelectCanonInD(): Song not yet unlocked!" );
 
             //insert functionality here
         }
@@ -245,7 +247,7 @@ public class UIEvents : MonoBehaviour
         CurrencyCanvasScript.HideCash();
         SFXController.GetComponent<SFXControllerScript>().ButtonPressed();
         GameStateController.Instance.ChangeState( GameStateController.GameState.SongSelection );
-        SongProgressionScript.GetSongLockComponents();
+        //SongProgressionScript.GetSongLockComponents();
     }
 
     public void LoadMarketplace()

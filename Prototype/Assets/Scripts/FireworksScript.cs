@@ -132,7 +132,7 @@ public class FireworksScript : MonoBehaviour
     /// </summary>
     public void PlayEffects()
     {
-        Debug.Log( "FireworksScript.PlayEffects(): Entered" );
+        //Debug.Log( "FireworksScript.PlayEffects(): Entered" );
 
         // Is the object legit?
         if( pfxInst != null )
@@ -140,13 +140,13 @@ public class FireworksScript : MonoBehaviour
             // Is the particle effect already playing
             if( !pfxInst.GetComponent<ParticleSystem>().isPlaying )
             {
-                Debug.Log( "FireworksScript.PlayEffects(): Playing..." );
+                //Debug.Log( "FireworksScript.PlayEffects(): Playing..." );
                 pfxInst.GetComponent<ParticleSystem>().Play();
             }
         }
         else
         {
-            Debug.Log( "FireworksScript.PlayEffects(): Objects are null, respawning" );
+            //Debug.Log( "FireworksScript.PlayEffects(): Objects are null, respawning" );
             SpawnObjects();
         }
     }
