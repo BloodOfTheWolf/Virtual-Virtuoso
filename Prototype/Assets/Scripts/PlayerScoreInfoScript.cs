@@ -9,45 +9,48 @@ public class PlayerScoreInfoScript : MonoBehaviour
     public float CanonScore;
     public float EliseScore;
     public float EntertainerScore;
+    public float MountainKingScore;
     public float HotCrossScoreHigh;
     public float TwinkleTwinkleScoreHigh;
     public float CanonScoreHigh;
     public float EliseScoreHigh;
     public float EntertainerScoreHigh;
+    public float MountainKingScoreHigh;
     private NoteStreakControllerScript Info;
     public string lastLevelPlayed;
     public static int PlayerMoney = 1000;
 
-    public static int TwinkleStars ;
-    public static int CrossStars ;
-    public static int CanonStars ;
-    public static int EliseStars ;
-    public static int EntertainerStars ;
+    public static int TwinkleStars;
+    public static int CrossStars;
+    public static int CanonStars;
+    public static int EliseStars;
+    public static int EntertainerStars;
+    public static int MountainKingStars;
     public Results_StarControlScript Stars;
     GameObject StarToEnable;
     
+
     void Awake()
     {
         DontDestroyOnLoad( this.gameObject );
     }
     
-    // Use this for initialization
-	void Start () 
+	void Start()
     {
         HotCrossScore = 0;
         TwinkleTwinkleScore = 0;
         CanonScore = 0;
         EliseScore = 0;
         EntertainerScore = 0;
+        MountainKingScore = 0;
         HotCrossScoreHigh = 0;
         TwinkleTwinkleScoreHigh = 0;
         CanonScoreHigh = 0;
         EliseScoreHigh = 0;
         EntertainerScoreHigh = 0;
-        
+        MountainKingScoreHigh = 0;
 	}
 	
-	// Update is called once per frame
 	void Update()
     {
         // Cap the player's money at 999,999
@@ -85,6 +88,12 @@ public class PlayerScoreInfoScript : MonoBehaviour
         {
             lastLevelPlayed = "The Entertainer";
             EntertainerScore = NoteStreakControllerScript.Score;
+        }
+
+        if (Application.loadedLevelName == "MountainKing")
+        {
+            lastLevelPlayed = "In the Hall of the Mountain King";
+            MountainKingScore = NoteStreakControllerScript.Score;
         }
 
         if (Application.loadedLevelName == "Results")
@@ -190,6 +199,27 @@ public class PlayerScoreInfoScript : MonoBehaviour
                     else if( (Results_StarControlScript.StarLevel == 1) && (EntertainerStars < Results_StarControlScript.StarLevel) )
                     {
                         EntertainerStars = 1;
+                    }
+                }
+            }
+
+            if (lastLevelPlayed == "In the Hall of the Mountain King")
+            {
+                if (MountainKingStars < 3)
+                {
+                    if (Results_StarControlScript.StarLevel == 3)
+                    {
+                        MountainKingStars = 3;
+                    }
+
+                    else if ((Results_StarControlScript.StarLevel == 2) && (MountainKingStars < Results_StarControlScript.StarLevel))
+                    {
+                        MountainKingStars = 2;
+                    }
+
+                    else if ((Results_StarControlScript.StarLevel == 1) && (MountainKingStars < Results_StarControlScript.StarLevel))
+                    {
+                        MountainKingStars = 1;
                     }
                 }
             }

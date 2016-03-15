@@ -91,108 +91,126 @@ public class HeldStarUpdateScript : MonoBehaviour
         switch(Song)
         {
         case "Twinkle":
-        if(PlayerScoreInfoScript.TwinkleStars == 1)
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        else if( PlayerScoreInfoScript.TwinkleStars == 2 )
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        else if( PlayerScoreInfoScript.TwinkleStars == 3 )
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        break;
-        case "Hotcross":
-        if( PlayerScoreInfoScript.CrossStars == 1 )
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        else if( PlayerScoreInfoScript.CrossStars == 2 )
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        else if( PlayerScoreInfoScript.CrossStars == 3 )
-        {
-            this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-        }
-        break;
+            if(PlayerScoreInfoScript.TwinkleStars == 1)
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            else if( PlayerScoreInfoScript.TwinkleStars == 2 )
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            else if( PlayerScoreInfoScript.TwinkleStars == 3 )
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            break;
+        case "HotCross":
+            if( PlayerScoreInfoScript.CrossStars == 1 )
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            else if( PlayerScoreInfoScript.CrossStars == 2 )
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            else if( PlayerScoreInfoScript.CrossStars == 3 )
+            {
+                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+            }
+            break;
+        case "MountainKing":
+            if (PlayerScoreInfoScript.TwinkleStars >= 2 && PlayerScoreInfoScript.CrossStars >= 2)
+            {
+
+                gameObject.transform.parent.GetChild(3).gameObject.SetActive(false);
+                if (PlayerScoreInfoScript.MountainKingStars == 1)
+                {
+                    this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else if (PlayerScoreInfoScript.MountainKingStars == 2)
+                {
+                    this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    this.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else if (PlayerScoreInfoScript.MountainKingStars == 3)
+                {
+                    this.gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    this.gameObject.transform.GetChild(1).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                    this.gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                }
+            }
+            break;
         case "FurElise":
-        if( PlayerScoreInfoScript.TwinkleStars >= 2  && PlayerScoreInfoScript.CrossStars >= 2 )
-        {
+            if( PlayerScoreInfoScript.TwinkleStars >= 2  && PlayerScoreInfoScript.CrossStars >= 2 )
+            {
 
-            gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
-            if( PlayerScoreInfoScript.EliseStars == 1 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
+                if( PlayerScoreInfoScript.EliseStars == 1 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.EliseStars == 2 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.EliseStars == 3 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
             }
-            else if( PlayerScoreInfoScript.EliseStars == 2 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
-            else if( PlayerScoreInfoScript.EliseStars == 3 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
-        }
-        break;
+            break;
         case "Entertainer":
-        if( PlayerScoreInfoScript.TwinkleStars >= 2 && PlayerScoreInfoScript.CrossStars >= 2 )
-        {
-            gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
-            if( PlayerScoreInfoScript.EntertainerStars == 1 )
+            if( PlayerScoreInfoScript.TwinkleStars >= 2 && PlayerScoreInfoScript.CrossStars >= 2 )
             {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
+                if( PlayerScoreInfoScript.EntertainerStars == 1 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.EntertainerStars == 2 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.EntertainerStars == 3 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
             }
-            else if( PlayerScoreInfoScript.EntertainerStars == 2 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
-            else if( PlayerScoreInfoScript.EntertainerStars == 3 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
-        }
 
-        break;
+            break;
         case "Canon":
-        if( PlayerScoreInfoScript.EliseStars >= 2 && PlayerScoreInfoScript.EntertainerStars >= 2 )
-        {
-            gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
-            if( PlayerScoreInfoScript.CanonStars == 1 )
+            if (PlayerScoreInfoScript.MountainKingStars >= 2 && PlayerScoreInfoScript.EliseStars >= 2 && PlayerScoreInfoScript.EntertainerStars >= 2)
             {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                gameObject.transform.parent.GetChild( 3 ).gameObject.SetActive( false );
+                if( PlayerScoreInfoScript.CanonStars == 1 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.CanonStars == 2 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
+                else if( PlayerScoreInfoScript.CanonStars == 3 )
+                {
+                    this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                    this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
+                }
             }
-            else if( PlayerScoreInfoScript.CanonStars == 2 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
-            else if( PlayerScoreInfoScript.CanonStars == 3 )
-            {
-                this.gameObject.transform.GetChild( 0 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 1 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-                this.gameObject.transform.GetChild( 2 ).gameObject.transform.GetChild( 0 ).gameObject.SetActive( true );
-            }
+            break;
         }
-        break;
-        }
-        
-
     }
 }
-
-

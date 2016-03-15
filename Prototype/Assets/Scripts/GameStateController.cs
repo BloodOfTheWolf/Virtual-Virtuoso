@@ -39,7 +39,9 @@ public class GameStateController : MonoBehaviour
         HotCrossBuns,
         FurElise,
         CanonInD,
-        Entertainer
+        Entertainer,
+        MountainKing,
+        Freeplay
     };
 
     GameState previousState;
@@ -118,6 +120,14 @@ public class GameStateController : MonoBehaviour
             break;
         case GameState.Entertainer:
             Application.LoadLevel( "TheEntertainer" );
+            RemoveFrontEndObjects();
+            break;
+        case GameState.MountainKing:
+            Application.LoadLevel( "MountainKing" );
+            RemoveFrontEndObjects();
+            break;
+        case GameState.Freeplay:
+            Application.LoadLevel( "Freeplay" );
             RemoveFrontEndObjects();
             break;
         }

@@ -30,7 +30,9 @@ public class ButtonHelper : MonoBehaviour
         MarketplaceConfirmPurchase,
         MarketplaceCancelPurchase,
         MusicSet,
-        SoundSet
+        SoundSet,
+        SelectFreeplay,
+        SelectMountainKing
     };
 
     public ButtonType UIButton;
@@ -112,7 +114,13 @@ public class ButtonHelper : MonoBehaviour
             BGMusicSetScript.MusicSetSelected( gameObject.GetComponent<MarketplaceButtonHelper>().SetIndex );
             break;
         case ButtonType.SoundSet:
-            
+
+            break;
+        case ButtonType.SelectFreeplay:
+            UIEventsObj.GetComponent<UIEvents>().SelectFreeplay();
+            break;
+        case ButtonType.SelectMountainKing:
+            UIEventsObj.GetComponent<UIEvents>().SelectMountainKing();
             break;
         }
     }

@@ -2,30 +2,37 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class SongSelectionSpriteScript : MonoBehaviour {
+public class SongSelectionSpriteScript : MonoBehaviour
+{
 
     public Image TutorialSelected;
     public Image HotCrossSelected;
     public Image FurEliseSelected;
     public Image CanonSelected;
     public Image EntertainerSelected;
+    public Image MountainKingSelected;
+    public Image FreeplaySelected;
 
-	void Start () 
+	void Start()
     {
         TutorialSelected.enabled = true;
         HotCrossSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
 	}
 	
-	public void TutorialActive () 
+	public void TutorialActive()
     {
         TutorialSelected.enabled = true;
         HotCrossSelected.enabled = false;
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
 	}
 
     public void HotCrossActive()
@@ -35,6 +42,8 @@ public class SongSelectionSpriteScript : MonoBehaviour {
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
     }
 
     public void FurEliseActive()
@@ -44,6 +53,8 @@ public class SongSelectionSpriteScript : MonoBehaviour {
         FurEliseSelected.enabled = true;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
     }
 
     public void CanoninDSelected()
@@ -53,6 +64,8 @@ public class SongSelectionSpriteScript : MonoBehaviour {
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = true;
         EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
     }
 
     public void TheEntertainerSelected()
@@ -62,5 +75,29 @@ public class SongSelectionSpriteScript : MonoBehaviour {
         FurEliseSelected.enabled = false;
         CanonSelected.enabled = false;
         EntertainerSelected.enabled = true;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = false;
+    }
+
+    public void MountainKingActive()
+    {
+        TutorialSelected.enabled = false;
+        HotCrossSelected.enabled = false;
+        FurEliseSelected.enabled = false;
+        CanonSelected.enabled = false;
+        EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = true;
+        FreeplaySelected.enabled = false;
+    }
+
+    public void FreeplayActive()
+    {
+        TutorialSelected.enabled = false;
+        HotCrossSelected.enabled = false;
+        FurEliseSelected.enabled = false;
+        CanonSelected.enabled = false;
+        EntertainerSelected.enabled = false;
+        MountainKingSelected.enabled = false;
+        FreeplaySelected.enabled = true;
     }
 }

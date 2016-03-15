@@ -37,7 +37,9 @@ public class UIEvents : MonoBehaviour
         HotCrossBuns,
         FurElise,
         CanonInD,
-        Entertainer
+        Entertainer,
+        MountainKing,
+        Freeplay
     };
 
     SongChoice previousChoice;
@@ -48,6 +50,23 @@ public class UIEvents : MonoBehaviour
     //***********************
     // EASY SONGS
     //***********************
+    public void SelectFreeplay()
+    {
+        // Has the player unlocked the song?
+        if (SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Easy)
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.Freeplay;
+            PlaySongPreview(currentChoice);
+        }
+        else
+        {
+            Debug.Log("UIEvents.SelectHotCrossBuns(): Song not yet unlocked!");
+
+            //insert functionality here
+        }
+    }
+
     public void SelectTutorial()
     {
         // Has the player unlocked the song?
@@ -85,6 +104,23 @@ public class UIEvents : MonoBehaviour
     //***********************
     // MEDIUM SONGS
     //***********************
+    public void SelectMountainKing()
+    {
+        // Has the player unlocked the song?
+        if (SongProgressionScript.CurrentDifficultyUnlocked >= SongProgressionManagerScript.DifficultyState.Medium)
+        {
+            SFXController.GetComponent<SFXControllerScript>().SelectionButtonPressed();
+            currentChoice = SongChoice.MountainKing;
+            PlaySongPreview(currentChoice);
+        }
+        else
+        {
+            Debug.Log("UIEvents.SelectFurElise(): Song not yet unlocked!");
+
+            //insert functionality here
+        }
+    }
+
     public void SelectFurElise()
     {
         // Has the player unlocked the song?
@@ -122,8 +158,6 @@ public class UIEvents : MonoBehaviour
     //***********************
     // HARD SONGS
     //***********************
-    
-
     public void SelectCanonInD()
     {
         // Has the player unlocked the song?
@@ -172,7 +206,15 @@ public class UIEvents : MonoBehaviour
             break;
         case SongChoice.Entertainer:
             //insert functionality here
-            
+
+            break;
+        case SongChoice.MountainKing:
+            //insert functionality here
+
+            break;
+        case SongChoice.Freeplay:
+            //insert functionality here
+
             break;
         }
     }
@@ -222,6 +264,12 @@ public class UIEvents : MonoBehaviour
                     break;
                 case SongChoice.Entertainer:
                     LoadEntertainer();
+                    break;
+                case SongChoice.MountainKing:
+                    LoadMountainKing();
+                    break;
+                case SongChoice.Freeplay:
+                    LoadFreeplay();
                     break;
                 }
             }
@@ -324,6 +372,16 @@ public class UIEvents : MonoBehaviour
     void LoadEntertainer()
     {
         GameStateController.Instance.ChangeState( GameStateController.GameState.Entertainer );
+    }
+
+    void LoadMountainKing()
+    {
+        GameStateController.Instance.ChangeState(GameStateController.GameState.MountainKing);
+    }
+
+    void LoadFreeplay()
+    {
+        GameStateController.Instance.ChangeState(GameStateController.GameState.Freeplay);
     }
     //end
 }

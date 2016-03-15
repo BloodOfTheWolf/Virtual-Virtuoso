@@ -20,11 +20,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Results.unity
   - enabled: 1
+    path: Assets/Scenes/Freeplay.unity
+  - enabled: 1
     path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/HotCrossBuns.unity
   - enabled: 0
     path: Assets/Scenes/MaryLamb.unity
+  - enabled: 1
+    path: Assets/Scenes/MountainKing.unity
   - enabled: 1
     path: Assets/Scenes/FurElise.unity
   - enabled: 1
