@@ -45,13 +45,13 @@ public class Results_MissScript : MonoBehaviour
             if( MissInitializer != MissF )
             {
                 MissInitializer = Mathf.Lerp( 0, MissF, prcComplete );
-                print( "Missinitializer!= MissF = " + MissInitializer );
+                //print( "Missinitializer!= MissF = " + MissInitializer );
             }
         if( (MissInitializer == Missed) && (Complete == false) || (MissInitializer == 0) && (Complete == false))
         {
             Controller.GetComponent<Results_ProgressionScript>().PlayCrash();
             Complete = true;
-            print( "outside if = " + MissInitializer );
+            //print( "outside if = " + MissInitializer );
         }
         }
 

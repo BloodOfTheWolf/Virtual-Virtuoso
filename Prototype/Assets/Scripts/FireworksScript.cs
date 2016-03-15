@@ -116,7 +116,7 @@ public class FireworksScript : MonoBehaviour
     /// </summary>
     public void SpawnObjects()
     {
-        Debug.Log( "FireworksScript.SpawnObjects(): Entered" );
+       // Debug.Log( "FireworksScript.SpawnObjects(): Entered" );
 
         int xx, yy, zz;
         xx = Random.Range( -7, 7 );
