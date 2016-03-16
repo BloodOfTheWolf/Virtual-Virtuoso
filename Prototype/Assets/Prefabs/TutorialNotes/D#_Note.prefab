@@ -50,7 +50,7 @@ GameObject:
   - 114: {fileID: 11439492}
   m_Layer: 0
   m_Name: D#_Note
-  m_TagString: SheetNote
+  m_TagString: SharpSheetNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,9 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18dd722265714d44191bcd6063fef79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteType: 3
-  NoteOctave: 1
-  AccidentalType: 1
 --- !u!114 &11480708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,6 +377,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: AccidentalType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: SharpSheetNote
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

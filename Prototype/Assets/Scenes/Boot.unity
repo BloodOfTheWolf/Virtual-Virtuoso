@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1acf912d000c745a5133cacef6f4a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerValue: 1
+  TimerValue: 3
   TimerText: {fileID: 523622538}
 --- !u!4 &1656194742
 Transform:
@@ -2306,11 +2306,13 @@ MonoBehaviour:
   CanonScore: 0
   EliseScore: 0
   EntertainerScore: 0
+  MountainKingScore: 0
   HotCrossScoreHigh: 0
   TwinkleTwinkleScoreHigh: 0
   CanonScoreHigh: 0
   EliseScoreHigh: 0
   EntertainerScoreHigh: 0
+  MountainKingScoreHigh: 0
   lastLevelPlayed: 
   Stars: {fileID: 0}
 --- !u!4 &1929389577
