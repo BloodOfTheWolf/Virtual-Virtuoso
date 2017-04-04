@@ -38,12 +38,12 @@ The target platform is the **Nexus 7** series of tablets, but the game should ru
 
 ## <a name="2"></a>2. Download & Installation
 ### <a name="2_Steps"></a>2.1. Steps
-1. Download the APK to your target device by clicking HERE (COMING SOON) or one of the links in the [Links](#2_Links) section
+1. Download the APK to your target device by clicking [HERE][DL-Mirror-1] or one of the links in the [Links](#2_Links) section
 2. On your target device, [ensure that the setting that allows you to install packages from unknown sources is enabled](http://fieldguide.gizmodo.com/how-to-install-unauthorized-apps-on-android-and-ios-1764645648)
 3. Run the APK on your target device to install the game
 
 ### <a name="2_Links"></a>2.2. Download Links
-- Mirror #1 (COMING SOON)
+- [Mirror #1][DL-Mirror-1]
 - Mirror #2 (COMING SOON)
 
 ---
@@ -54,3 +54,5 @@ The target platform is the **Nexus 7** series of tablets, but the game should ru
 - **Roberto Martinez** (Programming)  
 - **Wyatt Downie** (Art)  
 - **Jeremy Nasato** (Audio)  
+
+[DL-Mirror-1]: http://bit.ly/VirtualVirtuoso-R1-APK  "Download APK from Dropbox (Mirror #1)"
